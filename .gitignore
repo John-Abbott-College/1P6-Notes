@@ -1,0 +1,10 @@
+# Docsify related
+
+node_modules/
+package-lock.json
+package.json
+index.html
+_sidebar.md
+docsify_templates.html
+assets/
+
