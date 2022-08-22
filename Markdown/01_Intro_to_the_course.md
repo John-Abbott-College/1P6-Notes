@@ -1,34 +1,41 @@
-# Programming 1 - Monday August 23
+# Programming 1
+**Date:** Mon, Aug 23rd
+
+## Course Notes
+Notes for the class will be published to a website and updated as we progress:
+
+> https://john-abbott-college.github.io/1P6-Notes/#/
+> 
+> Bookmark this URL and skip LEA 😎
+
+A link to the website is available in LEA.
+
+## Student Login
+Student login through most school apps:
+
+> StudentID@johnabbottcollege.net 
+
+## CS Department 
+The **Chairs** of the department are:
+- Helen Katalifos
+- Ian Clement
+- Aref Mourtada
+
+Offices are in the 2nd floor of the Penfield building. Please become familiar with the offices.
+
+The **Dean of Technologies** (our boss) : Roberta Silerova.
+
+> Complaints must respect the chain of command - first go to teacher, then chairs, then Dean.
 
 
+## Contacting the Teacher
+Contact me (Mauricio Buschinelli) by Teams (fastest) and/or MIO.
+Office hours are posted in LEA and on my office door (Penfield 237).
 
-Student login through the App: 
+> Course announcements will be made in Teams.
 
-StudentID@johnabbottcollege.net 
+## Course Software
+We'll use primarily two programs, both can be downloaded and installed **for free**.
 
- 
-
-Notes for the class ... Will be uploaded to LEA as we progress
-
- 
-
-The Chairman of the department Helen Katalifos and/or Ian Clement and/or Aref Mourtada 
-
-The Dean of Technologies : Doug Brown. 
-
-- Respect the chain of command - first go to teacher, then chair, then Dean. 
-- You can contact me (Sandy Bultena) any way any time through email and/or MIO 
-
-- Every course must give you a course outline. Save a copy of it!!!! For potential future reference at another institution. 
-- The course outline for this class has been uploaded to LEA
-- Evaluation plan cannot be changed - except for the number of assignments….. 
-- The three tests – hopefully all on campus 
-- Get a calendar of some sort - electronic. Put all your assignment due dates into it (Google / iOS / ? ) 
-- Synchronize everything online - contacts info etc 
-- Set a notification in MIO to buzz you! I mean send yourself an email that will buzz your phone so you get notified that a teacher or other has sent you info 
-- Use MIO when handing things in that are flakey...ex… under a door etc….send a copy via MIO to protect yourself. 
-- If you have a laptop - download and install Flowgorithm from http://www.flowgorithm.org/ (optional)
-- Reminder: you can download Visual Studio 2019 “Community” here: 
-- https://visualstudio.microsoft.com/downloads/ 
-- There are no exams for 420 courses. 
-- FYI - wait on the purchase of a laptop! Don’t rush out and buy one! …..yet.. 
+- Microsoft Visual Studio 2022 (Community edition) - from https://visualstudio.microsoft.com/vs/
+- Flowgorithm - from www.flowgorithm.org

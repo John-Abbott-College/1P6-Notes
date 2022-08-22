@@ -4,10 +4,6 @@ Notes for Programming I course. These notes live in a public repository so that 
 
 [![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc]
 
-## Fall 2022 Course Outline
-
-The course outline is available in LEA ([link](https://www-jac-ovx.omnivox.ca/cvir/ddlp/VisualiseDocument.aspx?C=JAC&E=P&L=ANG&Ref=20220822133624&Info=anQwMWxtQkM4dENXLzRhZGFmY2VUclJha1VFb3kxd0pqZ3ZOU0NZS3VZd2cydi9LWEY1NEorZjF4UkVmUVA2QUYzSVdBV2dRZE96bFZzbDZ4MUJlWDNHbmVvUnJQWFg5N3NoYUh2aEEvcHR3SFFuMHowM0ovNVprS29qMHVlSFZFaWJjaTBlOHlRK001WU44ZmliL3lienlDMTBsQjdVMmVadjV0elUzY0VZPQ__&IDDocCoursDocument=e68b1d3b-a88c-40be-9ba2-2a2aa43e4eea)).
-
 ---
 
 This work is licensed under a
