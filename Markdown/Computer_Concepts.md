@@ -1,51 +1,63 @@
 # Day 2 - Computer Concepts
 
+Wednesday - August 25, 2022
+
+## Software vs Hardware
+
+> **Hardware** refers to the **physical structure** and **physical devices** that make up a computer.
+> 
+>Ei.: the stuff you can touch.
+
+Examples:
+- Hard drive (primary storage device)
+- CPU (central processing unit)
+- Wireless card
+- USB ports
+- Main memory (RAM)
+
+It can also refer to the peripherals such as:
+- Mouse
+- Keyboard
+- Microphone
+- Webcam
 
 
-Wednesday - August 25, 2021
+> **Software** is any **set of instructions** that tells the hardware how to carry out a specific task.
+> 
+> Ei.: the stuff you cannot touch.
 
-- **Hardware** - the physical devices that make up a computer 
-  - Keyboard. Mouse, input devices 
-  - Monitor, and output devices 
-  - Secondary storage devices 
-  - Main memory 
-- **Software** - logiciel 
-  - Series of instructions stored on hardware that carries out a specific task. 
-    - Ex: games, programs that do inventory, programs that manage things, etc etc. 
-- **Firmware**
-  - Firmware is also a set of instructions, but instead of living in some kind of hard-drive or memory, the instructions are written into the hardware itself (by changing the nature of the transistors within the chip)
-- **C.P.U.** Central Processing Unit - it is effectively the brain and/or decision maker in a computer. The CPU has two components within it - they are called the Control Unit and the ALU (arithmetic logic unit).  
-  - Flashy names ex: intel Core i7, Celeron, Pentium, AMD Athlon 
-  - Each CPU has a model number and a speed - measured in GHz.  
-- **MMU** Memory Management Unit - manages the memory by reading/writing data to RAM at the request from the CPU (i.e. CPU asks the MMU to read from a certain memory address)
-- **I/O** Input / Output - manages the flow of data between periphials and the Main memory (RAM) 
-- Main Memory - computer’s work area - where the computer stores a program as it is being run. Also called **RAM** - random access memory. Memory has addresses. 
-- Secondary storage devices - hard drives, USB drives (memory sticks) 
-- Your Operating System - this is software!!!! - brand names include Windows, iOS etc….. They make juvenile names like “El Capitain” and code names for versions. 
-  - In reality - an operating system tells the CPU how to manage the peripherals. Peripherals are things connected to the computer. 
-  - O/S (Operating System) does a lot of things including boot up, memory management, drivers etc... 
-- Your operating system does many things - including manage memory, allocating who can do what when (scheduling), scan for hardware interrupts, run programs etc.  
-- Low level programming deals directly with hardware and binary signals. It deals with very primitive code. We are using/examining Binary codes. Languages that are CPU specific such as Assember and other. 
-- High level programming are “English Like” languages that are converted to binary for you. Examples: C#, Perl, ASP, Python, etc… 
-  - Hi level programming is not "better" than low level programming!!!!! Low level could be sending binary signals to a piece of hardware. High level could be writing a database application. Low level deals with binary codes and not English like words. 
+Examples:
+- Operating system
+- Games
+- Programs that do inventory or manage things
 
- 
 
-## Translating human language to computer hardware language
+> **Firmware** is a special type of software. Instead of being stored in text form, the instructions are written into the hardware itself (by changing the nature of the transistors within the chip)
 
-- Everything begins at a plug or power source!!!! Electricity goes along a wire! 
+Examples:
+- The BIOS in your computer's motherboard
+- The software managing your microwave or fridge.
 
-- In computers we send pulses of electricity along a wire. These pulses are either zero or five volts. 
+
+## Human to Computer Language
+
+Everything begins at the power power source.
+
+- In computers we send pulses of electricity along a wire. These pulses are either zero or five volts.
 
 ![A graph of voltages along a wire.  The y-scale is from LOW to HIGH, and the title for the y-scale is 'Logic Levels'.  The x-scale is time, although it is divided into equal slices, where each slice represents a bit.  Under each bit (or pulse) the *value* of the bit is listed as either a 1 or zero.  If the graph height is *height* then the value of the bit is '1'.  If the graph height is 'low', the bit value is given as '0'.  It is typical that *heigh*t is 5 volts, and *low* is zero volts.](../Images/02_voltage.png)
 
-There are two states along the wire. Nothing else. 
+There are two states along the wire. Nothing else. In other words, **this is a binary system**.
+
+Similarly to a light bulb, when the voltage is high, the light is ON. If there is no voltage, the light is OFF.
+
+![Electrical circuit with a AAA battery, a lightbulb and a on/off switch ](assets/02_lightbulb_circuit.png)
 
 ### Characters
 
 Each letter of the English alphabet is mapped to a series of 7 UNIQUE pulses of electricity that form a pattern.  This mapping is called ASCII - American Standard Code for Information interchange. With addition of more pulses, all language symbols can be represented on a computer.  This encoding is called 'unicode'.
 
-In textbook it would be very hard to write that the letter 
+In a textbook it would be very hard to write that the letter 
 
 >  A = zero volts, five volts, zero volts, zero volts, zero volts, zero volts, zero volts, five volts 
 
@@ -55,11 +67,10 @@ So now I can say
 
 > A = 01000001  and this the unique sequence for the letter A. 
 
-This use of "0" and "1" to represent voltage is what is used in computers. It is a **BINARY** system. Note that each letter uses 8 pulses. 
+This use of "0" and "1" to represent voltage is what is used in computers. It is a **BINARY** system.
+Note that even though ASCII  uses only 7 pulses to represent a character, most characters use 8 pulses (with a zero at the beginning).
 
-
-
-Take a look at this ASCII CHART https://www.ascii-code.com/ 
+For example, see A = 01000001  and D = 01000100 at the ASCII CHART table below:
 
 | Decimal | Octal | Hex | Binary | Character | HTML | Description |
 | ---- | ---- | ---- | -------- | ---- | ----- | ----------- |
@@ -71,9 +82,6 @@ Take a look at this ASCII CHART https://www.ascii-code.com/
 
 From <https://www.ascii-code.com/> 
 
- 
-
-So you see A = 01000001  and D = 01000100 - notice how each letter is 8 pulses. 
 
 ### Terminology
 
@@ -81,9 +89,9 @@ In Computer Science we call a "1" or a "0" a **BIT**. 8 Bits together makes up a
 
 We have "words" to denote quantities as well: 
 
- 
 
 8 bits is a **byte**, In French we call this "un octet" 
+
 > A byte is the minimum amount of bits you need to represent a character or letter of the alphabet 
 
 4 bits is a **nibble** (half a *byte*)
