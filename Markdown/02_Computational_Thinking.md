@@ -1,4 +1,5 @@
-# Computational Thinking
+# Day 2 - Computational Thinking
+*August 25th, 2022*
 
 This course has 3 main learning objectives:
 

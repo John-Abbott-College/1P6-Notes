@@ -51,7 +51,7 @@ There are two states along the wire. Nothing else. In other words, **this is a b
 
 Similarly to a light bulb, when the voltage is high, the light is ON. If there is no voltage, the light is OFF.
 
-![Electrical circuit with a AAA battery, a lightbulb and a on/off switch ](assets/02_lightbulb_circuit.png)
+![Electrical circuit with a AAA battery, a lightbulb and a on/off switch ](../Images/02_lightbulb_circuit.png)
 
 ### Characters
 

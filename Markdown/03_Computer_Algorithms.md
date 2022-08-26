@@ -1,25 +1,84 @@
 # Day 3 - Computer Compression Algorithms
 
-Thursday - August 26, 2021
+Friday - August 26, 2022
 
-We’re not “programming” – there is no “File, Save As”, no typing in loops, variables, counters. We’re doing – the old fashioned way using pencil and paper - okay…notepad and Windows….
+In the previous lecture we looked at the 4 elements of computational thinking, which included **Algorithm Design**.
+
+We'll explore algorithms by looking at file compression and [sorting cards](https://deck.of.cards/old/).
+
+## Algorithms
+
+An **algorithm** is a set of well defined steps or rules that if followed will yield a pre-determined result.
+In other words, it's a recipe.
+
+Computers can only execute a small set of instructions. Therefore it's important to tell them **exactly** what to do.
+
+The [game we created in the previous class](https://makecode.com/_VeKVRoYrzTxm) is an example of an **algorithm**.
+
+![Block code for monkey moving around a background created with microsoft makecode arcade](../Images/03_makecode_game.png)
+
+
+### Card Sorting Algorithms
+
+There is a subset of Computer Science that studies the sorting algorithms (speed, memory usage, complexity, etc).
+
+Below are two of these sorting algorithms:
+
+- Insertion-sort
+- Select-sort
+
+To illustrate these algorithms, let's sort [a deck of cards](https://deck.of.cards/old/).
+
+> We'll briefly look at insertion-sort and select-sort as examples of algorithms.
+> **You will not be tested** on the details of how these algorithms work.
+
+#### Insertion-sort
+
+1. Loop over all cards, starting with the first card.
+2. At each position, consider the card's value.
+3. Move the card to the left until it is in the correct position*.
+4. "Correct position" means its value is more than the card to its left and less than the card to its right.
+
+Below is a dance enacting insertion-sort. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ROalU379l3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Selection-sort
+
+1. Select the first card and note its value.
+2. Loop over all cards.
+3. If a card is found whose value is lower than the selected card (step 1), swap the cards.
+4. Select the next card in the sequence.
+5. Repeat steps 2 to 4 until all cards are sorted.
+
+Below is a dance enacting selection-sort:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ns4TPTC8whw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+The next algorithm we'll look at is used in the compression of files. 
 
 ## Creating a zip file
 
 ### Why?
 
-Program and data files are getting larger and larger as computer storage becomes cheaper and cheaper.  But copying files from one location to another can take a long time.  By 'zipping' a file, you are reducing the overall size of the file, without losing any information.  Zipping a file will also reduce the amount of space you need on your hard drive or other storage.
+Program and data files are getting larger and larger as computer storage becomes cheaper and cheaper. However, copying files from one location to another can take a long time.
+
+By 'zipping' or compressing a file, we can reduce the overall size of the file, without losing any information. This will not only reduce the required storage space for the file, but also speed up information transfer (such as a web page being loaded into the browser).
 
 ### How?
 
-There are many different ways to create a compressed file. There a many utilities to compress a file, (`zip`, `7zip`, `gzip`, `rar`, `pkzip`, `gif` etc).  The different applications may use different algorithms, where one algorithm is better for text, some for pictures, etc.
+There are many different ways and utilities used to create a compressed file (`zip`, `7zip`, `gzip`, `rar`, `pkzip`, `gif` etc).  The different applications may use different algorithms, where one algorithm is better for text, some for pictures, etc.
 
-On Windows 10, the easiest way to compress a file (or files) is to
+On Windows 10, the easiest way to compress a file (or files) is to:
 
-*  open `file explorer` and select the file (or files, or folder) that you want to compress
-* Right click on your selection
-* Choose `send to` and then `compressed (zipped) folder`
-  * Note that you can use `7zip`, but it is not installed on Windows by default, nor on the MAC, so you run the risk that the person you are sending your files to may not be able to access the data.
+1. open `file explorer` and select the file (or files, or folder) that you want to compress
+2. Right click on your selection
+3. Choose `send to` and then `compressed (zipped) folder`.
+- Note that you can use `7zip`, but it is not installed on Windows or MAC by default. There's a risk that the person you are sending your files to may not be able to access the data.
+
+![animation showing how to zip two files in windows file explorer](../Images/03_zipping_file_windows.png)
+
 
 On a MAC, the easiest way to compress a file (or files) is to
 
@@ -34,17 +93,8 @@ On a MAC, more advanced options, use the command line
 * use the `zip` command
   * To see all of the various options, type `man zip` on the command line
 
-On Linux, compression is usually done via the archive command `tar`
 
-* open a terminal window
-* use the following command to create an archive, and then use `gzip` to compress the archive
-  * `tar -cf tarfile files`
-  * `gzip tarfile`
-  * This will create what is known as a `tarball`
-
-
-
-## Algorithm
+## Huffman Compression Algorithm
 
 The following lyric is 21 characters long.
 
@@ -58,9 +108,8 @@ So the number of bits that would need to be sent ( ```21 * 8```)  which is **168
 
 Is there any way we can compress this to fewer bits? Bandwidth along a wire is a resource, and I want to: **minimize the required number of bits**.
 
-### Huffman Algorithm
+Let’s use **Huffman Codes** and see what happens:
 
-Let’s use Huffman Codes and see what happens
 
 #### Creating the tree
 
@@ -69,7 +118,7 @@ Let’s use Huffman Codes and see what happens
 | The unique character | Number of times it appears in the string |
 | ---------------------| --------------- --------------------- |
 | i                               | 3 |
-| “ “ ….the blank space character | 4 |
+| “ “ (*blank space character*) | 4 |
 | w                               | 1 |
 | l                               | 5 |
 | s                               | 1 |
@@ -102,9 +151,11 @@ Sort the table by frequency (the number of times the letter appears, from least 
 
 Use a notepad and paper, or any on-line writing web app (example: [a whiteboard application](https://miro.com/) )
 
-Build a “tree” for each character, combining the lowest frequency characters together – you must prioritize untouched trees
+Build a “tree” for each character, combining the lowest frequency characters together – you must prioritize untouched trees.
 
- For a detailed description, see [this](https://en.wikipedia.org/wiki/Huffman_coding#Basic_technique)
+> This step is broken down into smaller steps below.
+
+ For a detailed description, see [Huffman coding on Wikipedia](https://en.wikipedia.org/wiki/Huffman_coding#Basic_technique)
 
 **Step 3.1**
 
@@ -190,9 +241,6 @@ Build a “tree” for each character, combining the lowest frequency characters
 
 ![description of image is in coments in the raw text](../Images/03_ay.png)
 
-[//]: <> "     bu                    ay "
-[//]: <> "   0/  \1                0/  \1 "
-[//]: <> "  b      u              a      y "
 
 **Step 3.5**
 
@@ -367,7 +415,6 @@ Start at the top node, then as you 'walk' the tree, keep track of where you are 
 
 ```
 " " (space) = left, left, left = 000
-“ “ (space) = 000
 a = 0010
 y = 0011
 i = 010
@@ -380,21 +427,22 @@ s = 1110
 w = 1111
 ```
 
-AHA!!!! This is my new "dictionary" that I invented (using huffman codes) based on the frequencies of characters in my document.
+This is the new "dictionary" created with huffman codes and based on the frequencies of characters in the document.
 
-So you see high frequency characters are given low numbers of bits. Also notice that low frequency characters are given a lot of bits.
+High frequency characters are given low number of bits. Also notice that low frequency characters are given a lot of bits.
 
-So your new “bit string” would be
+So the text:
 
 > i will sing a lullaby
 
-becomes:
+Becomes:
 
 ```
 i   ' '    w    i   l  l   ' '   s    i    n    g
 010 000   1111 010 10 10   000  1110 010  1101 1100 
 ```
-………. And so forth
+
+And so forth...
 
 #### Thoughts
 
@@ -405,10 +453,10 @@ This explains why certain things (like documents) compress really well – there
 
 #### Sending the data
 
-Notice also that when you send your bit string across, you MUST SEND YOUR DICTIONARY across as well!! If you lose your dictionary, your bit stream is UNDECODEABLE.  A virus or other malicious program simply has to target your “dictionary” and GB of data could be wiped out and undecipherable.
+Notice also that when you send your bit string across, you MUST SEND YOUR DICTIONARY across as well!! If you lose your dictionary, your compressed data is UNDECODEABLE.  A virus or other malicious program simply has to target your “dictionary” and GB of data could be wiped out and undecipherable.
 
-## Lab Exercise
+## Lab Exercise (optional)
 
-Something for you to try for fun – Compress the following:
+Compress the text below using Hoffman encoding:
 
 > laa dee daa dee daa
