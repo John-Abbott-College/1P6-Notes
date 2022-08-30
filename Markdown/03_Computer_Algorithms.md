@@ -1,6 +1,6 @@
 # Day 3 - Computer Compression Algorithms
 
-Friday - August 26, 2022
+*Friday - August 26, 2022*
 
 In the previous lecture we looked at the 4 elements of computational thinking, which included **Algorithm Design**.
 
@@ -104,16 +104,25 @@ To transmit this lyric from one computer to another, we would need to use one *b
 
 So the number of bits that would need to be sent ( ```21 * 8```)  which is **168** bits
 
-### Goal
+**Goal:** reduce the number of bits required to represent the original information. 
 
-Is there any way we can compress this to fewer bits? Bandwidth along a wire is a resource, and I want to: **minimize the required number of bits**.
 
-Let’s use **Huffman Codes** and see what happens:
+Let’s use a simplified version of the **Huffman Codes Algorithm**:
 
+> 1. Find all unique letters in the text to be compressed.
+> 2. Count how many time each letter is used and create a frequency table.
+> 3. Sort the frequency table from lowest frequency to highest frequency
+> 4. Group the lowest two frequency occurrences together, combine their frequencies and re-sort the table.
+> 5. Construct a partial tree with the combined elements.
+> 6. Repeat steps 3 to 4 until there is only one tree
+> 7. Create a dictionary by traversing the tree from the top to the desired letter, each left traversal is represented by a 0, and a right traversal is represented by a 1.
+> 8. Using the dictionary, create the sequence of zeros and ones to represent the original text
+
+For a detailed description, see [Huffman coding on Wikipedia](https://en.wikipedia.org/wiki/Huffman_coding#Basic_technique)
 
 #### Creating the tree
 
-**Step 1**: Write out frequency table of each unique character
+**Step 1 and 2**: Find all unique letters in the text to be compressed and create a frequency table of each unique character.
 
 | The unique character | Number of times it appears in the string |
 | ---------------------| --------------- --------------------- |
@@ -129,7 +138,7 @@ Let’s use **Huffman Codes** and see what happens:
 | b                               | 1 |
 | y                               | 1 |
 
-**Step 2:**
+**Step 3:**
 
 Sort the table by frequency (the number of times the letter appears, from least frequency to most frequency)
 
@@ -147,21 +156,20 @@ Sort the table by frequency (the number of times the letter appears, from least 
 | “ “ ….the blank space character | 4         |
 | l                               | 5         |
 
-**Step 3**:
+**Step 4**:
 
-Use a notepad and paper, or any on-line writing web app (example: [a whiteboard application](https://miro.com/) )
-
-Build a “tree” for each character, combining the lowest frequency characters together – you must prioritize untouched trees.
+Build a “tree” for each character, combining the lowest frequency characters together.
+Note: you must prioritize untouched trees (elements who haven't been combined yet).
 
 > This step is broken down into smaller steps below.
 
- For a detailed description, see [Huffman coding on Wikipedia](https://en.wikipedia.org/wiki/Huffman_coding#Basic_technique)
+**Step 4.1:** Merge the two least frequent letters together (in this case 'w' and 's').
 
-**Step 3.1**
+Note: we could have combined other characters with low frequency such as 'w' and 'y'. The final dictionary might be different but the final size of the compressed message should be the same.
 
-* Merge the least two frequent letters together (in this case 'w' and 's') and add the frequency together
-   (`1 + 1 = 2`).
-* Resort your table
+**Step 4.2:** Add the frequency together (`1 + 1 = 2`). We now have that '**sw**' is called twice.
+
+**Step 4.3:** Resort the table.
 
 | Character                       | Frequency |
 | ------------------------------- | --------- |
@@ -176,19 +184,20 @@ Build a “tree” for each character, combining the lowest frequency characters
 | “ “ ….the blank space character | 4         |
 | l                               | 5         |
 
-* We now have that '**sw**' is called twice.  
 
-* Create a partial tree for '**sw**'.
+**Step 5 **Create a partial tree for '**sw**'.
 
-  The *root* is 'sw', and from it, we branch to left to '**s**' and right to '**w**'. Label the branch that goes 'left' as ```0``` and the branch that goes right as ```1```
+The *root* is 'sw', and from it, we branch to left to '**s**' and right to '**w**'.
+
+Label the branch that goes 'left' as ```0``` and the branch that goes right as ```1```
 
 ![description of image is in the above text](../Images/03_sw.png)
 
-**Step 3.2**
+**Step 6.1 (looping steps 4 to 5)**
 
-* Repeat the last process with your new table. Merge the least two frequent letters together (in this case 'n' and 'g') and add the frequency together
+* Repeat steps 3 to 4 with your new table. Merge the least two frequent letters together (in this case 'n' and 'g') and add the frequency together
   (`1 + 1 = 2`).
-* Resort your table
+* Resort your table.
 
 | Character                       | Frequency |
 | ------------------------------- | --------- |
@@ -210,7 +219,7 @@ Build a “tree” for each character, combining the lowest frequency characters
 
 ![description of image is in the above text](../Images/03_gn.png)
 
-**Step 3.3 - 3.4**
+**Step 6.2 (looping steps 4 to 5)**
 
 * Repeat the last process for 'u' and 'b', then for 'y' and 'a'
 
@@ -242,7 +251,7 @@ Build a “tree” for each character, combining the lowest frequency characters
 ![description of image is in coments in the raw text](../Images/03_ay.png)
 
 
-**Step 3.5**
+**Step 6.3 (looping steps 4 to 5)**
 
 * Merge the least two frequent letters (or groups of letters) together (in this case 'ws' and 'gn') and add the frequency together
    (`2 + 2 = 4`).
@@ -270,7 +279,7 @@ Build a “tree” for each character, combining the lowest frequency characters
 [//]: <> "       0/ \1    0/ \1   "
 [//]: <> "       g    n  s     w "
 
-**Step 3.6**
+**Step 6.4 (looping steps 4 to 5)**
 
 * Merge the least two frequent letters (or groups of letters) together (in this case 'bu' and 'i') and add the frequency together
    (`2 + 3 = 5`).
@@ -294,7 +303,7 @@ Build a “tree” for each character, combining the lowest frequency characters
 [//]: <> "                0/ \1            "
 [//]: <> "               b     u           "
 
-**Step 3.7**
+**Step 6.5 (looping steps 4 to 5)**
 
 * Merge the least two frequent letters (or groups of letters) together (in this case 'ay' and '*space*') and add the frequency together
    (`3 + 4 = 7`).
@@ -317,7 +326,7 @@ Build a “tree” for each character, combining the lowest frequency characters
 [//]: <> "                0/ \1             "
 [//]: <> "               a     y            "
 
-**Step 3.8**
+**Step 6.6 (looping steps 4 to 5)**
 
 * Merge the least two frequent letters (or groups of letters) together (in this case 'gnsw' and 'l') and add the frequency together
    (`4 + 5 = 9`).
@@ -342,7 +351,7 @@ Build a “tree” for each character, combining the lowest frequency characters
 [//]: <> "               g    n  s     w       "
 
 
-**Step 3.9**
+**Step 6.7 (looping steps 4 to 5)**
 
 * Merge the least two frequent letters (or groups of letters) together (in this case 'ibu' and ' " " ay') and add the frequency together
    (`5 + 7 = 12`).
@@ -352,7 +361,6 @@ Build a “tree” for each character, combining the lowest frequency characters
 | ------------------------------- | --------- |
 | lgnws                           | 9         |
 | **" " ayibu**                   | **12**    |
-
 
 
 ![description of image is in coments in the raw text](../Images/03_space_ayibu.png)
@@ -368,7 +376,7 @@ Build a “tree” for each character, combining the lowest frequency characters
 [//]: <> "             a     y               b     u "
 
 
-**Step 3.10**
+**Step 6.8 (looping steps 4 to 5)**
 
 * Finally, merge 'lgnws', and ' " " ayibu'.
 
@@ -391,9 +399,7 @@ Build a “tree” for each character, combining the lowest frequency characters
 
 #### Creating the dictionary
 
-**Step 4:**
-
-Create bit patterns based on how you "walk" through the tree to your character.
+**Step 7:** Create bit patterns based on how you "walk" through the tree to your character.
 
 Start at the top node, then as you 'walk' the tree, keep track of where you are going by using ```Left = 0```, ```Right = 1```
 
@@ -427,9 +433,11 @@ s = 1110
 w = 1111
 ```
 
-This is the new "dictionary" created with huffman codes and based on the frequencies of characters in the document.
+This is the new "dictionary" created with Huffman codes and based on the frequencies of characters in the document.
 
-High frequency characters are given low number of bits. Also notice that low frequency characters are given a lot of bits.
+High frequency characters are given low number of bits. Also notice that low frequency characters are given a lot of bits
+
+**Step 8:** Using the dictionary, create the compressed "file" that represents the original file.
 
 So the text:
 
@@ -448,7 +456,7 @@ And so forth...
 
 So if you “compress” a piece of English Literature – the “space” would probably be given 3 or 4 bits, as would the “e”, “a” and other high frequency letters. Note that the “q” *could (and probably would) be longer than it’s original 8 bit ASCII.*  
 
-This explains why certain things (like documents) compress really well – there are recurring pattern, and why some images do not compress well. Databases compress very well because there is a lot of blank spaces in them.
+This explains why certain things (like documents) compress really well – there are many recurring pattern - and why some images do not compress well - very few pixels repeat in the same patter.
 
 
 #### Sending the data

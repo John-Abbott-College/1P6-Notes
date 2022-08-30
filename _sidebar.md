@@ -3,3 +3,7 @@
 - [2-Computational Thinking](./Markdown/02_Computational_Thinking.md)
 - [3-Computer Algorithms](./Markdown/03_Computer_Algorithms.md)
 
+**Week 2**
+- [4-Visual Code](./Markdown/04-VisualStudio.md)
+- 
+
