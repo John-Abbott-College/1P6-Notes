@@ -27,7 +27,7 @@ When installing Visual Studio, it will what components you actually need. To sav
 
 All you need for now is: `.NET desktop development`.
 
-![Picture from web page showing options for installation.  A big red arrow points to .Net desktop development](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_vs_options.png?1660943120582)
+![Picture from web page showing options for installation.  A big red arrow points to .Net desktop development](../Images/06_vs_options.png)
 
 > For **detailed install instructions** follow official guides by Microsoft:
 > 
@@ -50,15 +50,15 @@ Once the Visual Studio has started (may take a bit of time), you will see the we
 
 To create a program: choose *Create a new project*.
 
-![Screenshot of Visual Studio Welcome Screen, with arrow pointing to 'create a new project'](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_welcome_screen.PNG?1660943120583)
+![Screenshot of Visual Studio Welcome Screen, with arrow pointing to 'create a new project'](../Images/06_welcome_screen.PNG)
 
 When asked 'what type of project', choose a `C#`, `Windows`, `Console App` project.
 
-![Screenshot of 'Create a new project' visual studio page](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_project_type.PNG?1660943120581)
+![Screenshot of 'Create a new project' visual studio page](../Images/06_project_type.PNG)
 
 Lastly, you need to give your project a name, and a location where you want the project to saved on your hard drive.
 
-![Screenshot for configuring your project](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_solution.PNG?1660943120582)
+![Screenshot for configuring your project](../Images/06_solution.PNG)
 
 
 If asked for Additional information:
@@ -169,18 +169,18 @@ The following diagram shows the contents of two folders, one left one being the 
 
 You MUST zip of the `repos\ConsoleApp3` folder, NOT `repos\ConsoleApp3\ConsoleApp3`. If you see a `solution file` in your folder, then you are in the wrong place, and must go up one level and zip and submit the parent folder.
 
-![Screenshot of file explorer showing an number of folders 'ConsoleApp1', 'ConsoleApp2', ConsoleApp3, ConsoleAppTestBranching](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_app_folder1.PNG?1660943120580) 
+![Screenshot of file explorer showing an number of folders 'ConsoleApp1', 'ConsoleApp2', ConsoleApp3, ConsoleAppTestBranching](../Images/06_app_folder1.PNG) 
 
 Inside *ConsoleApp3*===>
 
-![Screenshot of file explorer showing folders called '.vs' and ConsoleApp3, and a file called ConsoleApp3.sln](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_not_app_folder.PNG?1660943120581)
+![Screenshot of file explorer showing folders called '.vs' and ConsoleApp3, and a file called ConsoleApp3.sln](../Images/06_not_app_folder.PNG)
 
 
 ### Creating an executable
 
 To create a file that will run our program (an executable), we need to `compile` and `link`. Most IDEs, including Visual Studio, will have a menu option called `build` that will do both tasks.
 
-![A screenshot of the menu bar where 'build' menu item is available](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_build.png?1660943120580)
+![A screenshot of the menu bar where 'build' menu item is available](../Images/06_build.png)
 
 There is a difference between `Build Solution` and `Rebuild Solution`, but both will work equally well for now. **I suggest `Build Solution`.**
 
@@ -233,9 +233,9 @@ There are two simple ways to run your program (shown below):
 1. Select `Debug` from the menu, and the select `Start Debugging`, or;
 2. Select the button that is showing a little green arrow, followed by the name of your project.
 
-![Screenshot of Menu 'Debug->Start Debugging'](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_debug_menu.png?1660943120580)
+![Screenshot of Menu 'Debug->Start Debugging'](../Images/06_debug_menu.png)
 
-![Screenshot of Button with little green arrow and the name of the project](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_debug_button.png?1660943120580)
+![Screenshot of Button with little green arrow and the name of the project](../Images/06_debug_button.png)
 
 
 ### Running the Program From the Command Line
@@ -252,7 +252,7 @@ Running the program from the command line is what actually happens behind the sc
     
     1.  Simple way to do this is to navigate to the directory using file explorer, click in the top entry box that displays the location of the directory/folder, ctrl-c to copy
 
-![Screenshot of File Explorer with the folder path selected](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_windir.PNG?1660943120583)
+![Screenshot of File Explorer with the folder path selected](../Images/06_windir.PNG)
 
 2.  Go to your terminal window, and type `cd`, a space , and then ctrl-v to paste your selection:
     
@@ -272,7 +272,7 @@ Voila! You have just run your program.
 
 When running your program from Visual Studio, the results should appear in a console window.
 
-![Screenshot of the result of running hello world program](app://local/home/mau/Insync/mau.jac.cs@gmail.com/Google%20Drive/JAC%20G/Courses/420-1P6/1P6/1P6-Notes/Images/06_HelloWorldOutput.PNG?1660943120580)
+![Screenshot of the result of running hello world program](../Images/06_HelloWorldOutput.PNG)
 
 Sometimes the window closes before you can see what is happening. If that occurs, then add the following lines to the to the end of your `main` function
 
@@ -305,4 +305,3 @@ namespace HelloWorld
 ## Resources
 
 - Video ["Hello World" Explained](https://docs.microsoft.com/en-us/shows/csharp-101/csharp-hello-world-explained) by Microsoft C# 101 series.
-- 
