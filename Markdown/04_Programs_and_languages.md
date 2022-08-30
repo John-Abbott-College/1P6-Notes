@@ -1,86 +1,81 @@
 # Day 4 - Programs and Languages
+*Tuesday, August 30, 2022*
 
-## Boot Up
-
-When your computer is first turned on, the `firmware` looks for code on a specific location on your internal hard drive. This code needs to be a valid operating system (OS) or your computer won't do much of anything.
-
-The operating system is the first of piece of software to be run by the CPU. The operating system says: 
-
-- Good morning CPU! 
-- You have a keyboard connected to you! 
-- You have a monitor! 
-- There is a mouse attached to the system 
-
-- So the o/s (operating system) effectively tells the CPU about the hardware that is connected to the system. 
-  - The OS periodically checks if the hardware configuration (keyboard, USB, mouse) has changed since the last time it checked.
-
-- The o/s does many other things including manage memory, schedule programs, swap things, etc etc…. 
-
-
+Let's take a look at how computers process the algorithm that we've written.
 
 ## CPU
 
-CPU can only understand instructions written in machine language - which is LOW LEVEL binary codes. 
+The Central Processing Unit (CPU) is the computer component that **interprets and executes** the instructions described in our algorithms. 
 
-CPU can 
+The CPU can only understand instructions written in **machine language**.
+
+Machine language is a set of LOW LEVEL binary codes that are hard-coded into the architecture of the CPU.
+
+The CPU can:
 
 - Read and write data from memory 
 - Add, multiply, subtract, divide two numbers 
 - Compare numbers 
 - Move data from one location to another. 
 
-all the above is done at incredibly fast speed…… very fast 
+All the above is done at incredibly fast speed. 
 
-Thank goodness we don't have to write in binary codes!!!! We are writing in a HIGH LEVEL language called C# 
+However, we don't write machine language, we are writing in a HIGH LEVEL language called C#.
 
-> A high level language is typically defined as 
+A **high level language** is typically defined as:
+
+> A programming language enables a programmer  to write programs that are more or less independent of a particular type of computer. Such languages are considered high-level because they are closer to human languages and further from machine languages
 >
-> > a programming language enables a programmer  to write programs that are more or less independent of a particular type of computer. Such languages are considered high-level because they are closer to human languages and further from machine languages
-> >
-> > In contrast, assembly languages are considered low-level because they are very close to machine languages.
+> In contrast, assembly languages are considered low-level because they are very close to machine languages.
 
-- The CPU is running the instructions of the o/s - and the o/s is managing the h/w (hardware) 
-- When the CPU receives an *interrupt* (moving a mouse, hit a key on the keyboard, generates an interrupt), it goes to the O/S code for that interrupt.  
-- The O/S can say - Oh my the user just moved the mouse over a game icon and wants to play solitaire!  
+The CPU is running the instructions of the Operating Systems (OS) - and the OS is managing the computer's hardware.
+
+The CPU can also receive an **interrupt** while it is executing code. An interrupt is an important notification such as moving a mouse, hitting a key on the keyboard.
+Once the CPU receives an interrupt, it asks the OS what is the code to be run for that particular interrupt (Ex.: update the mouse position and repaint the screen).
+
 
 ## How a Program Works
 
-A program is software - it is a series of instructions that carries out a specific task. This could be a game, it could be a database, it could be a web application. Usually stored on the disk drive in a computer in some form. 
+A program is software - it is a series of instructions that carries out a specific task. This could be a game, your browser, an app, etc. Usually stored on the storage drive of your computer.
 
 When a program is executed, 
 
-* the OS is informed that *this* program, located *here* on the disk needs to be executed.  
+1. The OS is informed that ***this*** program, located ***here*** on the disk needs to be executed.  
 
-* The OS will then instruct the IO chip to copy the program (or part of it) into the internal memory (RAM).  
+2. The OS will then instruct the IO chip to copy the program (or part of it) into the internal memory (RAM).
 
-* Once there, the OS instructs the CPU to begin executing the code located in RAM.
+3. Once there, the OS instructs the CPU to begin executing the code located in RAM.
 
-* The CPU uses RAM as a temporary scratchpad between itself and an external storage device (usually a hard disk or USB key). RAM is volatile. 
+4. The CPU uses RAM as a temporary scratchpad between itself and an external storage device (usually a hard disk or USB key).
 
-  - The memory management unit (MMU) manages the movement from RAM to memory within the CPU (CPU cache)
+> **RAM is volatile**, meaning that when the computer loses power, **everything is lost**.
 
-  - The speed of access CPU - RAM (or another level cache) is far faster than accessing the storage device.  
+5. The memory management unit (MMU) manages the movement from RAM to memory within the CPU (CPU cache).
 
-* When a CPU executes instructions it does a *fetch - decode - execute* Cycle 
+6. The speed of access between the CPU and the RAM is far faster than accessing the storage device (even an SSD drive).
 
-  - Fetch - the instruction is retrieved from memory - or a cache very close to the CPU. This means that the program may have originally lived on a hard disk - but it was copied into RAM so that the CPU has high speed access to it. 
-  - Decode - a binary bit pattern interpreted as an instruction - not data - that tells the CPU what to do 
-  - Execute - the instruction is done. 
+7. When a CPU executes instructions it does a *fetch - decode - execute* Cycle 
+
+  - **Fetch** - the instruction is retrieved from memory - or a cache very close to the CPU. This means that the program may have originally lived on a hard disk - but it was copied into RAM so that the CPU has high speed access to it. 
+  - **Decode** - a binary bit pattern interpreted as an instruction - not data - that tells the CPU what to do 
+  - **Execute** - the instruction is done.
 
 ![How programs execute code<br>Rectangle on left indicates RAM.  Out of ram is a ribbon of ones and zeros going to another rectangle on the right, indicating the MMU (memory management unit).  The ribbon passes through the MMU and feeds into another rectangle representing the CPU.  Inside the CPU rectangle, there is a picture of a calculator, as well as glasses and a piece of paper (indicating read/writing properties).  From the 'reading/writing' part of the CPU, another ribbon with ones and zeroes, snakes out to the left, passing through the MMU and ending at the rectangle indicating the RAM.<br> When the ribbon of binary goes from left to right from the RAM to the CPU, it is indicated as FETCH.<br> Where the ribbon of binary enters the CPU, a little brain is drawn, and it is indicated as DECODE.  <br>The calculator is indicated as 'EXECUTE' ](../Images/04_how_programs_execute.png)
 
 **Figure 1** How programs execute code
 
 
-## Levels of Language:  
+## Levels of Language
 
-### Lowest level: 
+### Low level languages
 
-**Machine language** - `10110110  10101011 … `
+**Machine language** is store in binary: `10110110  10101011 … `
 
-Registers in a CPU have names like - PC (program counter - effectively the eye of the computer - this holds the address of the next instruction to be performed, SP - stack pointer, R1 - register 1, R2 register 2, etc…. 
+The CPU has small amounts of storage called **registers**, where it holds the instruction and the values of what is currently being executed and what will be executed next.
 
-Low level - Assembly Language - has instructions like MOV R1, R1  JNZ R3  JMP R4. Each assembly instruction can be translated directly into binary code.
+Registers have names like - PC (program counter), SP (stack pointer), R1 (register 1), R2 (register 2), etc…
+
+**Assembly Language** is a level above machine language and has instructions like MOV R1, R1  JNZ R3  JMP R4. Each assembly instruction can be translated directly into binary code.
 
 Example:
 
@@ -106,6 +101,7 @@ These are very very English-like!!!! We code at a high level - meaning we do not
 >  Think about this - if we write a C# program in "English" - how does the CPU understand this????? I thought the CPU only understands binary??? 
 
 Great Question!!! Glad you asked! 
+
 
 ## Compilers & Interpreters 
 
@@ -168,7 +164,7 @@ If the source code is leaked to the public, then everyone who has it and can go 
 
 ### Open Source
 
-The programming community likes to share ideas and code.  *Open source code* is code where anyone can view the source code at will.  Many programs that you are familiar with (`Linus operating system` `bash` `perl` `python` `ruby` `gcc (gnu c compiler)`) are open source.  
+The programming community likes to share ideas and code.  *Open source code* is code where anyone can view the source code at will.  Many programs that you are familiar with (`Linux operating system` `bash` `perl` `python` `ruby` `gcc (gnu c compiler)`) are open source.  
 
 The advantages of open source software are:
 
@@ -185,13 +181,7 @@ You may not always be allowed to redistribute open source software.  Always chec
 
 ## Tools
 
-Many tools are required to create a program.  So many in fact, that the standard required tools are typically bundled together into one single program... the IDE.
 
-### Integrated Development Environment (IDE) 
-
-Integrated Development Environment - text editor, compiler, debugger, project explorer, etc. These tend to *remember* which files were open. Visual Studio is an IDE. You will notice that its editor is "smart". Visual Studio is good…. 
-
-Think of the IDE as a "workshop" where you create, edit, run, manage your program.  
 
 ## Program Development Cycle
 
