@@ -4,6 +4,6 @@
 - [3-Computer Algorithms](./Markdown/03_Computer_Algorithms.md)
 
 **Week 2**
-- [4-Visual Code](./Markdown/04_VisualStudio.md)
+- [4-Visual Studio](./Markdown/04_VisualStudio.md)
 
 
