@@ -43,7 +43,7 @@ Note that the directory that I am in is the `project` directory, and not the `so
 ```
 
 ## Running the code
-Note that I have to be in the project directory for this to work, and I have to have visual studio installed
+Note that I have to be in the project directory for this to work, and I have to have visual studio installed.
 
 ```bash
 [~/Projects/HelloWorld/HelloWorld] dotnet run

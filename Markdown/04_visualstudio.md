@@ -169,11 +169,7 @@ The following diagram shows the contents of two folders, one left one being the 
 
 You MUST zip of the `repos\ConsoleApp3` folder, NOT `repos\ConsoleApp3\ConsoleApp3`. If you see a `solution file` in your folder, then you are in the wrong place, and must go up one level and zip and submit the parent folder.
 
-![Screenshot of file explorer showing an number of folders 'ConsoleApp1', 'ConsoleApp2', ConsoleApp3, ConsoleAppTestBranching](../Images/06_app_folder1.PNG) 
-
-Inside *ConsoleApp3*===>
-
-![Screenshot of file explorer showing folders called '.vs' and ConsoleApp3, and a file called ConsoleApp3.sln](../Images/06_not_app_folder.PNG)
+![Screenshot of file explorer showing an number of folders 'ConsoleApp1', 'ConsoleApp2', ConsoleApp3, ConsoleAppTestBranching](../Images/06_app_folder1.PNG ':class=inline-img') Inside `ConsoleApp3` => ![Screenshot of file explorer showing folders called '.vs' and ConsoleApp3, and a file called ConsoleApp3.sln](../Images/06_not_app_folder.PNG ':class=inline-img')
 
 
 ### Creating an executable
@@ -214,7 +210,7 @@ ConsoleApp3 (folder for solution)
    |---- ConsoleApp3.sln (solution definition file)
 ```
 
->  ⚠ When submitting work to LEA, the solution folder (the top level `ConsoleApp3` folder in the example above) is what needs to be zipped and submitted.
+>  ⚠ When submitting work to LEA, you must zip and submit the solution folder (the top level `ConsoleApp3` folder in the example above).
 
 ## Running your program
 

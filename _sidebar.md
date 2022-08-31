@@ -1,9 +1,9 @@
 **Week 1**
-- [1-Intro to Course](./Markdown/01_Intro_to_the_course.md)
-- [2-Computational Thinking](./Markdown/02_Computational_Thinking.md)
-- [3-Computer Algorithms](./Markdown/03_Computer_Algorithms.md)
+- [1-Intro to Course](Markdown/01_intro_to_the_course.md)
+- [2-Computational Thinking](Markdown/02_computational_thinking.md)
+- [3-Computer Algorithms](Markdown/03_computer_algorithms.md)
 
 **Week 2**
-- [4-Visual Studio](./Markdown/04_VisualStudio.md)
+- [4-Visual Studio](Markdown/04_visualstudio.md)
 
 
