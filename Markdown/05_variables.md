@@ -2,59 +2,60 @@
 
 ## Definition
 
-A variable is a temporary holding place for a value. This value can be a numeric value such as the user's hourly pay, or it can be a "string" - meaning a word such as the user's name.  Yes… it can hold other things too…. You'll deal with that later. 
+A variable is a temporary holding place for a value. Think of it as a box that can store a single item.
 
-## Variables in programming
+This value can be of different types, for example:
 
-A variable in computer science is a temporary holding location (memory address) for a value. This location has a name - which is the name of the variable.
+- a number, such as the user's hourly pay, or the number of students in a course;
+- a word or sentence (aka. a "string"), such as the user's name;
+- many other things that we'll visit later...
 
-The program (high-level language) refers to this address by the variable's name rather than the specific memory location.
+```csharp
+// Number variables
+int hourlyPay = 21;
+int noStudents = 30;
 
-FACT 
+// String variables
+string userName = "Mauricio";
+string greeting = "Hello there!";
+```
 
-> Everytime you run your program, the operating system will allocate a different place in memory. You don’t really care because you reference that variable by its name in a high level language. The fact that it is created in a different place in RAM every run doesn’t affect you. Windows will handle this memory allocation. 
-
-### An anology?
-
-> An **accountant** is doing your taxes.  What is most important about identifying you is your **social insurance number** (SIN).  But it would not be nice to constantly call you by your number, and it would be hard for the accountant to remember what your number actually is.  Much better if the accountant simply calls you by your **first name** when communicating with you.  Only the **government** cares about your SIN.
->
->
->| Analogy                | Programming                     |
->| ---------------------- | ------------------------------- |
->| client's name          | variable name                   |
->| the client             | data                            |
->| government             | cpu                             |
->| accountant             | high level language             |
->| social inurance number | memory address for data storage |
->
 
 ### Variable Names
 
-#### The variable name should be meaningful!
+> 👉 Variable name should be **meaningful**!
+>
+> Anyone reading your code should be able to guess **what a variable represents** and **how it will be used** just based on the variable name.
 
 Examples: 
 
-* `highscore`
-
-* `hourlypay`
-
+* `highScore`
+* `hourlyPay`
 * `w`
 
-What do you think `highscore` is referring to?  What about `hourlypay`?
+What do is `highScore` referring to?
+	- It depends on the context but if we are looking at the source code a game, we would have a good idea of what it holds and what's intended for.
 
-Is `w` a good choice for a variable name? Probaly not, because I personally have no idea to what it could be referring to.
+What about `hourlyPay`?
+	- Again, it's context dependent, but if we know we are looking at a budgeting app, we can guess it's meaning.
 
-> It is important that you name your variables properly! 
+ `w`  is a terrible choice for a variable name.
+	 - Only the original developer know what it means.
+
+> 💣 Code submitted with poor variable names will have marks deducted.
 
 There are rules for naming variables as well standards - refer to the web for this. 
 
-#### Rules
+#### Naming Rules
 
 1. The variable name **cannot** start with a number
 2. It may contain letters and numbers after the first character
 3. It may contain an '\_' (underscore)
-4. It may **not** contain a ' ' (space), a '#' (hashtag), '!' (exclamation point), '.' (period)
-5. Variable names may not be a *reserved* word.  *Reserved* words are typically special words that the compiler expects to mean certain things. The list of reserved words is dependent on the computer language you are using. Example `print` is typically a reserved word for most languages
+4. It **cannot** contain a ' ' (space), a '#' (hashtag), '!' (exclamation point), or '.' (period)
+5. Variable names **cannot** be a *reserved* word. 
+	- *Reserved* words are special words that the compiler expects to mean certain things internal to the language.
+	- The list of reserved words is dependent on the computer language you are using. Example `print` is typically a reserved word for most languages.
+	- For a list of reserved words in C#, see the official documentation [C# Keywords](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/).
 
 #### Naming Standards
 
@@ -170,6 +171,31 @@ The code is parsed right to left.  So firstly, the program needs to
 * We now have `sandyAge = 36`.  Again, working from right to left, and knowing that the equals sign (`=`) actuall means *assign to*, the computer will place the number `36` into the `sandyAge` RAM box.
 
 ## Extra Info
+
+### Variables in programming
+
+In reality, a variable is a temporary holding location (memory address) for a value. This location has a name - which is the name of the variable.
+
+The program (high-level language) refers to this address by the variable's name rather than the specific memory location.
+
+FACT 
+
+> Everytime you run your program, the operating system will allocate a different place in memory. You don’t really care because you reference that variable by its name in a high level language. The fact that it is created in a different place in RAM every run doesn’t affect you. Windows will handle this memory allocation. 
+
+### An anology?
+
+> An **accountant** is doing your taxes.  What is most important about identifying you is your **social insurance number** (SIN).  But it would not be nice to constantly call you by your number, and it would be hard for the accountant to remember what your number actually is.  Much better if the accountant simply calls you by your **first name** when communicating with you.  Only the **government** cares about your SIN.
+>
+>
+>| Analogy                | Programming                     |
+>| ---------------------- | ------------------------------- |
+>| client's name          | variable name                   |
+>| the client             | data                            |
+>| government             | cpu                             |
+>| accountant             | high level language             |
+>| social inurance number | memory address for data storage |
+>
+
 
 ### Rules
 
@@ -300,7 +326,6 @@ apples = 15
 ```
 
 
-
 ## Lab Work
 
 What is the output of the following bit of code?
@@ -327,4 +352,10 @@ Console.WriteLine(c):
 ```
 
 
+### Review
+
+If you feel like you need a review, complete the following two tutorials from Microsoft:
+
+- [Hello World - Introduction to C# interactive C# tutorial](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/hello-world) 
+- [Manipulate integral and floating point numbers in C#](# Manipulate integral and floating point numbers in C#)
 

@@ -238,11 +238,13 @@ There are two simple ways to run your program (shown below):
 
 Running the program from the command line is what actually happens behind the scenes when you click on the play button listed above.
 
+The steps below will 
+
 **Steps**
 
 1.  Open a command window (or terminal, or console)
     
-    1.  Search for `cmd` in the Windows search bar
+    1.  Example: In Windows search for `cmd` or `PowerShell` in the Windows search bar. For Mac and Linux, open the terminal app.
     
 2.  Navigate to the directory where the executable file is
     
@@ -256,10 +258,9 @@ Running the program from the command line is what actually happens behind the sc
      cd c:\users\compsci\repos\ConsoleApp3\ConsoleApp3\bin\Debug\netcoreapp3.1
     ```
     
-    1.  To confirm that you are in the correct location, type `dir` in the command window, and a list of files in the current directory will be shown.
+    1.  To confirm that you are in the correct location, type `dir` or `ls` in the terminal, and a list of files in the current directory will be shown.
     
-3.  Type the name of the program executable, and hit return/enter.
-    
+3.  Type the name of the program executable (for Windows, it's the file ending in `.exe`) and hit return/enter.
 
 Voila! You have just run your program.
 
@@ -298,6 +299,15 @@ namespace HelloWorld
 ```
 
 
+## Review Lab
+
+Would you like review and practice the content of this lesson?
+
+Follow the tutorial below by Microsoft:
+
+- [Write your first C# code](https://docs.microsoft.com/en-us/learn/modules/csharp-write-first/)
+
 ## Resources
 
-- Video ["Hello World" Explained](https://docs.microsoft.com/en-us/shows/csharp-101/csharp-hello-world-explained) by Microsoft C# 101 series.
+- Video ["Hello World" Explained](https://docs.microsoft.com/en-us/shows/csharp-101/csharp-hello-world-explained) by Microsoft C# 101 series
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qmZ2RVZ4giY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
