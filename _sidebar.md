@@ -5,5 +5,7 @@
 
 **Week 2**
 - [4-Visual Studio](Markdown/04_visualstudio.md)
+- [5-Variables: Int & String](Markdown/05_variables_int_strings.md)
+
 
 
