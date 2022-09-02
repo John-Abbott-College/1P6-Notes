@@ -118,11 +118,15 @@ int sandyAge;
 int newAge;
 
 newAge = sandyAge + 1; // ERROR!!!, sandyAge has not yet been defined!
+```
+
+```csharp
+int sandyAge;
+int newAge;
 
 sandyAge = 34;         // Assigning it a value
 newAge = sandyAge + 1; // No problem! Now we can use it
 ```
-
 
 ## String and Integer Data Types
 
@@ -151,9 +155,8 @@ The live-cycle of a variable in C# is:
 
 ```csharp
 int myScore;                // declaration or birth 
-int totalScore;
-myScore = 0;                // definition or assignment (giving it a value)
-myScore = myScore + 10;     // Using the variable
+myScore = 2;                // definition or assignment (giving it a value)
+myScore = myScore + 10;     // Using the variable. myScore is now 12.
 ```
 
 > Every time you run your program, the operating system will reserve a place in RAM memory for the variable.
@@ -308,9 +311,14 @@ Console.WriteLine( $"{greeting} {firstName}!" );  // Output: Hello Mauricio!
 
 ### Variable Parsing
 
-Parsing is the act of reading a block of instructions and "breaking it down" and interpreting each little instruction. 
+Parsing is the act of reading a block of text, breaking it down into smaller parts, and interpreting it.
 
-Here is how variable parsing is interpreted by the computer:
+Here is how variable parsing is interpreted by the compiler:
+
+```csharp
+	variable = something_expression
+//    (LHS)           (RHS)
+```
 
 * Parsing an assignment statement is from **right to left**. 
 * What is on the right of the equals sign is calculated first.
@@ -326,57 +334,68 @@ The variable name simply becomes an *alias* for a memory location address.
 
 Imagine that the memory (RAM) is just a bunch of boxes with a unique addresses, all lined up in a neat row.
 
-When the programmer declares a variable with a name `sandyAge`, it is as if someone wrote the name of that variable (`sandyAge`) on a particular RAM box.
+When the programmer declares a variable with a name `myAge`, that variable points to a particular address in RAM (this of it as a RAM box).
 
 ```csharp
-int sandyAge;
+int myAge;
 ```
 
 There is nothing in the box (at least not yet).
 
+![Illustration of variable declaration pointing to a ram memory address](../Images/05_variables_assignment_ram_1.png)
+
 ---
 
-I want to put the number `5` in the box?  How do I do that?  By using an *assignment statement*.
+I want to put the number `35` in the box?  How do I do that?  By using an *assignment statement*.
 
 ```csharp
-sandyAge = 35;
+myAge = 35;
 ```
 
 What does the above instruction mean?  
 
-* Firstly: read from right to left (instead of the typical left to right). The number `35` is the data.  The equals sign (`=`) doesn't *really* mean equal, it means assign to.  
+* Firstly: read from **right to left** (instead of the typical left to right). The number `35` is the data.  The equals sign (`=`) doesn't *really* mean equal, it means **assign to**.  
 
 * Recap, take the number and assign it to... *what*?  
-* To the `sandyAge` box in RAM.  How do we find that box?  We don't care, because the CPU and O/S will take care of finding the RAM box that has the name `sandyAge` written on it.
+* To the `myAge` box in RAM.  How do we find that box?  We don't care, because the CPU and O/S will take care of finding the RAM box that has the name `myAge` written on it.
 
-* Lastly, the number `35` is placed in the `sandyAge` RAM box.
+* Lastly, the number `35` is placed in the `myAge` RAM box.
+
+![](../Images/05_variables_assignment_ram_2.png)
 
 ---
 
-My birthday has come and gone, and I want to change my age by one year.  How do I do that?
+Your birthday has come, and you want to change your age by one year.
 
 Continuing with the analogy...
 
-* I need to get my current age out of the `sandyAge` box
-* Whatever value it is, I need to add one to it
-* Then I need to put this new number back into the `sandyAge` box.
+* Get the current age out of the `myAge` box.
+* Whatever value it is, we add one to it.
+* Then, put the result back into the `myAge` box.
 
 ```csharp
-sandyAge = sandyAge + 1;   // this is not a MATH formula !!!
+	myAge = myAge + 1;   // this is not a MATH formula! It's variable assignment
+//  (LHS)	  (RHS)
 ```
 
-The above bit of code does exactly what we want.  
+The code is parsed right to left, starting with the RHS:
 
-The code is parsed right to left.  So firstly, the program needs to 
+1. Parsing RHS:  `myAge + 1`
 
-* parse `sandyAge + 1`.  It recognizes that `sandyAge` is a variable, so it gets the number from the `sandyAge` RAM box, which currently happens to be the number `35`.
-* Replacing `sandyAge` with `35`, the program now needs to parse `35 + 1`.  Because computers are good at math, it knows that the final number should be `36`.
-* We now have `sandyAge = 36`.  Again, working from right to left, and knowing that the equals sign (`=`) actuall means *assign to*, the computer will place the number `36` into the `sandyAge` RAM box.
+	- The program recognizes that `myAge` is a variable, so it gets the number from the `myAge` RAM box, which currently happens to be the number `35`.
+	*  `myAge` is thus replaced with the value `35`, the program now needs to parse `35 + 1`
+	* The result is calculated to be `36`.
+
+2. Variable assignment: now we have `myAge = 36`.
+
+- Again, working from right to left, and knowing that the equals sign (`=`) actually means ***assign to***, the computer will place the number `36` into the `myAge` RAM address.
+
+![](../Images/05_variables_assignment_ram_3.png)
 
 
-## Examples
+## Exercises
 
-1. What are the outputs?
+**Exercise 1:** What are the outputs?
 
 ```csharp
 // Declare my variables first
@@ -398,7 +417,7 @@ oranges = oranges + (apples * 2);
 Console.WriteLine(apples, oranges, grapes)
 ```
 
-2. What are the errors?
+Exercise 2: What are the errors?
 
 ```csharp
 highScore = highScore;
@@ -455,7 +474,7 @@ grapes;
 apples = 15;
 ```
 
-3. What is the output of the following bit of code?
+**Exercise 3:** What is the output of the following bit of code?
 
 ```csharp
 int a, b, c;
@@ -476,6 +495,12 @@ Console.WriteLine("The values are ");
 Console.WriteLine(a);
 Console.WriteLine(b);
 Console.WriteLine(c):
+
+// Hint: create a table to track how they change (tracing)
+// | a | b | c |
+// -------------
+// | 4 | 3 | 2 |
+// | ? | ? | ? |
 ```
 
 
