@@ -36,255 +36,15 @@ Example: Huffman Compression
 
 > 1. Find all unique letters in the text to be compressed
 > 2. Count how many time each letter is used, and sort from lowest frequency to highest frequency
-> 3. Group the lowest two frequency occurences together, and construct a partial tree, with one letter (or partial tree) to the left, and one to the right.  
+> 3. Group the lowest two frequency occurrences together, and construct a partial tree, with one letter (or partial tree) to the left, and one to the right.  
 >    1. Take note of the total frequency for both letters (partial tree)
 > 4. Insert this partial tree (with the new frequency) back into the list, and re-sort.
 > 5. Repeat steps 3 to 4 until there is only one tree
-> 6. Create a dictionary by taversing the tree from the top to the desired letter, each left traversal is represented by a 0, and a right traversal is represented by a 1.
+> 6. Create a dictionary by traversing the tree from the top to the desired letter, each left traversal is represented by a 0, and a right traversal is represented by a 1.
 > 7. Using the dictionary, create the sequence of zeros and ones to represent the original text
 
 NOTE: The above pseudo-code would be difficult for some people to understand if they do not understand what a 'partial tree' is.  Pseudo-code needs to reflect the understanding of the person reading it.
 
-
-
-## Visual Studio
-
-**Microsoft Visual Studio** is an [integrated development environment](https://en.wikipedia.org/wiki/Integrated_development_environment) (IDE) from [Microsoft](https://en.wikipedia.org/wiki/Microsoft).
-
-We will be using Visual Studio for our C# programs.  Visual Studio is already installed in the labs, but if you want to have Visual Studio at home, you can download Visual Studio [here](https://visualstudio.microsoft.com/downloads/).  I highly recommend the 'community' version, because, not only is it free, it also does not have a lot of unnecessary advanced tools.
-
-### Installation at home
-
-When installing Visual Studio, it may ask you what components you actually need.  To save space on your computer, you can choose to only install what you need for this course, and leave the rest for a later date. (see [this page](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2019)).  All you need for now is `.NET desktop development`.
-
-![Picture from web page showing options for installation.  A big red arrow points to .Net desktop development](../Images/06_vs_options.png)
-
-
-
-#### Mac users
-
-[Download Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
-
-## Exploring Visual Studio
-
-### Starting Visual Studio
-
-To run visual studio, just type Visual Studio into the Windows search bar (on MAC, command shift to get the search bar).
-
-Make sure you select 'Visual Studio', and NOT 'Visual Studio Code'!
-
-![Screen shot of Windows showing choices for 'Visual'.  Must select Visual Studio and not Visual Studio Code](../Images/06_starting_visual_studio2.PNG)
-
-
-
-### Create a New Project
-
-Once the Visual Studio has started (this may take a bit of time), you will see the following welcome screen.  To create a program, you must create a project.  
-
-![Screenshot of Visual Studio Welcome Screen, with arrow pointing to 'create a new project'](./Images/./06_welcome_screen.PNG)
-
-
-
-Once you have selected the 'create a new project', you will be asked 'what type of project' do you want to create.  We want to create a `C#`, `Windows`, `console` project.
-
-![Screenshot of 'Create a new project' visual studio page](./Images/./06_project_type.PNG)
-
-
-
-Lastly, you need to give your project a name, and a location where you want the project to saved on your hard drive.
-
-![Screenshot for configuring your project](./Images/./06_solution.PNG)
-
-
-
-### Project Name Rules !
-
-1. Do NOT use spaces in the name of your project
-2. You cannot change the name of your project once it is created (Visual Studio is fussy)
-3. The name of your project should be meaningful
-
-## Our First Program
-
-Depending on the exact configuration of Visual Studio, the default program created for your project will look exactly, or similar to, the following:
-
-```csharp
-using System;
-
-namespace HelloWorld
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-}
-
-```
-
-#### Deciphering 'Hello World'  Code - Line by Line
-
-```csharp
-using System;	
-```
-
-The programs that we write must eventually *talk* to the hardware, via keyboards and screens.  To make the developer's life more simple, many common bits of code are bundled into libraries, where the developer can access this code as necessary.
-
-`using System;` is just a fancy way of instructing the compiler into including the code from the `System` library.  For this course, we will *always* be using the System library.
-
-```csharp
-namespace HelloWorld { ... }
-```
-
-At this point it is not necessary to understand what this statement does in detail, but suffice it to say that variable names are grouped together in *namespaces*. This allows a developer to re-use certain variable names, as long as they are in different namespaces.
-
-In the above code, `HelloWorld` is the name of the namespace.  The name can be changed if desired.
-
-```csharp
-class Program { ... }
-```
-
-C# is an object-orientated programming language, which means everything must be in a `class`.  What object orientated programming is, and what a `class` is, will be discussed in Programming II.  At this point, just consider this required code.
-
-In the above code, `Program` is the class name, and may be changed if desired.
-
-```csharp
-static void Main(string[] args) { ... }
-```
-
-This is the main function of our program (functions will be discussed very soon).  When the program is first executed, the computer needs to know where to start.  The computer *looks for* the function `Main`, and starts execution at that point.  Thus, this is the `entry point` of our program.
-
-The `string[] args` says that the function will be called where the variable `args` will include any text that is written when the program is executed (this will be demonstrated in an example later in these notes)
-
-```csharp 
-Console.WriteLine("Hello World!");
-```
-
-This line will write whatever variable or string is enclosed between the parenthesis (in other words `Hello World!`) and print that to the console/terminal window.
-
-### Submitting your work on LEA
-
-Navigate to the folder where you created your project.  Be *very* careful, because there are two folders (one within the other) that have the name of your project.
-
-You need to look for the 'top level' folder.
-
-The following diagram shows the contents of two folders, one left one being the contents of my `repos` folder, the other being the contents of `repos\ConsoleApp3` folder.
-
-You MUST zip of the `repos\ConsoleApp3` folder, NOT `repos\ConsoleApp3\ConsoleApp3`.  If you see a `solution file` in your folder, then you are in the wrong place, and must go up one level and zip and submit the parent folder.
-
-![Screenshot of file explorer showing an number of folders 'ConsoleApp1', 'ConsoleApp2', ConsoleApp3, ConsoleAppTestBranching](../Images/06_app_folder1.PNG) ===> ![Screenshot of file explorer showing folders called '.vs' and ConsoleApp3, and a file called ConsoleApp3.sln](../Images/06_not_app_folder.PNG) 
-
-### Creating an executable
-
-To create a file that will run our program (an executable), we need to `compile` and `link`. Most IDEs, including Visual Studio, will have a menu option called `build` that will do both of these tasks for us.
-
-![A screenshot of the menu bar where 'build' menu item is available](../Images/06_build.png)
-
-There is a difference between `Build Solution` and `Rebuild Solution`, but both will work equally well for now.  I suggest `Build Solution`.
-
-### What files have been created?
-
-> The following examples assume that you have set your computer to show filename extensions.  If you haven't, your results may be ever so slightly different than what I am showing in these notes.
-
-After creating your project, your directory structure should look similar to (but not necessarily exactly to) the following:  (ps... this is the structure that needs to zipped and submitted to LEA for homework assignments)
-
-```text
-ConsoleApp3 (folder)
-   |---- .vs (folder)
-   |
-   |---- ConsoleApp3 (folder)
-   |  |---- obj (folder containing object files)
-   |  |
-   |  |---- bin (folder containing binary files)
-   |  |  |---- Debug (folder)
-   |  |     |---- netcoreapp3.1 (folder - some people may not have this folder)
-   |  |        |---- ConsoleApp3.deps.json (file)
-   |  |        |---- ConsoleApp3.dll (file)
-   |  |        |---- ConsoleApp3.exe (file - this is the EXECUTABLE)
-   |  |        |---- ConsoleApp3.runtimeconfig.dev.json (file)
-   |  |        |---- ConsoleApp3.runtimeconfig.json (file)
-   |  |
-   |  |---- ConsoleApp3.csproj (file)
-   |  |---- Program.cs (the source code of your program)
-   |
-   |---- ConsoleApp3.sln (solution file)
-```
-
-## Running your program
-
-All you need to run your program is the executable file, found in the `bin\Debug` directory of your solution folder.  The executable can be copied and shared with friends.  You do *not* need to have Visual Studio installed to run your programs. :)
-
-### Running the Program From the Command Line
-
-**Steps**
-
-1. Open a command window (or terminal, or console)
-
-   1. Search for `cmd` in the Windows search bar
-
-2. Navigate to the directory where the executable file is
-
-   1. Simple way to do this is to navigate to the directory using file explorer, click in the top entry box that displays the location of the directory/folder, ctrl-c to copy
-
-      <img src="./Images/06_windir.PNG" alt="Screenshot of File Explorer with the folder path selected" style="zoom:60%;" />
-
-   2. Go to your terminal window, and type `cd`, a space ` `, and then ctrl-v to paste your selection:
-   
-      ```dos
-	   cd c:\users\compsci\repos\ConsoleApp3\ConsoleApp3\bin\Debug\netcoreapp3.1
-	   ```
-	
-	3. To confirm that you are in the correct location, type `dir` in the command window, and a list of files in the current directory will be shown.
-	
-3. Type the name of the program executable, and hit return/enter.  
-
-Voila! You have just run your program.  
-
-### Running the Program from Visual Studio
-
-Running the program from the command line is a bit of a nuisance while developing your code.  Thus, Visual Studio has implemented the ability to run the code from the IDE itself.
-
-There are two simple ways to run your program (shown below).  One, select `Debug` from the menu, and the select `Start Debugging`, or two, select the button that is showing a little green arrow, followed by the name of your project.
-
-![Screenshot of Menu 'Debug->Start Debugging'](./Images/./06_debug_menu.png)
-
-![Screenshot of Button with little green arrow and the name of the project](./Images/./06_debug_button.png)
-
-
-
-### Result:
-
-When running your program from Visual Studio, the results should appear in a console window. 
-
-![Screenshot of the result of running hello world program](./Images/./06_HelloWorldOutput.PNG)
-
-Sometimes the window closes before you can see what is happening.  If that occurs, then add the following lines to the to the end of your `main` function
-
-```csharp
-Console.Write("\nPress any key to continue... ");
-Console.ReadLine();
-```
-
-It will then look like...
-
-``` csharp
-using System;
-namespace HelloWorld
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-            
-            // !!!! Add the following lines to your code !!!
-            Console.Write("\nPress any key to continue... ");
-						Console.ReadLine();
-        }
-    }
-}
-```
 
 # Programming in C#
 
@@ -380,6 +140,32 @@ I highly recommend using lots of comments in your code.
 
 It is normal that programs do not do what we want them to do.
 
+The the two most types of errors are **Syntax errors** and **Logic errors**.
+
+#### Syntax Error
+
+A syntax error occurs when the compiler cannot figure out what it is that you want it to do.  
+
+This can be because you misspelled an instruction, used a variable that has not yet been defined, lost a quote (`"`), missing a squiggly brace (`}`), or a number of other errors.
+
+When you try to compile your code, the compiler will notify you if you have any syntax errors.
+
+#### Logic Error
+
+This is when you want your algorithm to accomplish a task, but if you follow the directions of the algorithm, it doesn't do what you want it to do.
+
+> *Mom*: Brush your teeth
+>
+> *Kid*: OK
+>
+> *Mom*: Why can't I smell toothpaste on your breath?
+>
+> *Kid*: You didn't tell me that I needed to use toothpaste.
+
+
+
+
+
 ### Staring at Your Code Method
 
 One method of `debugging` the code is to stare at it for a very long time, and hope that you see your error.  This is not a very effective way of working.
@@ -460,7 +246,7 @@ The steps required are:
       1. double click on the left-most column right next to the line where you want the code to stop execution, or
       2. right click a line of code, and select `set breakpoint`
       
-      ![Screenshot of code with a breakpoint](./Images/./06_years_to_retirement.PNG)
+      ![Screenshot of code with a breakpoint](../Images/06_years_to_retirement.PNG)
 
 2. Start running the program as usual (ex: menu: `Debug` ->`Start Debugging`).  
 
@@ -472,21 +258,21 @@ The steps required are:
 
    1. Mouse-over a particular variable, and its current value will be shown, or
 
-      ![Screenshot of 'mousing over' a variable while debugging](./Images/./06_mouse_over.PNG)
+      ![Screenshot of 'mousing over' a variable while debugging](../Images/06_mouse_over.PNG)
 
    2. Right-click on a variable, and select `Add Watch`.  
 
-   ![Screenshot of Adding a variable to the watch window](./Images/./06_addwatch.PNG)
+   ![Screenshot of Adding a variable to the watch window](../Images/06_addwatch.PNG)
 
    A new window in the IDE will open, showing any variables that you are currently watching, plus the values of those variables.
 
 5. Step through the code, i.e., execute one line of code at a time, by clicking the `step into` button  in the top menu (or press `F11`).  
 
-   ![Screenshot of the debug menu](./Images/./06_debug_options.png)
+   ![Screenshot of the debug menu](../Images/06_debug_options.png)
 
    1. As the variables are being modified by executing a line of code, changes will be noted in the `watch` window.
 
-      ![Screenshot of a watch window](./Images/./06_watchwindow.PNG)
+      ![Screenshot of a watch window](../Images/06_watchwindow.PNG)
 
 # Program Examples
 
