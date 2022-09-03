@@ -320,21 +320,20 @@ Here is how variable parsing is interpreted by the compiler:
 //    (LHS)           (RHS)
 ```
 
-* Parsing an assignment statement is from **right to left**. 
-* What is on the right of the equals sign is calculated first.
-* The result of the above calculation is saved in the variable (RAM), overwriting anything that may have already been there.
+* Parsing an assignment statement is from **right to left** <--. 
+* What is on the right of the equals sign - the right hand side (RHS) - is calculated first.
+* The result of the above calculation is saved in the variable, overwriting anything that may have already been there.
 * The left hand side (LHS) of an assignment statement must be a variable name. 
-	* Remember that we are going to put the value from the right hand side (RHS) into the RAM box that has the variable name written on it.  Anything other than a variable name makes no sense.
-* Programs execute statements **one at a time**, in sequence.
+* Programs execute statements **one at a time**, from **top to bottom**, in sequence.
 
 
-#### Analogy for How Variables Parsing
+#### Analogy for Variable Parsing
 
 The variable name simply becomes an *alias* for a memory location address.
 
-Imagine that the memory (RAM) is just a bunch of boxes with a unique addresses, all lined up in a neat row.
+Imagine that the memory (RAM) is just a bunch of boxes with a unique addresses, all lined up in a neat column. Each box can hold a single value and we'll call these boxes the **RAM box**.
 
-When the programmer declares a variable with a name `myAge`, that variable points to a particular address in RAM (this of it as a RAM box).
+When the programmer declares a variable with a name `myAge`, that variable points to a particular address in RAM.
 
 ```csharp
 int myAge;
@@ -346,7 +345,7 @@ There is nothing in the box (at least not yet).
 
 ---
 
-I want to put the number `35` in the box?  How do I do that?  By using an *assignment statement*.
+Want to put the number `35` in the box?  How to do that?  By using an *assignment statement*.
 
 ```csharp
 myAge = 35;
@@ -354,10 +353,10 @@ myAge = 35;
 
 What does the above instruction mean?  
 
-* Firstly: read from **right to left** (instead of the typical left to right). The number `35` is the data.  The equals sign (`=`) doesn't *really* mean equal, it means **assign to**.  
+* Firstly: read the instruction from **right to left**. The number `35` is the data.  The equals sign (`=`) doesn't *really* mean equal, it means **assign to**.  
 
-* Recap, take the number and assign it to... *what*?  
-* To the `myAge` box in RAM.  How do we find that box?  We don't care, because the CPU and O/S will take care of finding the RAM box that has the name `myAge` written on it.
+* What is the assigned to?  
+	* To the `myAge` box in RAM.  How do we find that box?  We don't care, because the CPU and OS will take care of finding the address of the RAM box that the variable  `myAge` is pointing to.
 
 * Lastly, the number `35` is placed in the `myAge` RAM box.
 
@@ -382,13 +381,13 @@ The code is parsed right to left, starting with the RHS:
 
 1. Parsing RHS:  `myAge + 1`
 
-	- The program recognizes that `myAge` is a variable, so it gets the number from the `myAge` RAM box, which currently happens to be the number `35`.
+	- The program recognizes that  `myAge` is a variable, so it gets the number from the `myAge` RAM box, which currently happens to be the number `35`.
 	*  `myAge` is thus replaced with the value `35`, the program now needs to parse `35 + 1`
 	* The result is calculated to be `36`.
 
-2. Variable assignment: now we have `myAge = 36`.
-
-- Again, working from right to left, and knowing that the equals sign (`=`) actually means ***assign to***, the computer will place the number `36` into the `myAge` RAM address.
+2. Variable assignment:
+	- now we have `myAge = 36`.
+	- Again, working from right to left, and knowing that the equals sign (`=`) actually means ***assign to***, the computer will place the number `36` into the `myAge` RAM address.
 
 ![](../Images/05_variables_assignment_ram_3.png)
 
@@ -417,6 +416,7 @@ oranges = oranges + (apples * 2);
 Console.WriteLine(apples, oranges, grapes)
 ```
 
+<br>
 Exercise 2: What are the errors?
 
 ```csharp
@@ -473,6 +473,7 @@ grapes;
 // is associated with the apples variable name
 apples = 15;
 ```
+<br>
 
 **Exercise 3:** What is the output of the following bit of code?
 
@@ -506,8 +507,9 @@ Console.WriteLine(c):
 
 ## Review & Resources
 
-If you feel like you need a review, complete the following two tutorials from Microsoft:
-Note: they cover a few extra things we haven't show in class yet (but it' good to know).
+If you feel like you need a review, complete the following tutorial from Microsoft:
+
+>Note: these tutorials cover a few extra things we haven't show in class yet (but it' good to know).
 
 - [Hello World - Introduction to C# interactive C# tutorial](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/hello-world) 
 
