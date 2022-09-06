@@ -1,4 +1,4 @@
-# Day 5 - Variables
+# 05: Variables
 
 ## Definition
 

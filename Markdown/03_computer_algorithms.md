@@ -1,4 +1,4 @@
-# Day 3 - Computer Compression Algorithms
+# 03: Computer Compression Algorithms
 
 *Friday - August 26, 2022*
 
