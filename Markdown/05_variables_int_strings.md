@@ -230,21 +230,28 @@ Console.WriteLine("Hello " + name + ", your age is " + 35);
 ```
 
 
-> **Hidden Data Type Conversions**
->
-> Whenever you have a statement that looks like...
->
-> ```csharp
-> variable = something_expression
-> ```
->
-> ... this is an `assignment` statement.  The right side of the equals sign (`RHS`) is evaluated first, and the result (`value`) is placed inside the `variable`.
->
-> **If the left-hand (`LHS`) side of the assignment statement is declared as a string, and there are plus (`+`) operators on the `RHS`, then everything on the `RHS` is converted to a string before it is concatenated.**
+### Assignment Expressions & Hidden Data Type Conversions
+
+Whenever you have a statement that looks like...
+
+```csharp
+variable = something_expression
+```
+
+... this is an `assignment` statement. 
+ 
+In `assignment` statements, the right side of the equals sign (`RHS`) is **evaluated first**, and then the result (`value`) is placed inside the `variable`.
+ 
+Here is how the evaluation of the `RHS` happens:
+
+1. The evaluation of the `RHS`  happens from left -> to right.
+2. **Inside the `RHS`, if the left element in a operation is a `string`, then both elements are converted to `string` and concatenated.**
+3. Once the `RHS` is evaluated, it's value is **assigned to the `LHS`**.
+
 
 **MAJOR WARNING**
 
-The behaviour of mixing `strings` and `int` types in a statement which includes the `+` operator can be different depending of the construction of the expression.
+The behaviour of mixing `strings` and `int` types in a statement which includes the `+` operator can be different depending of the construction of the expression (see section above).
 
 ```csharp
 string output;     // from here on, output is always of type string.
