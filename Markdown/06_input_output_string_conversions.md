@@ -106,12 +106,12 @@ Console.WriteLine($"Hello {name}, how are you?");
 ```csharp
 int myAge = 41;
 string userInput;
- 
+
 Console.WriteLine("Enter your age: ");
 userInput = Console.ReadLine();
 
-int difference = myAge - userInput;    // ERROR! Operator '-' cannot be applied to operands of type 'int' and 'string' 
-Console.WriteLine($"I am {difference} years older than you.");
+int ageDifference = myAge - userInput;    // ERROR! Operator '-' cannot be applied to operands of type 'int' and 'string' 
+Console.WriteLine($"I am {ageDifference} years older than you.");
 ```
 
 If you would like to capture user input as a number, you must **first convert the input from string to integer.** 
@@ -120,17 +120,21 @@ If you would like to capture user input as a number, you must **first convert th
 
 Remember that computers, internally, cannot tell the difference between numbers and strings (text).  The string `"35"` is stored in the computer in a **_very_** different way than the integer `35`.
 
-> Remember that the word *parse* refers to reading text, and inferring specific information.
+> Remember that the word ***parse*** refers to reading text, and inferring specific information.
 
-There are a few different ways to convert a `string` to `int`, for now we will use the function: `int.Parse()`:
+There are a few different ways to convert a `string` to `int`. For now, we'll use the function `int.Parse()`:
 
 ```csharp
 string variableOne = "35";
-int variableTwo;
-variableTwo = int.Parse(variableOne);
+int variableTwo = 10;
+
+int oneAsInt;
+oneAsInt = int.Parse(variableOne);
+
+Console.WriteLine($"Subtracting two from one gives: {oneAsInt - variableTwo}");
 ```
 
-NOTE: If the computer cannot convert the string to a number, then it will crash the program.
+> **Note:** If the computer cannot convert the string to a number, then it will crash the program. 💥
 
 ```csharp
 // THIS WILL CRASH THE PROGRAM, BECAUSE 'HELLO WORLD' CAN NOT
@@ -152,7 +156,7 @@ Like in most languages, in C#, you can perform basic mathematical operations usi
 | `+`    | add      |
 | `-`    | subtract |
 
-### Integers Truncation
+Example 1:
 
 ```csharp
 int unitsPerPallet = 10;    // Units insite a pallet.
@@ -162,7 +166,26 @@ int totalUnits = unitsPerPallet * qtyPallets;
 // Output: 50
 ```
 
-However, we can problems if we divide integers:
+Example 2:
+
+```csharp
+int varA = 10;
+int varB = 2;
+
+Console.Write($"Multiplication: {varA * varB}, Division: {varA / varB}, Subtraction: {varA - varB}");
+
+// Output
+// Multiplication: 20, Division: 5, Subtraction: 8
+```
+
+Note that when using string interpolation (`$" "` syntax), we can write computer expressions inside the `{ }`, not just variable names.
+
+
+### Integer Truncation
+
+The math shown above conveniently used numbers that divide "nicely" into whole numbers.
+
+However, we can run into problems when dividing integers that result into decimals:
 
 ```csharp
 int a = 1;
@@ -211,10 +234,18 @@ double pi = 3.141592;
 
 If you are curious, in C# there are 10 [integral types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types) (similar to `int`) and 3 [floating-point numeric types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types) (similar to `double`).
 
-Notice that trying to assign the integer `35` to a `double` will result in error.
+Notice that trying to assign the integer `35` to a `double` will work, however, C# is **automatically converting** (referred to as *implicitly casting*) the `int` to a `double`.
 
 ```csharp
-double age = 35;    // Error! 
+double age = 35;    // Bad practice! 35 is an int converted to double "behind the scenes".
+```
+
+As you will see below, automatic conversion can sometimes lead to unexpected results and is considered bad practice.
+
+Instead, explicitly assign a `double` number to your `double` variable:
+
+```csharp
+double age = 35.0;    // Much better. 35.0 is a "real" double.
 ```
 
 
@@ -236,7 +267,7 @@ Rules:
 Look at the code below, and at the result. _Can you figure out why the results are what they are?_
 
 ```csharp
-Double age;
+double age;
 
 age = 5 / 9 * 60;
 Console.WriteLine(age);
@@ -251,7 +282,6 @@ age = 60.0 / 9.0 * 5.0;
 Console.WriteLine(age);
 age = 60.0 * 5.0 / 9.0;
 Console.WriteLine(age);
-
 ```
 
 _Result_
@@ -275,7 +305,7 @@ _Result_
 
 `line 10:`, by using `5.0/9.0` we are forcing the calculations to be done with real numbers, not integers.
 
-#### Implicit casting
+### Implicit Casting
 
 When a type of variable is "converted" into another type, in computer science we call this **casting**.
 
@@ -290,7 +320,7 @@ It is far better to be explicit about type casting.
 > 💣 Implicit casting is considered a bad coding practice and will have marks deducted.
 
 
-## Converting `int` to `double`
+### Explicit Casting
 
 It is possible (and recommended) to explicitly convert data types by using the `Convert` built-in functions:
 
@@ -308,4 +338,3 @@ Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
 ```
 
 Using the `Convert` functions also avoid **truncation** (see previous section).
-
