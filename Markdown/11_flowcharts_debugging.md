@@ -26,25 +26,6 @@ The labs have a program called 'flowgorithm' which can be used to design, and ex
 
 **Figure 1** A flowgorithm flowchart
 
-## Pseudo-Code
-
-When designing code, some persons prefer to simply write their algorithm out using language as close to english (or french or ...) as possible.
-
-Pseudo-code does not have many rules, its purpose is to explore the solution (check for logic errors) before worrying about syntax errors.  It must describe the algorithm in a step-by-step fashion.
-
-Example: Huffman Compression
-
-> 1. Find all unique letters in the text to be compressed
-> 2. Count how many time each letter is used, and sort from lowest frequency to highest frequency
-> 3. Group the lowest two frequency occurrences together, and construct a partial tree, with one letter (or partial tree) to the left, and one to the right.  
->    1. Take note of the total frequency for both letters (partial tree)
-> 4. Insert this partial tree (with the new frequency) back into the list, and re-sort.
-> 5. Repeat steps 3 to 4 until there is only one tree
-> 6. Create a dictionary by traversing the tree from the top to the desired letter, each left traversal is represented by a 0, and a right traversal is represented by a 1.
-> 7. Using the dictionary, create the sequence of zeros and ones to represent the original text
-
-NOTE: The above pseudo-code would be difficult for some people to understand if they do not understand what a 'partial tree' is.  Pseudo-code needs to reflect the understanding of the person reading it.
-
 
 # Debugging Code
 
@@ -143,6 +124,67 @@ Salary per hour is: 0
 ```
 
 I may not be able to figure this out yet, but at least I know that it is not calculating the `weeklySalary` correctly.
+
+
+### Block Comments and Debugging
+
+Commenting can be a very very powerful debugging technique. We can use commenting to comment out huge sections of code and try to zero in on problem areas. Also - if someone wants to swap out a section of code, we can use comments. 
+
+In `Visual Studio`, you can select a bunch of code lines that you want to comment, and press `ctrl` `/` (on MAC, press `command` `/`) to toggle comments `on`/`off` in your code.  Most editors have some form of shortcut to achieve this.
+
+But, if you don't want to do that, you can block out code using the `/*` `*/` commenting style: 
+
+**Example** - something is wrong with the code for baby sitter being drunk.  Lets check rest of code first to make sure it works, before testing that bit of code.
+
+```csharp
+// ================================================================
+// Mom and Dad going out :)
+// ===============================================================
+
+// ---------------------------------------------------------------
+// can we get a babysitter? if so, lets go out
+// ---------------------------------------------------------------
+babySitter = CallBabysitterService();
+if (PickUp( babySitter)) {
+
+  // mom and dad are going on a date!
+  GoOutOnDate(Mom, Dad);
+  
+  // but must check to make sure babysitter is ok
+	babySitterStatus = CallHomeAndCheck();
+  
+  // -------------------------------------------------------------
+  // babysitter is not ok
+  // -------------------------------------------------------------
+
+  /*  START OF BLOCK COMMENT
+  // drunk
+	if (babySitterStatus == drunk) {
+  	CallPolice();
+    GoHome();
+    End()
+	}
+	END OF BLOCK COMMENT */  
+  
+  //  baby sitter is up too late
+  if (babySitterStatus == late) {
+    GoHome();
+    End();
+  }
+  
+  // -------------------------------------------------------------
+  // Everything is good, carry on
+  // -------------------------------------------------------------
+  DanceLikeNoOneIsWatching (Mom, Dad);
+}
+```
+
+
+
+There are two methods, use the shortcut keys in Visual Studio... select the code you want to comment, and press `ctrl` `/` (on MAC, press `command` `/`) to toggle comments `on`/`off` in your code.
+
+
+
 
 ### Using the IDE Debugger Method
 
@@ -284,12 +326,3 @@ namespace Examples
     }
 }
 ```
-
- # Additional Notes
-
-## Definition of Console
-
-[source](https://docs.microsoft.com/en-us/dotnet/api/system.console?view=net-5.0)
-
-> The console is an operating system window where users interact with the operating system or with a text-based console application by entering text input through the computer keyboard, and by reading text output from the computer terminal. For example, in the Windows operating system, the console is called the Command Prompt window and accepts MS-DOS commands. The [Console](https://docs.microsoft.com/en-us/dotnet/api/system.console?view=net-5.0) class provides basic support for applications that read characters from, and write characters to, the console.
-

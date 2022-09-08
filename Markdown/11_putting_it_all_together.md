@@ -1,36 +1,3 @@
-# Pseudo Code
-
-Pseudo Code is a syntax free language of instructions in English. Basically you write out what you want to do in English in the correct order. Once your logic is established, it should be straightforward to convert your pseudo-code into C# or any other high level language. 
-
-**Example**: 
-
-> Input user's birthday 
-> Age = today - user's birthday (yes you can do math on dates) 
-> Display Age 
-
- 
-
-**Example**
-
-pseudo-code to put on shoes in the morning.  
-
->1. sit up from bed 
-> 2. put socks on 
-> 3. put shoe on 
-> 4. tie shoelaces 
-
- Note: *numbering is optional - but you must logically see the order of things!!!! This is very important.*
-
- 
-
- **Example**
-
-Note: *You cannot say this unless x has been previously declared (born, created) and x has been defined (given a value)* 
-
-> Increase the value of x by 4 
-
-
-
 ## The **DDU"** approach `declare`, `define`, `use` 
 
 ```csharp
@@ -41,25 +8,6 @@ myscore = myscore + 30;   // you use myscore on the right hand side
 
 Computer Science is very strict about this: You cannot use a variable until it is born and has a value.  You cannot even "speak of" a variable unless it exists. 
 
-
-
-## Algorithm 
-
-*a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.* 
-
-In other words what technique did you use to accomplish something. This usually involves a series of steps in logical order, with part of the process possibly repeating.  
-
-We create an algorithm:-- 
-
-1. Pour desired amount of water into pot 
-2. Put pot on stove burner 
-3. Turn on burner 
-4. Watch water until you see bubbles rising, when this is done turn off burner 
-5. Water is boiled. 
-
-  We can also do this using pseudo code - which is code without syntax and/or rules. It is very English like. It’s also very similar to the algorithm above 
-
-Difference between pseudo code and algorithm? Well pseudo code is the English like you're using. It is syntax free.  An algorithm is the logical order of things. It how you arrange your pseudo code to perform a certain task. 
 
 ## Flowcharting
 
