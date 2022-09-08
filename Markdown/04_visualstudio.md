@@ -301,13 +301,34 @@ namespace HelloWorld
 ```
 
 
-## Review Lab
+## Solution Explorer
+
+On the top-right of Visual Studio, you should see a panel called the **Solution Explorer**.
+
+![Screenshot of Visual Studio highlighting the Solution Explorer window on the top right of the screen](https://docs.microsoft.com/en-us/visualstudio/ide/media/visual-studio-integrated-development-environment.png?view=vs-2022#lightbox)
+
+This panel will show you all the files included in your solution. From there you can:
+
+- Rename your project
+- Delete files
+- Open different files in the project
+- etc
+
+>To open the Solution Explorer window (if not already not open):
+>
+	From the Visual Studio menu bar by using **View** > **Solution Explorer**, or by pressing **Ctrl**+**Alt**+**L**.
+
+For more details on the Solution Explorer menu, see the official documentation on [Learn about Solution Explorer](https://docs.microsoft.com/en-us/visualstudio/ide/use-solution-explorer?view=vs-2022).
+
+
+## Content Review
 
 Would you like review and practice the content of this lesson?
 
 Follow the tutorial below by Microsoft:
 
 - [Write your first C# code](https://docs.microsoft.com/en-us/learn/modules/csharp-write-first/)
+
 
 ## Resources
 
