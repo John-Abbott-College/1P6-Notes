@@ -75,6 +75,7 @@ There are many different ways of using two or more words, flattened together int
 | TwoWords   | PascalCase (UpperCamelCase)|
 | two_words  | snake case                 |
 | TWOWORDS   | upper flat case (all Caps) |
+| TWO_WORDS |  all Caps snake case |
 | two-words | kebab-case | 
 
 ![3 naming conventions illustrated with a camel, a snake and a kebab squewer](https://juniortoexpert.com/wp-content/webp-express/webp-images/uploads/naming-convention-snake-case-kebab-case-camel-case.png.webp)
@@ -84,8 +85,7 @@ For .NET languages (C# is a .NET language) the Microsoft guidelines recommend th
 
 - `PascalCase` is used for class names and functions (covered in Programming II).
 - `camelCase` is used for variable names and function parameters.
-
-Although it is not in the MS guidelines, we'll use all CAPS for constants (a constant is a variable whose data *never ever* changes. More on this later in the course)
+- `ALL_CAPS_SNAKE_CASE` is used for constants (a constant is a variable whose data *never ever* changes. More on this later in the course)
 
 See [Microsoft's Naming Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines) for details.
 
@@ -296,7 +296,6 @@ Console.WriteLine(output);
 // 3542 Hello
 // 77 Hello
 ```
-
 
 
 ## String Interpolation
