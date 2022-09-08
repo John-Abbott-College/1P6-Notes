@@ -419,7 +419,7 @@ grapes = grapes + apples;
 oranges = oranges + (apples * 2);
 
 // print result onto the screen
-Console.WriteLine(apples, oranges, grapes)
+Console.WriteLine(apples, oranges, grapes);
 ```
 
 <br>
@@ -501,7 +501,7 @@ b = b + 12;
 Console.WriteLine("The values are ");
 Console.WriteLine(a);
 Console.WriteLine(b);
-Console.WriteLine(c):
+Console.WriteLine(c);
 
 // Hint: create a table to track how they change (tracing)
 // | a | b | c |
