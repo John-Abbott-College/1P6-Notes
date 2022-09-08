@@ -31,8 +31,10 @@ All you need for now is: `.NET desktop development`.
 
 > For **detailed install instructions** follow official guides by Microsoft:
 > 
-> - [Install Visual Studio for **Windows**](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022)  f
+> - [Install Visual Studio for **Windows**](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022)
 > - [Install Visual Studio for **Mac**](https://docs.microsoft.com/en-us/visualstudio/mac/installation?view=vsmac-2022)
+
+If you installed Visual Studio but did not select the correct "workload" (see image above), see the official documentation for how to [Modify Visual Studio workloads, components, and language packs](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2022).
 
 
 ### Starting Visual Studio
