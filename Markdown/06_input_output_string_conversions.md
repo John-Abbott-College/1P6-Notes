@@ -52,8 +52,8 @@ As the name suggests, `Console.WriteLine()` will output its information in a sin
 
 #### Console.Write()
 
-However, there is another function, `Console.Write()`, which will print text **without breaking the line**.
-This meas that everything will be placed in the same line of text.
+There is yet another function, `Console.Write()`, which will print text **without breaking the line**.
+This means that everything will be placed in the same line of text.
 
 Consider the previous example but using `Console.Write()`:
 
@@ -79,16 +79,17 @@ To ask a user for information, you need to do **two steps**:
 1. Tell the user what information you want typed.
 2. Read that information from the console window.
 
-In computer science it's common to see the term "**to prompt for input**" when asking for user to provide information.
+In computer science it's common to use the term "**to prompt for input**" when asking the user to provide information.
 
-You already know how to accomplish **step 1** using  `Console.WriteLine()` or  `Console.Write()`. There are a few different ways to accomplish step 2, `Console.ReadLine()` is one of them.
+You already know how to accomplish **step 1** using  `Console.WriteLine()` or  `Console.Write()`.
+Step 2, can be accomplished by using `Console.ReadLine()`.
 
 #### Console.ReadLine()
 
 The function `Console.ReadLine()` will pause the program and wait until the user has typed something and hit the <kbd>Enter</kbd> key.
 
 The information collected by `Console.ReadLine()` is returned is a `string`. This means you must:
-1. First create a `string` variable, and
+1. First declare a `string` variable.
 2. Then read user input with  `Console.ReadLine()` by assigning its return value to the `string` variable you created.
 
 ```csharp
@@ -114,7 +115,23 @@ int ageDifference = myAge - userInput;    // ERROR! Operator '-' cannot be appli
 Console.WriteLine($"I am {ageDifference} years older than you.");
 ```
 
-If you would like to capture user input as a number, you must **first convert the input from string to integer.** 
+If you would like to capture user input as a number, you must **first convert the input from string to integer.** See below.
+
+#### What is the Console?
+
+A console is also know as the terminal or command line interface. 
+
+It's basically a how for humans to interact with the computer using purely text.
+
+> **The console** is an operating system window where users interact with the operating system or with a text-based console application by entering text input through the computer keyboard, and by reading text output from the computer terminal.
+> 
+> For example, in the Windows operating system, the console is called the Command Prompt window and accepts MS-DOS commands.
+> 
+> In C#, the [Console](https://docs.microsoft.com/en-us/dotnet/api/system.console?view=net-6.0) class provides basic support for applications that read characters from, and write characters to, the console.
+
+*Source: Microsoft [documentation on Console class](https://docs.microsoft.com/en-us/dotnet/api/system.console?view=net-6.0).*
+
+See the section Diving Deeper at the end of the notes for a detailed video on what is a command line interface.
 
 ### From Strings to Integers with `int.Parse()`
 
@@ -128,10 +145,10 @@ There are a few different ways to convert a `string` to `int`. For now, we'll us
 string variableOne = "35";
 int variableTwo = 10;
 
-int oneAsInt;
-oneAsInt = int.Parse(variableOne);
+int varOneAsInt;
+varOneAsInt = int.Parse(variableOne);
 
-Console.WriteLine($"Subtracting two from one gives: {oneAsInt - variableTwo}");
+Console.WriteLine($"Subtracting two from one gives: {varOneAsInt - variableTwo}");
 ```
 
 > **Note:** If the computer cannot convert the string to a number, then it will crash the program. 💥
@@ -178,10 +195,10 @@ Console.Write($"Multiplication: {varA * varB}, Division: {varA / varB}, Subtract
 // Multiplication: 20, Division: 5, Subtraction: 8
 ```
 
-Note that when using string interpolation (`$" "` syntax), we can write computer expressions inside the `{ }`, not just variable names.
+>Note that when using string interpolation (`$" "` syntax), we can write a **full expressions** inside the `{ }`, not just variable names.
 
 
-### Integer Truncation
+### Integer Truncation 🔪
 
 The math shown above conveniently used numbers that divide "nicely" into whole numbers.
 
@@ -234,7 +251,7 @@ double pi = 3.141592;
 
 If you are curious, in C# there are 10 [integral types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types) (similar to `int`) and 3 [floating-point numeric types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types) (similar to `double`).
 
-Notice that trying to assign the integer `35` to a `double` will work, however, C# is **automatically converting** (referred to as *implicitly casting*) the `int` to a `double`.
+Notice that trying to assign the integer `35` to a `double` will work, however, C# is **automatically converting** (aka. *implicitly casting*) the `int` to a `double`.
 
 ```csharp
 double age = 35;    // Bad practice! 35 is an int converted to double "behind the scenes".
@@ -251,11 +268,11 @@ double age = 35.0;    // Much better. 35.0 is a "real" double.
 
 ## Mixing `integer` and `double` arithmetic
 
-If you use a number in an equation, and that number does not have a decimal point, then it will be considered to be an `integer`. (**Ex** `5`, `6`)
+If you use a number in an equation, and that number does not have a decimal point, then it will be considered to be an `integer` (ex.: `5`, `6`).
 
-If you want the equation to use a real number, you _must_ add the decimal point, followed by at least one number (**Ex** `5.0` is a valid `double` and  `5.` is NOT a valid number).
+If you want the equation to use a real number, you _must_ add the decimal point, followed by at least one other number (ex.: `5.0` is a valid `double` and  `5.` is NOT).
 
-> Mathematical formulas are executed **from left to right**.
+> Remember: mathematical formulas (not variable assignment) are executed **from left to right**.
 
 Rules:
 
@@ -297,23 +314,23 @@ _Result_
 
 **Explanation of above**
 
-`line 3`: `5 / 9 * 60` = `int( 5/9 )` `* 60` = `int( 0 * 60 )` = `0`
+Line 3: `5 / 9 * 60` = `int( 5/9 )` `* 60` = `int( 0 * 60 )` = `0`
 
-`line 5`: `60 / 9 * 5` = `int( 60/9 )` `* 5` = `int( 6 * 5 )` = `30`
+Line 5: `60 / 9 * 5` = `int( 60/9 )` `* 5` = `int( 6 * 5 )` = `30`
 
-`line 7`: `60 * 5 / 9` = `int( 60*5 )` `/ 9` = `int( 300 / 9)` = `33`
+Line 7: `60 * 5 / 9` = `int( 60*5 )` `/ 9` = `int( 300 / 9)` = `33`
 
-`line 10:`, by using `5.0/9.0` we are forcing the calculations to be done with real numbers, not integers.
+Line 10: by using `5.0/9.0` we are forcing the calculations to be done with real numbers, not integers.
 
 ### Implicit Casting
 
 When a type of variable is "converted" into another type, in computer science we call this **casting**.
 
-> Note that by mixing `int` and `double` in the same calculation (example above) we are relying on C# to convert variables behind the scenes.
+> Note that by mixing `int` and `double` in the same calculation (examples above) we are relying on C# to convert variables "behind the scenes".
 > 
 > This behind the scenes conversion that happens "automatically" is called **implicit casting**.
 
-As you can see in the previous section, how implicit conversion happens is not always obvious and can easily lead to bugs.
+As you can see in the previous section, the way how implicit conversion happens is not always obvious and can easily lead to bugs.
 
 It is far better to be explicit about type casting.
 
@@ -324,9 +341,9 @@ It is far better to be explicit about type casting.
 
 It is possible (and recommended) to explicitly convert data types by using the `Convert` built-in functions:
 
-- `Convert.ToDouble()`: Converts an `int` to `double`.
-- `Convert.ToString()`: Converts an `int` or `double` to `string`.
-- `Convert.ToInt32()`: Converts a `double` to `int32`, which is the standard `int` type (32 bits long).
+- `Convert.ToDouble( value )`: Converts an `int` value to `double`.
+- `Convert.ToString( value )`: Converts an `int` or `double` value to `string`.
+- `Convert.ToInt32( value )`: Converts a `double` value to `int32`, which is the standard `int` type (32 bits long).
 
 ```csharp
 int myInt = 10;
@@ -337,4 +354,23 @@ Console.WriteLine(Convert.ToDouble(myInt));    // convert int to double
 Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
 ```
 
-Using the `Convert` functions also avoid **truncation** (see previous section).
+Using the `Convert` functions also avoid **truncation** 🔪
+
+```csharp
+int varA = 1;
+int varB = 2;
+
+Console.WriteLine( varA / varB );  // Output: 0
+Console.Write( Convert.ToDouble(varA) / Convert.ToDouble(varB) );  // Output: 0.5
+```
+
+
+## Diving Deeper (optional)
+
+Why do we use command line interfaces (aka. the console) to interact with the computer?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4RPtJ9UyHS0?start=325" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
