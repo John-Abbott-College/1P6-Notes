@@ -9,6 +9,8 @@
 
 **Week 3** 
 - [6-Input/Output & Conversions](Markdown/06_input_output_string_conversions.md)
+- [7-Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process)
+
 
 
 

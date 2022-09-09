@@ -279,9 +279,10 @@ Ask yourself the following questions about this algorithm:
  
 In pseudo code: 
 
-> Output: How many minutes did you use? 
-> Input: number of minutes 
-> Calculate charge = number of minutes * .35 
-> Display the charge 
-> Done
+> Output: How many minutes did you use?
+> Input: number of minutes
+> Calculate charge = number of minutes * .35
+> Display the charge
+ 
+
 
