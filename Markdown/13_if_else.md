@@ -1,96 +1,10 @@
-# Proper symbol names
 
-[source](https://finallylearn.com/what-are-the-keyboard-symbol-names/)
-
-Note: French names are according to goole translate, and classroom feedback   :)
-| Symbol | English | French |
-| ---- | ------------------------------- |---|
-| [ ]  | brackets, square brackets       |crochets  |
-| [    | open bracket                    |parenthèse ouverte |
-| ]    | close bracket                   | fermer la parenthèse |
-| { }  | braces, curly brackets          |accolades |
-| {    | open brace                      |accolade ouverte |
-| }    | close brace                     |accolade rapprochée |
-| \    | backslash, backward slash       |barre oblique inverse |
-| \|   | vertical pipe, pipe             | baree vertical |
-| ;    | semicolon                       |point-virgule |
-| :    | colon                           |deux points |
-| ‘    | apostrophe, prime, single quote |apostrophe, premier, guillemet simple |
-| “    | quotation mark, double quotes   |guillemets, guillemets doubles |
-| .    | period, decimal, dot            |point, décimal, point |
-| /    | slash, forward slash            |barre oblique, barre oblique |
-| <>   | angle brackets                  |équerres |
-| <    | less than                       |moins de |
-| >    | greater than                    |supérieur à |
-| `    | back tick, back quote  |tique arrière, citation arrière |
-| ~    | tilde                                |tilde |
-| !    | exclamation mark, exclamation point  |point d'exclamation |
-| @    | at, at sign, at symbol               |Aromas,  à commerciale |
-| #    | pound, hash, number                  |Diése |
-| ^    | carat                                |carats |
-| &    | ampersand                       |esperluette, et commerciale |
-| *    | asterisk                             |astérisque |
-| (    | open parenthesis, left parenthesis   |parenthèse ouverte, parenthèse gauche |
-| )    | close parenthesis, right parenthesis |parenthèse fermante, parenthèse droite |
-| ( )  | parentheses, round brackets          |parenthèses |
-
-
-# Conditionals
-
-## The `if` Statement 
-
-The `if` statement appears in every language. It is extremely important. We use it to alter flow of our program. It is very important to understand that the if statement has a condition - and the answer to this condition is either `TRUE` or `FALSE`. 
-
-The format of and `if statement`  in C# is: 
-* **`if (`_`boolean conditional`_` )` _`code block`_**
-
-where: 
-
-* *`boolean conditional`* is anything that evaluates to `true` or `false` 
-  * the `boolean conditional` *must* be surrounded by parenthesis `(...)`
-* `code block` can either be
-  * a single line of code, ending in a semi-colon, *or*
-  * multiple lines of code, enclosed in squiggly braces `{ ... }`
-
-Consider the syntax in the following C# code snippet shown below
-
- ```csharp
- if (score < 100)
- {
- 		Console.WriteLine("Keep on trying");
- 		Console.WriteLine("You will get it soon");
- }
- Console.WriteLine("Enjoy the game");
- 
- ```
-
-So above we assume the variable score is declared and defined. And if score < 100 then we do the two lines of code in the if statement. If it is false, we do NOT do the two lines of code in the if statement. 
-
-Notice that the `Console.WriteLine("Enjoy the Game");` will ALWAYS be run because it is not contingent (or dependent) on the condition of (score <100). 
-
- **Things to note:**
-
-* `if` is NOT capitalized!
-
-* Remember - your condition must yield a true or false answer. Nothing else. 
-
-  there is no semi-colon after the close squiggly brace (`}`)
-
-* The `true` `code block` is the block of code that *immediately* follows the `if` statement
-
-* Notice that lines `3` and `4` are indented?  This is not required by the compiler, but it *is* required by humans.  Without this clue (via indentation), human readers (programmers, debuggers, etc), will not necessarily realize that there is an code block.
-
-* Visual studio will format your code as you type (indentation), but sometimes if you cut'n'paste code, it can easily get messed up.  In Visual Studio, according to the documentation, the shortcut key is `ALT`+`SHIFT`+`F`
-
-* You should always open and close your if statements with squiggly braces
-
-* Keep bracess aligned - make sure one opens and one closes 
-
-* Indentation is optional but strongly recommended. Keep it pretty!!!! 
-
-  - Braces aligned, code inside the brace brackets indented 
+# If Statements Pt.2
 
 * if your "True” section (`if block`) contains only one line of code, you do not need the opening and closing brace bracket. This rule applies only when there is one line of code. If you add a second line of code, braces are mandatory 
+
+## Bad Examples
+
 
 **Example of _BAD_ coding style**
 
@@ -215,55 +129,6 @@ if (a = b ) 	// NOT comparing a to b, but setting a equal to b,
 Console.WriteLine( "hello world" );
 Console.WriteLine("All done!")
 ```
-
-
-
-## The `else` Statement
-
-The `else` cannot live alone. It must be part of an `if statement`. The `else` part of an `if statement` is **OPTIONAL**. 
-
-The format of and `if-else statement`  in C# is: 
-`if (`_`boolean conditional`_` )` _`code block`_  **`else` _`code block`_**
-
-
-- The `else` is part of an `if statement`. It is OPTIONAL 
-- An `if statement` can have only one `else` part 
-- The `else` is performed if the `condition` is FALSE 
-- The `else` cannot ‘be alone’ - it must be part of an `if` with a `TRUE block of code`. Note the `if` *always* has a TRUE part of the code 
-- The `else` bracketing rules are the same as mentioned above for the `if block` in the previous section. 
-- Note that *either* the first block of code in an `if` is performed when the condition is true OR the second block of code in an if is performed if the condition is false. **NEVER BOTH** 
-- Do not put a semicolon after the word `else` 
-- don’t put a semicolon after a squiggly brace 
-- If you have a line of code that is the same (common) in the TRUE part and FALSE part of an `if`, consider pulling it out of the `if` statement and put it before or after the entire `if statement` 
-
- **Example**
-
-```csharp
-// many lines of code above
-if (lives <= 0)
-{
-  	Console.WriteLine("you died");
-  	Console.WriteLine("better luck next time");
-}
-else
-{
-  	Console.WriteLine("you made it");
-  	Console.WriteLine("you are are still alive");
-}
-Console.WriteLine("Thank you for playing");
-```
-
-> Lines 4 and 5 are executed if the `if` statement is true.  The true block ALWAYS comes first
->
-> Lines 9 and 10 are excuted if the `if` statment is false.  The false block ALWAYS comes second
->
-> Line 12 will be executed no matter what, because it is outside of both the `if` and `else` code blocks
-
-Notice for the code above which is clear, well written example of an `if statement``:
-
-* the condition `lives <=0` is in ROUND (no-brace) parantheses and has no semicolon
-* see how nicely the TRUE and FALSE part are indented the same amount, aligned
-* note that "Thank your for playing" will ALWAYS be shown, whether the lives <=0 or not.
 
 
 
