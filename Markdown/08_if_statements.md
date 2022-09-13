@@ -1,71 +1,93 @@
+# The `if` Statement
+
+Useful programs typically need to make make decisions based on inputs and conditions.
+
+The `if` statement is used to alter flow of a program **if a specific condition is met**.
+The answer to this condition **must be** either `true` or `false`.
+
+> The format of and `if statement`  in C# is: 
+>
+>**`if (`_`expression`_` )`
+> 		`code block`_**
+
+Where:
+
+* *`expression`*  is the condition that must be met.
+	* This condition *must* be surrounded by parenthesis `(...)` and is anything that evaluates to `true` or `false` .
+* `code block` is a can either be:
+  * multiple lines of code, enclosed in squiggly braces `{ ... }`,
+  * a single line of code, ending in a semi-colon.
+
+Note:
+
+- * `if` is NOT capitalized
+- There is no semi-colon after the code block ( `{ ... }` )
+- Line indentation is not required by the compiler, but it is important for humans. Without this clue (indentation), human readers might not realize there is a code block.
+	- You may use **auto-format** option in Visual Studio to add indentation with the shortcut key is `CTRL`+`E`, `D`
+
+### `if` Example 1
+*(assume the variable temperature is declared and defined)*
+
+```csharp
+//  If statement including multiple lines of code
+
+if (temperature > 27)
+{   // begining of code block
+
+ 	Console.WriteLine("It's hot!");
+ 	Console.WriteLine("Please open the window");
+ 	
+}   // end of code block
+
+Console.WriteLine("Cheers!");
+```
+
+In the example, above, if `temperature` is greater than (`>`) 27, then the two lines of code (inside the `code block`) will be executed. 
+
+The **condition** would be: "is the temperature greater than 27?". Note how this question is answered with `yes` or  `no`, in other words `true` or `false`.
+
+If the **condition** evaluates to `false`, we **do not** run the two lines inside the code block.
+
+Notice that the `Console.WriteLine("Cheers!");` will **always run** because it is not dependent on the if statement.
 
 
-# Logic
+## Code Blocks
 
-Programs really boring unless we can add some decision making to them.
+As mentioned above, a `code block` is one or more code statements enclosed in `curly braces` "{ }" ).  
 
-## True / False 
+Example of a `code block`:
 
-For the moment we are going to limit our decision making based on questions that can only be answered by `true` or `false`.  Any question that cannot be answered by `true`/`false` must use a different command then the `if`/`else` construct.
+```csharp
+int x;
+int y;    // These declarations are outside of the code block
 
-### Basic structure of `if / else statement`
+{   // begining of code block
+	Console.WriteLine("This is a code block");
+	x = 12;
+	// Code blocks can have one or many lines of code
+	y = x * 2;
+	Console.WriteLine(y);
+}   // end of code block
+```
 
-In programming, the idea behind the `if`/`else` block of code works as follows:
 
-**"if statement"**: `if`   `( expression )` ` code block ` 
+### `if` Example 2
 
-where the `expression` evaluates to either `true` or `false`
-
-* Example: `if (x > 10)`  `code block`
-
-* a `code block` is one or more code statements enclosed in `curly braces` "{}" ).  
-
-  This code will be executed **only** if the  `expression` in the `if statement` evaluates to `true`
-
-  * Example of a `code block`
-
-    ```csharp
-    {
-    	// This entire code block will only execute 
-    	// if (and only if), x is greater than 10
-    
-    	Console.WriteLine("This is a code block");
-    	x = 12;
-      
-    	// I can have as many lines of code in a code block as I want
-    	y = x * 2;
-    }
-    ```
-
-**"else"**: (*optional*) 
-
-* Must be followed by another `code block`
-
-  This `code block` will be executed **only** if the expression in the `if statement` evaluates to `false` 
-
-### Examples
-
-#### `if` Example:
-
-**pseudo code**
+**Pseudo code**
 
 > Ask user for age.
 > Is our user an adult?
-> If yes, display adult only movie choices
+> If yes, display R-rated movie choices
 > Display family friendly movies
 > Ask user for movie choice
 
-**flowchart**
-
-<img src="./Images/08_if.png" alt="Flowchart of the code shown below" style="zoom:67%;" />
-
-**code**
+**Code**
 
 ```csharp
-// Do not allow children to watch adult content
+// Do not allow children to watch R-rated movies
 
 // declare constants
-int ADULT_AGE = 18; // at least in quebec
+int ADULT_AGE = 18;
 
 // declare variables
 int userAge;
@@ -77,44 +99,156 @@ userAge = int.Parse ( Console.ReadLine() );
 
 // if old enough you can watch any movie you want
 if (userAge >= ADULT_AGE) 
-{																				// start of "if" block
+{       // start of "if" block
   Console.WriteLine("1 - Terminator");
   Console.WriteLine("2 - DeadPool");
-}																				// end of "if" block
+}       // end of "if" block
 
-// notice that there is no 'else' statement
-// that is because both adults and children can watch children's movies
+//  No age requirement to watch these movies
 Console.WriteLine("3 - Lion King");
-Console.WriteLine("4 - Beauty and the Beast");
+Console.WriteLine("4 - Encanto");
 
 // choose a movie
 Console.WriteLine("Please enter the number of the movie you want to watch");
 movieNumber = int.Parse ( Console.ReadLine() );
-
 ```
 
-#### `if-else` example
+
+## `bool` Type: True - False
+
+In computer science, there is a data type created specifically to represent the state of being `true` or `false`: the **boolean data type**.
+
+Similarly to `int`, `double`, and `string`, the `bool` must be declared and assigned.
+
+```csharp
+bool goodWeather;      // variable declaration
+goodWeather = true;    // variable assignment
+goodWeather = false;   // we quickly changed our mind
+```
+
+If the idea of something being `true` or `false` confusing, you can think of them as being synonymous to  `yes` and `no`.
+
+For instance we may have a variable **`is_raining`** and state that this represents if it is raining outside or not. The value of **`is_raining`** would be: 
+
+- **`true`** if it is raining outside. 
+- **`false`** if it is not raining outside. 
+
+**Other examples**: 
+
+- **`work_completed`** represents if I have completed my work or not. 
+- **`sound_alarm`** represents whether or not the alarm should be on.
+
+
+### Boolean Expressions
+
+When we introduced the `if` statement, we mentioned it follows the format below:
+
+>`if ( expression )`
+>		`code block`
+
+In the examples given, we used the following expressions (see complete examples above):
+
+```csharp
+// First example
+if (temperature > 27)
+{
+	... // ignore code block for now 	
+}   
+
+// Second example
+if (userAge >= ADULT_AGE) 
+{  
+	...  // ignore code block for now 
+}
+```
+
+The expressions `temperature > 27` and `userAge >= ADULT_AGE` are boolean expressions because their result evaluates to `bool`. In other words, the result is either `true` or `false`.
+
+We could have printed these expressions to the console:
+
+```csharp
+int temperature = 28;
+int ADULT_AGE = 18;
+int userAge = 17;
+
+Console.WriteLine( temperature > 27 );   // Output: True
+Console.WriteLine( userAge >= ADULT_AGE );   // Output: False
+```
+
+To create boolean expressions and compare multiple elements we need to use **logic operators**.
+
+## Logic operators in C#
+
+Below is a list of operators we can use to compare things.
+
+We will revisit them in more detail in a future lesson.
+
+| C#   | English                  |
+| ---- | ------------------------ |
+| <    | less than                |
+| <=   | less than or equal to    |
+| >    | greater than             |
+| >=   | greater than or equal to |
+| ==   | equals to                |
+| !=   | not equals to            |
+| \|\| | or                       |
+| &&   | and                      |
+
+
+##  The `if-else` Statement
+
+The `else` statement is an optional extension of the `if` statement (it must be part of an `if` statement).
+
+> The format of and `if-else statement`  in C# is:
+>
+> `if ( boolean conditional )`
+>	`code block`
+> **`else`**
+> 	**`code block`_**
+
+Note:
+
+- The `else` is part of an `if` statement. It is OPTIONAL 
+- An `if` statement can have only one `else` part 
+- The `else` is performed if the `condition` is FALSE
+- It's **either** the first code block in the `if` that is performed when the condition is true **or** the second code block in the `else` that is performed if the condition is false. **NEVER BOTH** 
+
+### `if-else` Example 1
+
+```csharp
+// assume there is code to manage the lives in the game
+
+if (lives == 0)
+{
+  	Console.WriteLine("you died");
+  	Console.WriteLine("better luck next time");
+}
+else
+{
+  	Console.WriteLine("you made it");
+  	Console.WriteLine("you are are still alive");
+}
+Console.WriteLine("Thank you for playing");
+```
+
+### `if-else` Example 2
 
 **Psuedo Code** 
 
-> Is our user retired or not?
-> Display "How old are you" 
+> Is the user retired or not?
+> Display "How old are you" ?
 >
 > Input user's age  
 >
 > is the user's age 65 or over?
 > 	if yes 
 > 		then display "you are retired" 
-> 		else 
-> 			Display "you can still work" 
+> 	else 
+> 		Display "you can still work" 
 >
 > rest of code
 
-**flowchart**
-
-<img src="./Images/08_if_else.png" alt="A flowchart diagram of the code shown below" style="zoom:67%;" />
-
-**code**
+**Code**
 
 ```csharp
 // Program to test if the user is retired or not
@@ -131,13 +265,13 @@ userAge = int.Parse ( Console.ReadLine() );
 
 // is the user retired?
 if (userAge >= RETIREMENT_AGE)		      // if statement
-{																				// start of if code block
+{        // start of if code block
 	Console.WriteLine("You are retired");
-}																				// end of if code block
-else															      // else statement
-{																				// start of else code block
+}        // end of if code block
+else     // else statement
+{        // start of else code block
 	Console.WriteLine("You are NOT retired");
-}																				// end of else code block
+}        // end of else code block
 
 // Whether user is retired or not, this code will 
 // be executed because the if and else code blocks are complete
@@ -145,81 +279,31 @@ Console.WriteLine("Thank you for your patience");
 
 ```
 
-## Best Practices for `if/else` code
+## Best Practices for `if-else` code
 
 **Readability**:
 
 Your questions should be as simple as possible - and as English like as possible so that you can read properly. 
 
-Example: 
-
 ```csharp
-	// Note that || means 'or'
 
-	// keep this as English as possible
-	// Now do you see the importance of naming variables properly 
-	if  (lives <= 0 ) ||  ( health  <= 0 )  
-	{	 
-		Console.WriteLine ("Game is over!");
-	} 
+// keep this as English as possible
+// Now do you see the importance of naming variables properly 
+if  (lives == 0 )
+{	 
+	Console.WriteLine ("Game is over!");
+} 
 ```
-
-
 
 **Only true/false or yes/no questions**
 
-A valid question in a diamond would be *“Are you hungry?”* - because the answer is either yes or no. 
+A valid question would be *“Are you hungry?”* - because the answer is either yes or no. 
 
-  An invalid (illegal) question would be *“What would you like to eat?”* because the answer is too varied - it could be hot dog, hamburger, chips, or a million other things.  
-
-### Bad Examples
-
-#### redundant questions
-
-**Psuedo Code**
-
-> pick a random number  
-> Question - *is your number bigger than 48 ?*
-> 	*then set colour to red*
-> *Is your number less than or equal to 48*?
-> 	*then set colour to blue*
-
- **Why is this bad?**
-
-Because, if the number is bigger than 48, we know for absolute certainty that it is *not* less than or equal to 48.
-
-Likewise, if the number is *not* bigger than 48, we know for absolute certainty that it *is* equal or less than 48.
-
-So the second question is redundant.
-
-**Better way**
-
-> pick a random number  
-> Question - *is your number bigger than 48 ?*
-> 	*then set colour to red*
-> **_else_**
-> 	*set colour to blue*
-
-## Logic operators in C#
-
-| C#   | English                  |
-| ---- | ------------------------ |
-| \|\| | or                       |
-| &&   | and                      |
-| <    | less than                |
-| <=   | less than or equal to    |
-| >    | greater than             |
-| >=   | greater than or equal to |
-| ==   | equals                   |
-| !=   | not equals               |
+An invalid (illegal) question would be *“What would you like to eat?”* because the answer is too varied - it could a number of things.
 
 
 
 
-
- 
-
- 
 
  
 
