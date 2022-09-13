@@ -7,8 +7,8 @@ The answer to this condition **must be** either `true` or `false`.
 
 > The format of and `if statement`  in C# is: 
 >
->**`if (`_`expression`_` )`
-> 		`code block`_**
+>`if( expression )`<br/> 
+>&emsp; &emsp; `code block`
 
 Where:
 
@@ -32,7 +32,7 @@ Note:
 //  If statement including multiple lines of code
 
 if (temperature > 27)
-{   // begining of code block
+{   // beginning of code block
 
  	Console.WriteLine("It's hot!");
  	Console.WriteLine("Please open the window");
@@ -75,10 +75,10 @@ int y;    // These declarations are outside of the code block
 
 **Pseudo code**
 
-> Ask user for age.
-> Is our user an adult?
-> If yes, display R-rated movie choices
-> Display family friendly movies
+> Ask user for age.<br>
+> Is our user an adult?<br>
+> &emsp;&emsp; If yes, display R-rated movie choices<br>
+> Display family friendly movies<br>
 > Ask user for movie choice
 
 **Code**
@@ -128,23 +128,23 @@ goodWeather = false;   // we quickly changed our mind
 
 If the idea of something being `true` or `false` confusing, you can think of them as being synonymous to  `yes` and `no`.
 
-For instance we may have a variable **`is_raining`** and state that this represents if it is raining outside or not. The value of **`is_raining`** would be: 
+For instance we may have a variable **`isRaining`** and state that this represents if it is raining outside or not. The value of **`isRaining`** would be: 
 
 - **`true`** if it is raining outside. 
 - **`false`** if it is not raining outside. 
 
 **Other examples**: 
 
-- **`work_completed`** represents if I have completed my work or not. 
-- **`sound_alarm`** represents whether or not the alarm should be on.
+- **`workCompleted`** represents if I have completed my work or not. 
+- **`soundAlarm`** represents whether or not the alarm should be on.
 
 
 ### Boolean Expressions
 
 When we introduced the `if` statement, we mentioned it follows the format below:
 
->`if ( expression )`
->		`code block`
+>`if ( expression )`<br>
+> &emsp; &emsp; `code block`
 
 In the examples given, we used the following expressions (see complete examples above):
 
@@ -201,10 +201,10 @@ The `else` statement is an optional extension of the `if` statement (it must be 
 
 > The format of and `if-else statement`  in C# is:
 >
-> `if ( boolean conditional )`
->	`code block`
-> **`else`**
-> 	**`code block`_**
+> `if ( boolean conditional )`<br/>
+>&emsp; &emsp; `code block`<br/>
+> `else`<br/>
+> &emsp; &emsp; `code block`
 
 Note:
 
@@ -226,7 +226,7 @@ if (lives == 0)
 else
 {
   	Console.WriteLine("you made it");
-  	Console.WriteLine("you are are still alive");
+  	Console.WriteLine("you are still alive");
 }
 Console.WriteLine("Thank you for playing");
 ```
@@ -301,11 +301,6 @@ A valid question would be *“Are you hungry?”* - because the answer is either
 
 An invalid (illegal) question would be *“What would you like to eat?”* because the answer is too varied - it could a number of things.
 
-
-
-
-
- 
 
  
 
