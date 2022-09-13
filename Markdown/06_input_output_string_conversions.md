@@ -1,4 +1,4 @@
-# 06: Input-Output & Conversions
+# 06: Console Input-Output & Conversions
 📑 In this lesson will:
 
 - Review information output with `Console.WriteLine()` and `Console.Write()`.
