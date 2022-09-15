@@ -20,10 +20,10 @@ Where:
 
 Note:
 
-- * `if` is NOT capitalized
+-  `if` is NOT capitalized
 - There is no semi-colon after the code block ( `{ ... }` )
 - Line indentation is not required by the compiler, but it is important for humans. Without this clue (indentation), human readers might not realize there is a code block.
-	- You may use **auto-format** option in Visual Studio to add indentation with the shortcut key is `CTRL`+`E`, `D`
+	- You may use **auto-format** option in Visual Studio to add indentation with the shortcut key is <kbd>CTRL</kbd>+<kbd>E</kbd>, <kbd>D</kbd> (Windows) ⌨
 
 ### `if` Example 1
 *(assume the variable temperature is declared and defined)*
@@ -279,28 +279,4 @@ Console.WriteLine("Thank you for your patience");
 
 ```
 
-## Best Practices for `if-else` code
-
-**Readability**:
-
-Your questions should be as simple as possible - and as English like as possible so that you can read properly. 
-
-```csharp
-
-// keep this as English as possible
-// Now do you see the importance of naming variables properly 
-if  (lives == 0 )
-{	 
-	Console.WriteLine ("Game is over!");
-} 
-```
-
-**Only true/false or yes/no questions**
-
-A valid question would be *“Are you hungry?”* - because the answer is either yes or no. 
-
-An invalid (illegal) question would be *“What would you like to eat?”* because the answer is too varied - it could a number of things.
-
-
- 
 

@@ -13,5 +13,6 @@
 
 **Week 4**
 - [8-If Statement](Markdown/08_if_statements.md)
+- [9-If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices.md)
 
 
