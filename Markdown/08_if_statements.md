@@ -280,3 +280,15 @@ Console.WriteLine("Thank you for your patience");
 ```
 
 
+### If-Else Single Liners
+If the `if` or `else` code block contains only one line of code, it's not necessary to open and close curly bracket.
+
+```csharp
+int A = 1;
+int B = 2;
+
+if (A < B) Console.WriteLine("A is smaller than B");
+else Console.WriteLine("A is NOT smaller than B");
+```
+
+This rule applies only when there is one line of code. If you add a second line of code, braces are mandatory.

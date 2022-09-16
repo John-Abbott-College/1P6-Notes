@@ -1,5 +1,65 @@
 # Boolean Algebra 
 
+## Intro to Boolean Algebra
+
+There are instances where we need to test for a mix conditions. For example:
+
+1. Both birth-day **AND** birth-month must match the current day to declare a birthday.
+2. The oil in the car should be changed every 6 months **OR** every 5,000 km.
+3. To return a new sweater you must have the receipt **AND NOT** remove the price tag.
+
+The combination of **AND**, **OR**, and **NOT** conditions is called boolean algebra or boolean logic.
+
+### Example 1
+
+The program *BirthdayCalculator* prompts the user for their birth-month and birth-day. The program reads the current date from the system and informs the user if it's their birthday.
+
+*Pseudo Code*
+
+
+
+- boolean OR and AND
+	- Examples:
+		- Give birthday example
+`if (birthMonth == currentMonth) && (birthDay == currentday)`
+
+Show them how to get system time.
+```csharp
+// Get local system Time.
+DateTime localTime = DateTime.Now;
+
+// System time includes:
+// day, day of week, month, year, hour, minutes, and more...
+
+Console.WriteLine($@"
+	Day: {localTime.Day}
+	Day of week: {localTime.DayOfWeek}
+	Month: {localTime.Month}
+	Year: {localTime.Year}
+	Hour: {localTime.Hour}
+	Minutes: {localTime.Minute}
+");
+```
+
+
+
+With the exception of `DayOfWeek`, all of the date values show above are of type `Int32`. Do note that `DayOfWeek` can be easily converted to `string` with:
+
+```csharp
+DateTime localTime = DateTime.Now;
+
+string weekDayString = Convert.ToString( localTime.DayOfWeek );
+Console.WriteLine(weekDayString);
+```
+
+- Writing a bot that brings the recycling bin outside:
+	- It's Wed and the bin is not empty;
+	- `if (weekDay == "Wednesday") && (binNotEmpty)`
+
+
+
+
+
 What is boolean algebra?
 
 **Short Answer**: Arithmetic operations and/or rules based on `true`/`false` logic.
@@ -34,20 +94,13 @@ You can code this. You will *never* get a syntax error, nor will you get any oth
 
 By studying Boolean Algebra, we can begin to "look for" and analyze these types of logical errors. This is very important to understand when making decisions in our code via `if/else` statements, but also in datababase courses (3rd semester?) when you are searching for specific data in a database.
 
-### `bool` data type (C#)
+## Example 1: ShouldRun?
 
-In C# there is a data type that we have not yet looked at.  The data type allows us to represent the logic values `true` and `false`.
-
-We use **variables** of type `bool` to represent elements of our situation or procedure. Variables may take one of only two values. Traditionally this would be `true` or `false` **- nothing else**. So for instance we may have a variable **`is_raining`** and state that this represents if it is raining outside or not. The value of **`is_raining`** would be : 
-
-- **`true`** if it is raining outside. 
-- **`false`** if it is not raining outside. 
-
-**Example**: 
+The program helps a user decide if they should go for a run or not.
 
 - **`is_raining`** represents if it is raining outside or not. 
 - **`work_completed`** represents if I have completed my work or not. 
-- **`should_run`** represents if I go for a run or not. 
+- **`should_run`** represents if user should go for a run or not. 
 
 The above "questions" you can ask the user during the run of the program and store their answers in their appropriate variables. These answers will be some combination of trues and falses based on the user's choice and input. 
 
@@ -81,8 +134,8 @@ should_run = work_completed && !is_raining;
 
 | MATH   |C#| operation |
 | ------ |--| --------- |
-| ⋀      | `&&`| AND       |
-| ⋁      | `||` |OR        |
+| ⋀      | `&&`| AND      |
+| ⋁     | `||`| OR      |
 | $\neg$ | `!`| NOT       |
 
 ![Three separate Venn diagrams. The first (x and y) shows two circles labeled x and y respectively, the two circles overlap, and where the two circles overlap, the diagram is coloured in red. The second (x or y) shows tow circles labeled x and y respectively, the two circles overlap. All of the x circle and all of the y circle is coloured in red. The third diagram shows only one circle, labeled x, surrounded by a square.  Everything outside of the circle, but still inside the square, is coloured red.](../Images/09_and_or_not.png)

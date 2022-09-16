@@ -2,45 +2,6 @@
 
 ... no notes
 
-# Gotcha's
-
-A 'gotcha' is any *common* mistake that confuses the programmer. 
-
-## `if` - `if` versus `if` - `else`
-
-Not necessarily an error, but definitely *not* `best practice`.
-
-Consider the following code snippet
-
-```csharp
-if (a > 10) { some code }
-if (a <= 10 ) { other code }
-```
-
-Imagine that `a` is greater than 10.  The `some code` would be executed.  Would the `other code` ever be executed? No.  Why? Because either `a` is `greater than` 10, or it is NOT.  Either/or.
-
-The following is marginally better, but still not good.
-
-```csharp
-if (a > 10) { some code }
-else if (a <= 10 ) { other code }
-```
-
-If we have either/or conditions, we should be using `if-else`. 
-
-```csharp
-if (a > 10) { some code }
-else { other code }
-```
-
-Why?  What difference does it make?
-* In the first code snippet, *both* conditionals must be calculated *every time*!
-* In the second code snippet, you have to calculate the comparison again (`a <=10`) if the first condition (`a>10`) is false, even though it is *not* necessary.  
-
-These extra comparisons slows down your program, and makes the user's experience less enjoyable.
-
-> With the programs that you will write in first year, this *slowing down* of the execution will not be noticable, but once you start 'real' programming, it can make a significant difference.
-> Better to learn *now* how to code correctly
 
 ## Choice of Conditionals
 
