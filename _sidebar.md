@@ -16,4 +16,5 @@
 - [9-If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices.md)
 - [10-If Else-If](Markdown/10_if_else-if.md)
 
-
+**Week 5**
+- [11-Boolean Algebra](Markdown/11_boolean_algebra.md)
