@@ -56,7 +56,7 @@ For a meal to be considered a "special", a client must by a pizza and a drink.
 
 | English|Math|C#|
 |:----:|:----:|:---:|
-|Special is a pizza *AND* drink | special = pizza $\land$ drink | `supper = pizza && drink;` |
+|Special is a pizza *AND* drink | special = pizza $\land$ drink | `special = pizza && drink;` |
 
 **Do we have a special?**
 
@@ -80,7 +80,7 @@ To generalize the `AND` operation, we will construct a **truth table** for x AND
 >
 > So the only circumstance where we get this to happen when both x and y are true.
 
-|   x   |   y   | x ⋁ y |
+|   x   |   y   | x $\land$ y |
 |:-----:|:-----:|:-----:|
 | **T** | **T** | **T** |
 |   T   |   F   |   F   |
@@ -97,7 +97,7 @@ Legend: T = True, F = False
 
 |           English           |          Math           |              C#               |
 |:---------------------------:|:-----------------------:|:-----------------------------:|
-| Drink is Rootbeer *OR* Coke | drink = rootbear ⋁ coke | `drink = rootbeer \|\| coke;` |
+| Drink is Rootbeer *OR* Coke | drink = rootbeer ⋁ coke | `drink = rootbeer \|\| coke;` |
 
 So, we send our friend out to get pizza and drinks.  They come back with pizza and a drink.
 
