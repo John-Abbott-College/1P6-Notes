@@ -87,7 +87,7 @@ should_run = work_completed && !is_raining;
 
 [Spreadsheet](https://docs.google.com/spreadsheets/d/1sZozXos7AcZx4hDlc9Zr0xZtVOHk0O12glPhgy7Ss_I/edit?usp=sharing)
 
-![Three separate Venn diagrams. The first (x and y) shows two circles labeled x and y respectively, the two circles overlap, and where the two circles overlap, the diagram is coloured in red. The second (x or y) shows tow circles labeled x and y respectively, the two circles overlap. All of the x circle and all of the y circle is coloured in red. The third diagram shows only one circle, labeled x, surrounded by a square.  Everything outside of the circle, but still inside the square, is coloured red.](../Images/09_and_or_not.png)
+![Three separate Venn diagrams. The first (x and y) shows two circles labeled x and y respectively, the two circles overlap, and where the two circles overlap, the diagram is coloured in red. The second (x or y) shows tow circles labeled x and y respectively, the two circles overlap. All of the x circle and all of the y circle is coloured in red. The third diagram shows only one circle, labeled x, surrounded by a square.  Everything outside of the circle, but still inside the square, is coloured red.](../../Images/09_and_or_not.png)
 
 **Figure 1** : Diagram displaying the Venn diagram of `AND`, `OR`, and `NOT`.  
 

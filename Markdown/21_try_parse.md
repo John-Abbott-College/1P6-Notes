@@ -7,26 +7,14 @@ However, you must always assume that your user is *dumb as a rock* and will not 
 Consider the following example code, 
 
 ```csharp
-using System;
+int yourNumber;
+Console.Write("Please enter a number: ");
 
-namespace ahha
-{
-    class MainClass
-    {
-        public static void Main(string[] args)
-        {
-            int yourNumber;
-            Console.Write("Please enter a number: ");
-            yourNumber = int.Parse(Console.ReadLine());
-            Console.WriteLine("Thank you :)");
-         }
-
-    }
-}
-
+yourNumber = int.Parse(Console.ReadLine());
+Console.WriteLine("Thank you :)");
 ```
 
-*running the code*
+*Running the code*
 
 ```text
 Please enter a number: boo
@@ -34,31 +22,29 @@ Please enter a number: boo
 
 Once the user hits return, a pop-up window comes along, and says
 
-​		**System Format Exception has been thrown**
+**System.FormatException: Input string was not in a correct format. 💥**
 
-> **NOTE**: the above is the output from a MAC, running Visual Studio.  It may be different than what a Windows machine will display.
+At this point your program crashes and stops.
 
-At this point your program stops.  In other words, the user has crashed your program!
+> You should **NEVER** let the user crash your program!
 
-### Never EVER let the user crash your program!!!!
+So, what do we do?  We use the **`TryParse`** flow.
 
-So, what do we do?  We use **try parse**. Try Parse will NEVER cause your program to crash.
+## String to int with TryParse
 
-## Converting a string to an integer
-
-### Syntax
+**Syntax**
 
 `bool `*`didWork`*` = int.TryParse(`*`string`*`, out  `*`myInteger`*`)`
 
-where
+Where:
 
 * *`didWork`* is a boolean variable
   * it will be set to true if the computer was able to convert the string to an integer
   * else it will be set to false
 * `string` is the string to be converted (it can be a variable containing a string)
 * `myInteger` is an integer variable
-  * if the computer is able to conver the string to an integer, then `myInteger` will be set to that value
-  * else, myInteger will be set to zero!
+  * if the computer is able to convert the string to an integer, then `myInteger` will be set to that value
+  * else, `myInteger` will be **set to zero**.
 
 ### Converting, but not testing
 
@@ -67,22 +53,11 @@ We can, if we want, just convert the string into an integer, and not care if it 
 **Example**
 
 ```csharp
-using System;
+int yourNumber;
+Console.Write("Please enter a number: ");
 
-namespace ahha
-{
-    class MainClass
-    {
-        public static void Main(string[] args)
-        {
-            int yourNumber;
-            Console.Write("Please enter a number: ");
-            int.TryParse(Console.ReadLine(), out yourNumber);
-            Console.WriteLine("Your number is: "+yourNumber);
-         }
-
-    }
-}
+int.TryParse(Console.ReadLine(), out yourNumber);
+Console.WriteLine("Your number is: "+yourNumber);
 ```
 
 ```text
