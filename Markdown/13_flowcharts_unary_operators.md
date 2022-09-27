@@ -9,6 +9,16 @@
 **Figure 1** A flowgorithm flowchart
 
 
+### Flowgarithm
+
+This course will use the program Flowgarithm to create programming flowcharts, which can be installed for free.
+
+- Install [Flowgarithm for Windows](http://www.flowgorithm.org/download/).
+- Install Flowgarithm for Mac:
+	- Download [zip from here](https://github.com/jostasik/Flowgorithm-macOS/releases/tag/v3.3.1).
+	- Follow [instructions here](https://github.com/jostasik/Flowgorithm-macOS).
+
+
 There are specific shapes for different aspects of the program:
 
 |                    Symbols                    | Used for...                                                     |
@@ -24,7 +34,7 @@ There are specific shapes for different aspects of the program:
 |                    arrows                     | Indicates program flow, indicated by arrow                      |
 
 
-## General Rules about Flowcharts
+### General Rules about Flowcharts
 
 * As much as possible, program flow should start at the top and go down, or to the right (not always possible).  Use arrows instead of lines *only* when the program flow is not down, or to the right.
 * Lines indicating program flow should never cross each other (that makes it too confusing)
@@ -69,7 +79,7 @@ Pseudo code:
 ![flowchart of above](../Images/11_example1.png)
 
 
-## Data Type Conversion & If Statements
+### Flowgarithm Data Type Conversion & If Statements
 
 Similarly to C#, user inputs is collected as a string. If the input will be used as an `integer`, it must first be converted.
 
@@ -97,7 +107,7 @@ Notice the following:
 - The `if` statement is made of a boolean expression with two possible paths: `True` and `False`. The `if` statement **should not be asking a question**.
 
 
-## If, else if, else if, else
+### If, else if, else if, else
 
 It is possible to string a bunch of `if` statements together, in such a way that only **one** of the code blocks will be executed.
 
@@ -170,7 +180,7 @@ You have ordered: Trio with chips
 ```
 
 
-## Exercise
+### Exercise
 
 Convert the program ShouldRun (from lesson 11: boolean algebra) to a flowchart using Flowgarithm.
  
