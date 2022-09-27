@@ -118,7 +118,7 @@ Compare the `if, else-if, else-if, else` flowchart to the following flowchart `i
 If we only use `if` as opposed to `if else`, then *every* condition will be evaluated (wasting cpu cycles).
 
 
-## Branching
+### Branching
 
 It is good to pull things that are in common out of "decision branches.  Looking at the flowchart below, we have two output blocks, both which are doing the *exact* same thing.
 
@@ -128,7 +128,8 @@ Look at the following flowchart... we have moved the output block out of both th
 
 ![Same flowchart as the previous, but there is now only one output block, after the "true" and "false" branch merge together](../Images/11_undo_duplicate_code.png)
 
-## Nested `if`s in Flowchartsx
+
+### Nested `if`s in Flowchartsx
 
 Remember that a code block is just a bunch of code, surrounded by curly braces.  Within a code block, we can have other loops, and/or if statements.  If we have an `if` inside of an `if block` or `else block`, it is referred to as a `nested if`.
 
@@ -226,7 +227,7 @@ apples++;    // It means apples = apples + 1;
  ```
 
 
-## Prefix vs Postfix Operators
+### Prefix vs Postfix Operators
 
 In all of the example above, the unary increment operators were used in their **postfix** form.
 
@@ -307,7 +308,7 @@ Value of b is: 9   // Can you see why?
 Value of a is: 6
 ```
 
-## Overdoing Unary Operators
+### Overdoing Unary Operators
 
 In general, don't make expressions with unary operators too complicated!
 
@@ -324,7 +325,9 @@ Console.WriteLine(a );
 We think the output should be `2` but things get screwy and you only get `1`  
 
 
-## Exercises
+### Exercises
+
+**Exercise 1**
 
 What is the output of the code below?
 
@@ -338,7 +341,7 @@ Console.WriteLine (a+ " " + b + "  " + c);
 ```
 
 
-**Exercise**
+**Exercise 2**
 
 ```csharp
 int a, b, c; // the variables are born 
@@ -351,6 +354,4 @@ a = ++b + ++c;
 
 Console.WriteLine(a + “ ” + b+ “ ” +c); 
 ```
-
-
 
