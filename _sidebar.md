@@ -20,4 +20,5 @@
 - [11-Boolean Algebra](Markdown/11_boolean_algebra.md)
 - [12-Boolean Algebra, Pt2](Markdown/12_boolean_algebra_cont.md)
 
-
+**Week 6**
+- [13-Flowcharts & Unary Operators](Markdown/13_flowcharts_unary_operators.md)
