@@ -39,12 +39,12 @@ The user enters the password to unlock their phone. **While the password is inco
 
 *Pseudo-code* 
 
-> Ask the user for the password.<br/>
-> Compare the entered password with the password on the system<br/>
-> If the passwords are equal:
-> &emsp; &emsp; Unlock the screen.
-> else:
-> &emsp; &emsp; Ask the user to enter the password again.
+> - Ask the user for the password.
+> - Compare the entered password with the password on the system.
+> - If the passwords are equal:
+> 	- Unlock the screen.
+> - else:
+> 	- Ask the user to enter the password again.
 
 *Flowgarithm*
 
@@ -107,7 +107,7 @@ else
 
 A `counter` is a regular `int`  variable, that can be used to keep track of how many times a process is repeated.
 
-Every time something of interest happens, the counter will be increased (or incremented) or decreased (or decremented).
+Every time something of interest happens, the counter will be increased (incremented) or decreased (decremented).
 
 > **Note**: Unlike most humans, programmers **count starting at 0 (zero)**, *not 1 (one)*.
 
