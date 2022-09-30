@@ -481,7 +481,7 @@ apples = 15;
 ```
 <br>
 
-**Exercise 3:** What is the output of the following bit of code?
+**Exercise 3:** What is the output of the following bit of code? Create a trace table to keep track of how the variables are changing.
 
 ```csharp
 int a, b, c;
@@ -503,7 +503,7 @@ Console.WriteLine(a);
 Console.WriteLine(b);
 Console.WriteLine(c);
 
-// Hint: create a table to track how they change (tracing)
+// Create a table to track how they change (tracing)
 // | a | b | c |
 // -------------
 // | 4 | 3 | 2 |
