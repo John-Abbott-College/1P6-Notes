@@ -2,6 +2,7 @@
 **Week 6**
 - [13-Flowcharts & Unary Operators](Markdown/13_flowcharts_unary_operators.md)
 - [14-While Loop, Counters & Accumulators](Markdown/14_while_loop_counters_accumulators.md)
+- [15-Debugging Techniques](Markdown/15_debugging.md)
 
 **Week 5**
 - [11-Boolean Algebra](Markdown/11_boolean_algebra.md)
