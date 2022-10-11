@@ -169,7 +169,7 @@ Where:
 
 ### For Loop Flowchart
 
-![Flowchart of a `for loop`. On the printed figure, box 'a' is "i=0", box 'b' is "i<10", box 'c' is "i++", box 'd' is "code"](/Images/17_for_loop_deconstructed.png)
+![Flowchart of a `for loop`. On the printed figure, box 'a' is "i=0", box 'b' is "i<10", box 'c' is "i++", box 'd' is "code"](../Images/17_for_loop_deconstructed.png)
 
 
 ### Typical For Loop Usage
