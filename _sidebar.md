@@ -1,3 +1,5 @@
+**Week 7**
+- [16-Do-While & For Loops](Markdown/16_do_while_and_for_loops.md)
 
 **Week 6**
 - [15-Debugging Techniques](Markdown/15_debugging.md)
