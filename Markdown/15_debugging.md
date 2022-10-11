@@ -60,8 +60,8 @@ The code below should calculate a person's hourly salary from their yearly salar
 However, the code does not give the expected answer. Regardless of the input, It always says the hourly salary is $0.
 
 ```csharp
-int WORK_HOURS_PER_WEEK = 40;
-int WEEKS_PER_YEAR = 52;
+const int WORK_HOURS_PER_WEEK = 40;
+const int WEEKS_PER_YEAR = 52;
 int salaryPerYear;
 int salaryPerHour;
     
