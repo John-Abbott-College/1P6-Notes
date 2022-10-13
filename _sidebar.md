@@ -1,4 +1,5 @@
 **Week 7**
+- [17-Functions](Markdown/17_functions.md)
 - [16-Do-While & For Loops](Markdown/16_do_while_and_for_loops.md)
 
 **Week 6**
