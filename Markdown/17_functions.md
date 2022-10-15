@@ -79,7 +79,7 @@ static return_type FunctionName(input_type inputA)
 
 Where:
 
-- `static` - Keyword that defines how accessible this function is. In short, `static`  means this function can be accessed from anywhere in your program.
+- `static` - Keyword that defines how to reach this function. For now, `static`  means this function can be accessed from anywhere in your `Program` class.
 - `return_type` - The type of variable that this function will return (provide as it's output).
 	- Examples of return types:
 		- `int`, `string`, `double`, `bool`
@@ -258,4 +258,24 @@ CustomGreeting("Yo", "Mauricio");   // Two arguments of type string separated by
 ## Exercises
 
 ### Exercise 1
+Complete the [W3School exercises 1 to 4](https://www.w3schools.com/cs/exercise.php?filename=exercise_methods1) from C# methods.
+*PS. the word "method" is a synonymous for function.*
+
+### Exercise 2
 Create a function called `PrintSum` that takes two integers as inputs and prints their sum (addition) to the console.
+
+### Exercise 3
+Create a function called `IsValid` which receives an integer and prints to console whether or not this integer is valid according to the following rule:
+- The integer is valid if it is more than 0 and smaller than 100;
+ 
+### Exercise 4 (challenge)
+Create a function called `Validator` which receives 3 integers:
+- The first integer is the number to be validated. Call this input `number`.
+- The second integer is the minimum possible value that `number` can be. Call this input `minimum`.
+- The third integer is the maximum possible  value that `number` can be. Call this input `maximum`.
+
+Make this function return `true` if `number` is between `minimim` and `maximum` (not inclusive). Otherwise the function should return `false`.
+
+*PS. This lesson has not covered return values, however, you can figure this out by looking at the general structure of a function (previous section in the notes).*
+and prints to console whether or not this integer is valid according to the following rule:
+- The integer is valid if it is more than 0 and smaller than 100;
