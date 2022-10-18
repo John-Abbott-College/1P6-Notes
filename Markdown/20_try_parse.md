@@ -4,7 +4,7 @@ Up until now, we have assumed when we ask the user for an integer, that the user
 
 However, you must always assume that your user is *dumb as a rock* and will not necessarily do what you ask of them.
 
-Consider the following example code, 
+Consider the following example code,
 
 ```csharp
 int yourNumber;

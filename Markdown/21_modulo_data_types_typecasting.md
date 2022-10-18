@@ -1,84 +1,7 @@
-**Reminder** : your test will be at 11:30 - 14:30 am Thursday Sept 30. The test is closed book, closed notes. Bring pen, pencil, eraser.
-
 # Thoughts about assignment 2
 
-1. Please, *please*, do not have ridiculously long lines of code.  
-
-   1. In C#, the line of code doesn't end until there is the semi-colon, so just hit 'return' once in a while
-   2. Long comments can be split over multiplie lines, just remember to start each line with `//`
-
-2. For the same reason as above, *please* do **not** use end-of-line comments.  The code line becomes too long.  Not everyone one has 60" monitors!
-
-   1. Unless defining a variable, put the comment on a separate line *above* the line(s) of code that it is referring to.
-
 3. All code should have, at minimum, a comment describing what the program is supposed to do
-
-4. Use proper variable names.  If they are long, use either `camelCase` or `snake_case`. Do *not* runallthewordstogetherwithoutanyspaces. 
-
-5. To save the extra use of variables that you won't need later on, use the following:
-
-   ```csharp
-   int number = int.Parse( Console.ReadLine() );
-   double real_number = double.Parse( Console.ReadLine() );
-   ```
-
-6. **USE CONSTANTS**. Seeing a formula like the one below would be hard to modify if the requirements for the program changed suddenly
-
-   ```csharp
-   // if you don't know what it is supposed to be doing, then it would
-   // be hard to figure out
-   total = 9 * 99 + 10 * 99 * 0.8 + (number - 19) * price * 0.7;
-   ```
-
-   ```csharp
-   // Better way
-   total = NUM_FULL_PRICE * price +
-           NUM_FIRST_DISCOUNT * price * FIRST_DISCOUNT_PERCENTAGE/100.0 +
-           (number_purchased - NUM_FULL_PRICE - NUM_FIRST_DISCOUNT) * price 
-           * SECOND_DISCOUNT_PERCENTAGE/100.0;
    
-   ```
-
-   
-
-# Comparison Operators
-
-| Symbol | Description                                                  |
-| ------ | ------------------------------------------------------------ |
-| `<`    | less than                                                    |
-| `>`    | greater than                                                 |
-| `<=`   | less than or equal (Note... no space between the `<` and `=`) |
-| `>=`   | greater than or equal (... no space between the `>` and the `=`) |
-| `==`   | equality (be very careful not to use a single `=` in a `conditional`) |
-| `!=`   | not equal to                                                 |
-
-We use comparison operators in `if` statements and in `while` loops whenever we test a condition. 
-
-Notice how whenever/however I test something it always yields a true or false answer. 
-
-### Common Mistake
-
-**Version 1**
-
-```csharp
-int age = 15;
-if (age == 16) 
-{ 
-	Console.WriteLine("Happy Sweet 16"); 
-} 
-// Nothing is displayed
-```
-
-**Version 2**
-
-```csharp
-int age = 15;
-if (age = 16) // Lucky for you, the compiler see this error, and will not run your code! 
-{ 
-	Console.WriteLine("Happy Sweet 16"); 
-} 
-```
-
 # Mathematical Operations
 
 **Mathematical Operations** 
@@ -94,18 +17,6 @@ if (age = 16) // Lucky for you, the compiler see this error, and will not run yo
 | `-=`   | `a -= 3` is equivalent to `a = a - 3`                        |
 | `/=`   | `a /= 5` is equivalent to `a = a/5`                          |
 | `*=`   | `a *= 4` is equivalent to `a = a*5`                          |
-
-**Example**
-
-```csharp
-// code excerpts 
-a = a + b;   
-
-// you could re-write the above using a different syntax doing this: 
-a += b; 
-```
-
->  *NOTE*: You can certainly get away with never using this syntax but it is quite common out there in the real world. 
 
 ### Modulo
 
@@ -178,8 +89,6 @@ So if the number divides by two perfectly, the remainder will be zero and so it 
 | string        | String    | A sequence of characters                                     |             |                                                         |
 | DateTime      | DateTime  | Represents date and time                                     |             | 0:00:00am 1/1/01 to 11:59:59pm 12/31/9999               |
 
- 
-
 **The most common types are**: 
 
 Int32  - this is used to declare an integer 
@@ -193,3 +102,95 @@ Boolean - to declare Boolean types
 You will notice .NET types begin with capital letters. 
 
 >  For now: only use `string` or `String`, `double` or `Double`, `int` or `Int32`, `bool` or `Boolean`.  Everything else should be avoided unless you have a special reason not to.
+
+
+## Typecast and Mixed Types
+
+Sometimes you need to temporarily convert a number into another type so that is matches. 
+
+**example**: 
+
+ ```csharp
+  int apples = 25; 
+  double grapes = 3.35; 
+ 
+  grapes = grapes * apples; // will this work??? I'm mixing types….. uh oh….not sure. 
+ 
+  // what about: 
+  apples = apples * grapes; // not sure either 
+ ```
+
+
+
+ Now what is you want to multiply these? An integer and a Double??? Will you get into trouble here? 
+
+Some languages are "loosely typed" and some are very "strictly typed". C# is finnicky with its types, so we need to typecast 
+
+## Explicit Casting
+
+> **General Rule** - to avoid relying on the system to "maybe" do something for you - you should "typecast" your variables to the type on the left hand side of the equals. 
+
+ **Rules**
+
+* You want everything on the right hand side of the equals sign to match the type of the variable on the left hand side of the equals sign.
+* to change type, enclose the type name in parenthesis before your variable. 
+  * *Example*: ` (int) var1 `
+    * this means, convert `var` to an `int` for this calculation only!
+
+**Example**: 
+
+ ```csharp
+ int abc = 2; 
+ double def = 6.8; 
+ 
+ abc = abc * (int) def; 
+ 
+ // similarly 
+ def = def * (double) abc; 
+ ```
+
+
+Remember - typecast is only temporary for that equation or line of code. Typecast does not change they type of the variable which was assigned at birth.  
+
+FYI - if you typecast a `double` to an `int`, it will be TRUNCATED !
+
+> **Truncated**: the decimal portion of the real number will be chopped off.  
+>
+> This has the affect that the real number will always be rounded towards zero to the nearest integral value.
+>
+> *Positive numbers*: `(int) 45.9 = 45`,  `(int) 45.0 = 45`, `(int) 45.1 = 45`
+>
+> *Negative numbers*: `(int) -45.9 = -45`,  `(int) -45.0 = -45`, `(int) -45.1 = -45`
+
+## Type Conversion Methods
+
+[reference](https://www.w3schools.com/cs/cs_type_casting.php)
+
+It is also possible to convert data types explicitly by using built-in methods, such as `Convert.ToBoolean`, `Convert.ToDouble`, `Convert.ToString`, `Convert.ToInt32` (`int`) and `Convert.ToInt64` (`long`):
+
+```csharp
+int myInt = 10;
+double myDouble = 5.25;
+bool myBool = true;
+
+Console.WriteLine(Convert.ToString(myInt));    // convert int to string
+Console.WriteLine(Convert.ToDouble(myInt));    // convert int to double
+Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
+Console.WriteLine(Convert.ToString(myBool));   // convert bool to string
+
+```
+
+### What is the difference between explicit type casting and converting?
+
+Converting a real number to integer uses *rounding* instead of *truncation*.  See example below:
+
+```csharp
+double a = 45.7;
+int b = (int)a;
+int c = Convert.ToInt32(a);
+
+Console.WriteLine("original number: " + a);
+Console.WriteLine("integer cast: " + b);
+Console.WriteLine("convert to Int32: " + c);
+
+```
