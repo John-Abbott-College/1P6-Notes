@@ -76,8 +76,9 @@ Where:
 > 	2. If the calling program wants to save this information in an assignment statement, the variable used to save the data must be of the appropriate data type.
 > 	3. It is not necessary for the calling program to save the returned value.  It will still be used if necessary.
 
+### Examples
 
-### Example 1: Sum of Two Numbers
+#### Ex 1: Sum of Two Numbers
 
 Consider a function that receives two numbers and returns their sum:
 
@@ -112,7 +113,7 @@ Console.Write(mySum);
 - You can declare new variables inside the function, however, they are not available outside the function unless they are `returned`.
 
 
-### Example 2: Saving the return value
+#### Ex 2: Saving the return value
 
 Below is other example on how to save the return value of a non-void function.
 
@@ -136,7 +137,8 @@ static int GoGetIt()
 }
 ```
 
-#### Example 3: No inputs with Output
+
+#### Ex 3: No inputs with Output
 
 Here the function is being used multiple times.
 
@@ -146,13 +148,13 @@ static void Main(string[] args)
 	int result;
   
 	// program to add 2 numbers and print result
-	result = gogetit() + gogetit(); // yes, you can use the return value of a function
+	result = GoGetIt() + GoGetIt(); // yes, you can use the return value of a function
 	// inside an equation
 	Console.WriteLine("The total of is equal to " + result);
 	Console.ReadLine();
 }
 
-static int gogetit() {
+static int GoGetIt() {
   int number;
   Console.Write("what is your number? ");
   number = int.Parse(Console.ReadLine());
@@ -160,8 +162,7 @@ static int gogetit() {
 }
 ```
 
-
-#### Example 4: Boolean Functions
+#### Ex 4: Boolean Functions
 
 Below is an example of using functions in game programming - note this is a very partial program, it is missing a lot of variables. But look at the boolean function calls to get an idea of what is going on. 
 
@@ -171,15 +172,15 @@ static void Main(string[] args)
   // some code ...
   do 
   {
-    if (targethit()) // using a boolean function call
+    if (TargetHit()) // using a boolean function call
       // display explosion graphics
       // increase score
       // play sound
       // remove bullet, remove target 
-  } while (! gameouver()); // what is the return type of gameover?
+  } while (! GameOver()); // what is the return type of gameover?
 }
 
-static Boolean targethit()
+static Boolean TarGetHit()
 {
   Boolean gotit = false;
   if (xship == xbullett && yxhip == ybullet) // need globals for these, etc
@@ -189,7 +190,7 @@ static Boolean targethit()
   return gotit;
 }
 
-static Boolean gameover()
+static Boolean GameOver()
 {
   Boolean gamedone = false;
   if (gametimer < 0)
@@ -203,4 +204,43 @@ static Boolean gameover()
   }
   return gamedone;
 }
+```
+
+
+## Exercises
+
+### Exercise 1: Input Validation
+
+Create a function called `GetValidInt` that will return a valid integer after collecting user input. A valid input is a decimal number greater than 0.
+
+Pseudo code below:
+
+```text
+int GetValidInt() 
+{
+	declare theNumber
+	prompt user for input
+	do 
+	{
+		success = TryParse
+	} while not success
+	
+	return theNumber
+}
+```
+
+Your function will be used as illustrated below:
+
+```csharp
+static void RectangleArea() 
+{ 
+  int side1, side2;
+  Console.WriteLine ("enter value for side 1"); 
+  side1 = GetValidInt(); 
+  
+  Console.WriteLine("enter value for side 2"); 
+  side2 = GetValidInt(); 
+  
+  // and so on. 
+} 
 ```
