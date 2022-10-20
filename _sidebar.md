@@ -1,4 +1,5 @@
 **Week 8**
+- [20-TryParse](Markdown/20_try_parse.md)
 - [19-Switch Statements](Markdown/19_switch_statements.md)
 - [18-Return Functions](Markdown/18_return_functions.md)
 
