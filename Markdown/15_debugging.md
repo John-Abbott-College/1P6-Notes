@@ -170,49 +170,10 @@ The steps required are:
 What line(s) of code can have breakpoints?
 
 > - You can set a breakpoint on any line of executable code.
-> - Example, in the following C# code, you could set a breakpoint on the line of code with the variable assignment (`int testInt = 1`), the `for` loop, or any code inside the `for` loop. You can't set a breakpoint on method signatures, declarations for a namespace or class, or variable declarations if there's no assignment and no getter/setter.
+> 	- Example, you could set a breakpoint on a variable assignment (`int testInt = 1`), a `for` loop, or any code inside a `for` loop.
+> 	- You can't set a breakpoint on method signatures, declarations for a namespace or class, or variable declarations if there's no assignment and no getter/setter (more on this later in the course).
 
 [source](https://docs.microsoft.com/en-us/visualstudio/debugger/using-breakpoints?view=vs-2019)
-
-## Program Examples
-
-```csharp
-// ==================================================
-// PURPOSE:
-//      Calculate how many years left to retire
-// AUTHOR:
-//      Sandy Bultena, (c) 2021
-// ==================================================
-using System;
-
-namespace Examples
-{
-    class MainClass
-    {
-        public static void Main(string[] args)
-        {
-            // This number does not change, so I am using all
-            // capitals to indicate it is a constant
-            int RETIREMENT_AGE = 65;
-            
-            int usersAge;
-            int yearsUntilRetirement;
-
-            Console.Write("Please enter your age: ");
-
-            // Get the user's age.
-            // NOTE: I need a number, not a string, so I have to convert
-            usersAge = int.Parse ( Console.ReadLine() );
-
-            // Calculate the number of years to retirement
-            yearsUntilRetirement = RETIREMENT_AGE - usersAge;
-
-            // Print information to the terminal
-            Console.WriteLine("You have " + yearsUntilRetirement + " years until you retire");
-        }
-    }
-}
-```
 
 ## Class Exercise
 
