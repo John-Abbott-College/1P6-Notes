@@ -39,6 +39,7 @@ The `TryParse` flow allows us to parse user input but not crash our program.
 **Syntax**
 
 ```csharp
+string myString = Console.ReadLine();
 int myInteger;
 bool didWork = int.TryParse(myString, out myInteger);
 ```
