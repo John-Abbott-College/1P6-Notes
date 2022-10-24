@@ -23,7 +23,9 @@ Note:
 -  `if` is NOT capitalized
 - There is no semi-colon after the code block ( `{ ... }` )
 - Line indentation is not required by the compiler, but it is important for humans. Without this clue (indentation), human readers might not realize there is a code block.
-	- You may use **auto-format** option in Visual Studio to add indentation with the shortcut key is <kbd>CTRL</kbd>+<kbd>E</kbd>, <kbd>D</kbd> (Windows) ⌨
+
+### Auto Indentation
+You may use **auto-format** option in Visual Studio to add indentation with the shortcut key is <kbd>CTRL</kbd>+<kbd>E</kbd>, <kbd>CTRL</kbd>+<kbd>D</kbd> (Windows) ⌨
 
 ### `if` Example 1
 *(assume the variable temperature is declared and defined)*
