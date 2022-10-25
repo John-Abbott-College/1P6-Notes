@@ -3,17 +3,6 @@
 
 ## If Else-if Statement
 
-We previously looked at the `if-else` statement which has the following structure:
-
-> Structure of the `if-else statement`:
->
-> `if ( boolean conditional )`<br/>
->&emsp; &emsp; `code block`<br/>
-> `else`<br/>
-> &emsp; &emsp; `code block`
-
-However, this is limiting. Notice how there is **only one** boolean condition that can be included.
-
 The `if else-if` statement enables us to check for multiple boolean conditions within the same `if` statement
 
 ```csharp
@@ -210,6 +199,16 @@ int max = 50;    // highest random value to be generated (not included)
 Random randomizer = new Random();    // create an object of type Random
 int randomInt = randomizer.Next(min, max);   // generates a random int between min and max.
 ```
+
+Where:
+
+- `Random` is the name of a class (classes are covered in a later course).
+- `Random randomizer` defines a variable called `randomizer` to be an object of type `Random`
+- `Random()` is a function (method) that creates the object (also known as constructor).
+- `Random randomizer = new Random()` creates a new Random object and saves it in the variable `randomizer`.
+- `randomizer.Next(min, max)` call method `Next` with the parameters (inputs) `min` and `max` on the object `randomizer`.
+	- The random number generated includes `min` but does not includes `max`.
+	- Therefore, the code above will generate an integer in the range 10, 11, 12, 13, ..., 47, 48, 49.
 
 
 ## Exercise

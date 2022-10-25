@@ -277,7 +277,7 @@ Improve the program so that:
 
 ### Exercise 2: 21 Dice roll 🎲
 
-In the exercise section of [lesson 10 - *If Else-If Statement*](Markdown/10_if_else-if.md), you created a dice roll game with 4 simple rules:
+In the exercise section of [lesson 10 - *If Else-If Statement*](10_if_else-if_random.md), you created a dice roll game with 4 simple rules:
 
 - The player rolls 2 dice at a time.
 - If the two dice have the same number, it's an instant win.
