@@ -1,3 +1,6 @@
+**Week 9**
+- [21-Scope, Globals & Keyboard tips](Markdown/21_scope_globals_keyboard.md)
+
 **Week 8**
 - [20-TryParse](Markdown/20_try_parse.md)
 - [19-Switch Statements](Markdown/19_switch_statements.md)
@@ -17,7 +20,7 @@
 - [11-Boolean Algebra](Markdown/11_boolean_algebra.md)
 
 **Week 4**
-- [10-If Else-If](Markdown/10_if_else-if.md)
+- [10-If Else-If](Markdown/10_if_else-if_random.md)
 - [9-If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices.md)
 - [8-If Statement](Markdown/08_if_statements.md)
 
