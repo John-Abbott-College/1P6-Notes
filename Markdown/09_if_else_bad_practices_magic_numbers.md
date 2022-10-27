@@ -213,3 +213,46 @@ else
 Console.WriteLine("You will always see this!!!")
 ```
 
+# Magic Numbers and Constants
+
+It's not practice to hard code variables such as numbers and strings in your code. For example:
+
+```csharp
+if (a < 4584)
+{
+  	// ... lines of code
+}
+```
+
+The above code is valid and might accomplish the goal of the program.
+However, what is the number `4584`?
+
+In this case  4584 is a **"magic number"**. Even if comments are added to explain, this number might need to be used later in the code:
+
+```csharp
+Console.WriteLine("Your score was lower than " + 4584 + ", you lost.")
+```
+
+
+If you had to change the number to 1234, you would have to remember and find all the location where this **magic number** was used, which is easy to forget or miss.
+
+To avoid this kind of repetitive and error prone practice, we use **constants**.
+
+## How to use Constants: 
+
+- To create a constant , add the keyword `const` in front of your variable.
+- A constant must be **defined** as it is declared.
+
+```csharp
+// give the constant a value when you declare it.
+const int upperlimit = 100;
+```
+
+- Once a constant is declared (with it's mandatory assignment), it's value cannot change.
+
+```csharp
+const int upperlimit;
+upperlimit = 100; // Error!
+// you cannot assign a value to a constant
+```
+
