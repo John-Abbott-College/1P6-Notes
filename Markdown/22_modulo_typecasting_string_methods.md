@@ -360,7 +360,9 @@ C. Minesweeper
 D. Solitaire
 ```
 
-4. Write a program that prompts the user for a word and checks if that word is contained in the sentence below.
+4. Complete all the [String exercises from W3Schools](https://www.w3schools.com/cs/exercise.php?filename=exercise_strings1).
+
+5. Write a program that prompts the user for a word and checks if that word is contained in the sentence below.
 
 ```csharp
 const string sentence = "The quick brown fox jumps over the lazy dog";
