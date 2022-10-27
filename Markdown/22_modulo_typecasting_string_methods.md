@@ -219,6 +219,11 @@ integer cast: 45
 convert to Int32: 46
 ```
 
+### Type Conversion Tables
+
+To see a list of valid conversion from one data type to another, see the official documentation:
+- [Type Conversion Tables in .NET](https://learn.microsoft.com/en-us/dotnet/standard/base-types/conversion-tables)
+
 
 ## String Input and Compare
 
@@ -369,3 +374,6 @@ const string sentence = "The quick brown fox jumps over the lazy dog";
 ```
 
 *Hint: Use a built-in string method*
+
+6. Complete the tutorial: [Modify the content of strings using built-in string data type methods in C#](https://learn.microsoft.com/en-us/training/modules/csharp-modify-content/)
+	- Make sure you can complete the last challenge!

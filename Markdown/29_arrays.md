@@ -362,4 +362,9 @@ Console.WriteLine(a[0]+" "+a[1]+" "+a[2]+" "+a[3]+" "+a[4]);
 | 6     |                |                |            |            | 203        |            |            |
 
 
+## Exercises
+
+1. Follow the tutorial [Perform operations on arrays using helper methods in C#](https://learn.microsoft.com/en-us/training/modules/csharp-arrays-operations/)
+	- Make sure to complete the final challenge.
+
 
