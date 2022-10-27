@@ -337,7 +337,7 @@ It is far better to be explicit about type casting.
 > 💣 Implicit casting is considered a bad coding practice and will have marks deducted.
 
 
-### Explicit Casting
+### Explicit Conversion
 
 It is possible (and recommended) to explicitly convert data types by using the `Convert` built-in functions:
 

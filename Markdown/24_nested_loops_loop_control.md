@@ -27,7 +27,7 @@ What is this insanity?
 
  Thinking of architecture? 
 
-<img src="./Images/24_roman_cols.png" alt="Roman coleseum" style="zoom:33%;" />
+![Roman coleseum](../Images/24_roman_cols.png) 
 
 Look at those beautiful columns, they go *up*/*down*
 

@@ -17,13 +17,13 @@ Make sure to **constantly** use automatic code formatting:
 
 **Default hotkeys** for Visual Studio (Windows):
 
-- Ctrl+E, Ctrl+D to format the entire document.
-- Ctrl+E, Ctrl+F to format the selection (whatever is highlighted).
+- **Ctrl+E, Ctrl+D** to format the entire document.
+- **Ctrl+E, Ctrl+F** to format the selection (whatever is highlighted).
 
 **Some versions** of Visual Studio (Windows):
 
-- Ctrl + K + D  to format entire document.
-- Ctrl + K + F to format the selection (whatever is highlighted).
+- **Ctrl + K, D**  to format entire document.
+- **Ctrl + K, F** to format the selection (whatever is highlighted).
 
 **To find out which key bindings apply in _your_ copy of Visual Studio**:
 In menu _Edit_ → _Advanced menu_ - the keys are displayed to the right of the menu items, so it's easy to discover what they are on your system.
