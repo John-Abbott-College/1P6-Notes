@@ -37,3 +37,6 @@
 - [3-Computer Algorithms](Markdown/03_computer_algorithms.md)
 - [2-Computational Thinking](Markdown/02_computational_thinking.md)
 - [1-Intro to Course](Markdown/01_intro_to_the_course.md)
+
+**Extra Learning**
+- [Extra Learning Resources](Markdown/00_extra_self_guided_learning.md)
