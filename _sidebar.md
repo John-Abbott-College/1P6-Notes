@@ -39,4 +39,4 @@
 - [1-Intro to Course](Markdown/01_intro_to_the_course.md)
 
 **Extra Learning**
-- [Extra Learning Resources](Markdown/00_extra_self_guided_learning.md)
+- [Extra Learning Resources](Markdown/99_extra_self_guided_learning.md)
