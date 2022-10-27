@@ -332,5 +332,8 @@ Follow the tutorial below by Microsoft:
 
 ## Resources
 
+- Video [Intro to Visual Studio in 5 minutes | Intro to Visual Studio](https://www.youtube.com/watch?v=5AOp8zFu4Vg&list=PLdo4fOcmZ0oWxvt87h9r3uq3uU6pUlCq8&index=1)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5AOp8zFu4Vg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 - Video ["Hello World" Explained](https://docs.microsoft.com/en-us/shows/csharp-101/csharp-hello-world-explained) by Microsoft C# 101 series
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qmZ2RVZ4giY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

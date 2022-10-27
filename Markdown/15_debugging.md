@@ -175,6 +175,10 @@ What line(s) of code can have breakpoints?
 
 [source](https://docs.microsoft.com/en-us/visualstudio/debugger/using-breakpoints?view=vs-2019)
 
+## Resources
+
+- Video: [Debugging (C#101 Series)](https://www.youtube.com/watch?v=pm_pv0Eb7Fw&list=PLdo4fOcmZ0oVxKLQCHpiUWun7vlJJvUiN&index=15)
+
 ## Class Exercise
 
 The program below asks the user for a number N. It should then display the first N even numbers.
