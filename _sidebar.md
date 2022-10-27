@@ -1,4 +1,5 @@
 **Week 9**
+- [23-Nested Loops](Markdown/23_nested_loops_control.md)
 - [22-Modulo, Typecasting & String Methods](Markdown/22_modulo_typecasting_string_methods.md)
 - [21-Scope, Globals & Keyboard tips](Markdown/21_scope_globals_keyboard.md)
 
