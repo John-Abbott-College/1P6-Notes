@@ -1,4 +1,5 @@
 **Week 9**
+- [22-Modulo, Typecasting & String Methods](Markdown/22_modulo_typecasting_string_methods.md)
 - [21-Scope, Globals & Keyboard tips](Markdown/21_scope_globals_keyboard.md)
 
 **Week 8**
@@ -21,7 +22,7 @@
 
 **Week 4**
 - [10-If Else-If](Markdown/10_if_else-if_random.md)
-- [9-If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices.md)
+- [9-If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices_magic_numbers.md)
 - [8-If Statement](Markdown/08_if_statements.md)
 
 **Week 3** 
