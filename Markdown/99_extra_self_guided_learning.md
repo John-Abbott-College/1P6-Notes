@@ -19,3 +19,12 @@ This is a list of resources for additional self-guided learning organized by top
 ## Asynchronous Programming
 
 - Video: [Introduction To Async, Await, And Tasks | C# 201](https://www.youtube.com/watch?v=X9N5r6kMOxw&list=PLdo4fOcmZ0oXzJ3FC-ApBes-0klFN9kr9&index=5)
+
+> If you must venture into Asynchronous programming, I suggest the following:
+> - Stick to [System.Timers.Timer](https://learn.microsoft.com/en-us/dotnet/api/system.timers.timer) for now, it's simpler and safer.
+> - Avoid returning values from a function running on a separate thread back to your main function.
+
+### Timers (scheduling functions)
+
+- Brief explanation: [Introduction to Timer in C#](https://www.educba.com/timer-in-c-sharp/)
+- Detailed explanation: [C# Timer: Schedule a Task](https://social.technet.microsoft.com/wiki/contents/articles/37252.c-timer-schedule-a-task.aspx)
