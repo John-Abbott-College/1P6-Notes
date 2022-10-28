@@ -60,7 +60,7 @@ for row = 1 to 2
 	{ 
 		print alien;  // do not break the line
 	} 
-	print a line break; // happens after columns are printed
+	print a line break; // happens after the row is completed
 } 
 ```
 
