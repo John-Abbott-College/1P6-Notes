@@ -1,3 +1,6 @@
+**Week 10**
+- [24-Changing Loop Behaviour](Markdown/24_changing_loop_behaviour.md)
+
 **Week 9**
 - [23-Nested Loops](Markdown/23_nested_loops_control.md)
 - [22-Modulo, Typecasting & String Methods](Markdown/22_modulo_typecasting_string_methods.md)
