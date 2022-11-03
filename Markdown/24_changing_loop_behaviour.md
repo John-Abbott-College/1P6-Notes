@@ -60,7 +60,7 @@ for(int i = 0; i <= 5; i++)
 	if (i == 3)
 	{
 		break;
-	}  // if i == 5
+	}  // if i == 3
 	Console.Write(i + " ");
 }  // for i<=5
 ```

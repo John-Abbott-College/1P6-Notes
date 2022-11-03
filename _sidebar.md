@@ -1,4 +1,5 @@
 **Week 10**
+- [25-Function Params vs Args](Markdown/25_passing_parameters_to_functions.md)
 - [24-Changing Loop Behaviour](Markdown/24_changing_loop_behaviour.md)
 
 **Week 9**

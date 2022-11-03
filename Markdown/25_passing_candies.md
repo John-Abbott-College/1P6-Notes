@@ -28,6 +28,9 @@ Example.
 * `computer` counts the candies in `red_box`, and puts the same number of candies in `purple_box` (Does not transfer candies, just makes sure both boxes contain the same number of candies).  `computer` does the same thing with `blue_box` and `green_box`
 
 Now `foo` performs whatever operations have been specified for this function.
+Example:
+> `purple_box+=green_box`
+
 
 
 
