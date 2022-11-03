@@ -2,17 +2,35 @@
 
 ## Counting candies (aka - pass by value)
 
-Make groups of three.
+Make groups of three:
 
-One person is the function `foo`
+- One person is the function `Foo`
+- One person is the function `Main`, which calls `Foo`
+- One person is the computer.
 
-One person is the function `main`, which calls `foo`
-
-One person is the computer.
-
+Teacher:
+- write simple function for `Foo` taking two parameters, both # of candies
 
 
-Teacher: write simple function for `foo` taking two parameters, both # of candies
+## Round 1
+
+*Function call*
+```csharp
+static void Main() {
+	choco red_box = 3;
+	jolly blue_box = 2;
+	
+	blue_box = Foo(red_box, blue_box)
+}
+```
+
+*Function Definition*
+```csharp
+static jolly Foo(choco pink_box, jolly green_box)
+{
+	return green_box = (jolly) pink_box % green_box
+}
+```
 
 Students:
 

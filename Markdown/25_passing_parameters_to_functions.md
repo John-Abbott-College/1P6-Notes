@@ -15,7 +15,7 @@ Parameters and arguments refer to function inputs. However, they refer to  diffe
 static double Division(double parameter1, double parameter2)
 ```
 
-In the function above, `int parameter1` and `int parameter2` are the **two parameters** this function is setup to receive.
+In the function above, `double parameter1` and `double parameter2` are the **two parameters** this function is setup to receive.
 
 **Arguments** are the values passed to the function **when the function is called**.
 
