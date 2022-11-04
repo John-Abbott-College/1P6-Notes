@@ -159,7 +159,28 @@ How about the message that will ask the user to enter some information?
 
 #### Phase 2 - Make it reusable
 
-Refactor your code to make the function reusable for any 
+Refactor your code to make the function reusable for **any prompt message** you might have.
+
+Examples of message:
+
+
+
+The message should be passed to the function as an argument.
+
+Examples of function calls:
+
+```csharp
+int birthDay, studentNumber, age;
+
+string birthDayQuestion = "What is your birth day?";
+string studentNumberQuestion = "Please enter your JAC student number";
+string ageQuestion = "Quel âge as-tu ?";
+
+birthDay = GetIntInput(birthDayQuestion);
+studentNumber =GetIntInput(studentNumberQuestion);
+age =GetIntInput(ageQuestion);
+```
+
 
 ## Resources
 
@@ -168,72 +189,51 @@ Refactor your code to make the function reusable for any
 
 ## Exercises
 
-### 1. Modifying GetIntInput
+### 1. GetIntInput: Max and Min Limits
 
-- rewrite `GetIntInput` to enable user to add the error message.  Test your work
+Refactor (aka. modify) the `GetIntInput( )` done in class in order to:
 
-  Example of calls:
+- Pass the maximum and minimum allowed integers to the function.
+- Have the function will assure the user input is within this range.
+- If a minimum range is not passed, have it default to `1`.
 
-  `hours = GetIntInput("Combien d'heures tu travail","Tu as typé une mauvaise character")`
-
-  `age = GetIntInput("Cuantos años tienes", "¿Eres un idiota? ¿Por qué estás escribiendo letras cuando deberías escribir un número?"); `)
-
-* What about if you wanted a lower limit and a high limit - a range??? How would you do this? 
-
-  Well the call would look like this: 
-
-  `Lotteryguess = GetIntInput("Enter a number between 6 and 49", "hey stop typing characters", "You typed in something good, but not in range!", 6,49); `
-
-  The function would need to accept 5 arguments: 
-
-  1 - the prompt message (string)
-
-  2 - the error message because they typed in an invalid character (string)
-
-  3 - the error message where they typed in a good number, but the number was out of range (string)
-
-  4 - lowerlimit (int)
-
-  5 - upperlimit (int)
-
-  *This function would be my universal get a number type of function.*
-
-* Now what if parameter 4 and 5 - the limits were sometimes used, sometimes not….. for example: 
-
-``` csharp 
-age = GoGetNumber("Quelle âge as-tu?", "Hey! Mauvais charactere!", "Âge invalide", 2, 120);
-  
-guess = GoGetNumber("pick a number between 1 and 100", "Bad character", "out of range", 1, 100); 
-  
-// what???? only 4 are being passed???? 
-tickets = GoGetNumber("how many tickets", "invalid typing", "you can't have negative", 0);  
-  
-// whaat?? now only 2 are being used 
-pick = GoGetNumber("type in a number", "lay off the characters");    
-```
-
-   
-Is this possible? Yes - with optional parameters.
-
-We simply re-write the first line of the function with a default value for arguments that may not be passed.
-
-This is your magic line of code 
+Example of function calls:
 
 ```csharp
-static int GoGetNumber(String askmessage, String errmessage, String rangemessage="", int lowlimit = Int32.MinValue, int hilimit = Int32.MaxValue) 
+birthYear = GetIntInput(birthYearQuestion, 2022, 1900);
+birthDay =GetIntInput(birthDayQuestion, 31, 1);
+birthDay =GetIntInput(birthDayQuestion, 31);  // only 2 arguments passed
 ```
 
-  Note: You cannot leap-frog an argument. For example, you cannot do this: 
+
+### 2. GetIntInput: Custom Limit Error Message
+
+Refactor the previous  `GetIntInput( )` in order to:
+- Pass a custom error message to the function if user enters an integer outside of the valid range.
+
+Example of function calls:
 
 ```csharp
-pick = GoGetNumber("what is the number", 10, 100); 
+string birthDayQuestion = "What is your birth day?";
+birthDay =GetIntInput(birthDayQuestion, 1, 31, "Invalid. Day range is between 1 to 31");
 ```
 
-  **Position is important, your arguments must match the parameters** 
+### 3. GetIntInput: Custom Parse Fail Message
 
-  So to do the above you would have to do this:
+Refactor the previous `GetIntInput( )` in order to:
+- Pass a custom parse error message in case the user does not types in an integer
+- If a custom message is not provided, use a default error message.
+Example of function calls:
 
 ```csharp
-pick = GoGetNumber("What is the number", "", "", 10, 100)
-```
+string birthDayQuestion = "What is your birth day?";
+string rangeErrorMessage = "Invalid. Day range is between 1 to 31";
 
+// Function call with custom parse error message
+birthDay = 
+GetIntInput(birthDayQuestion, 1, 31, rangeErrorMessage, "Birth day must be an integer");
+
+// Function call without error message (dafault parameter is used)
+birthDay = 
+GetIntInput(birthDayQuestion, 1, 31, rangeErrorMessage);
+```
