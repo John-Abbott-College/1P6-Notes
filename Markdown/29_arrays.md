@@ -1,7 +1,5 @@
 # Arrays
 
-
-
 ## Why do we need arrays?
 
 Imagine the following:

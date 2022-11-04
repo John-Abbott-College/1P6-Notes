@@ -348,4 +348,3 @@ static void Main() {
 - `a = multiply(n1, n2);` 
 - `biggernum = findbiggest(n1,n2);` 
 - `exp = pow(4,2);` 
-

@@ -34,10 +34,17 @@ In other words, it is **an approach to problem solving** that involves 4 main el
 
 The elements listed above are "high level" elements. To achieve them, one typically four practices:
 
-- **Being incremental and iterative**: design should start with small pieces that can be verified to work. Slowly add complexity and regularly check that it is still functional.
-- **Testing and debugging**: develop strategies for anticipating and dealing with problems efficiently. Most of the development time is spent debugging.
-- **Reusing and remixing**: don't reinvent the wheel but understand what you are bringing into your design so that you can adapt it to your needs and fix it when it breaks. Provide proper attribution.
-- **Abstracting and modularizing**: build something large by putting together collections of smaller parts. Make reusable and adaptable parts.
+- **Being incremental and iterative**:
+	- Design should start with small pieces that can be verified to work. Slowly add complexity and regularly check that it is still functional.
+
+- **Testing and debugging**:
+	- Develop strategies for anticipating and dealing with problems efficiently. Most of the development time is spent debugging.
+
+- **Reusing and remixing**:
+	- Don't reinvent the wheel but understand what you are bringing into your design so that you can adapt it to your needs and fix it when it breaks. Provide proper attribution.
+	
+- **Abstracting and modularizing**:
+	- Build something large by putting together collections of smaller parts. Make reusable and adaptable parts.
 
 (*Adapted from Brennan & Resnick, AERA 2012, New frameworks for studying and assessing the  
 development of computational thinking*)
