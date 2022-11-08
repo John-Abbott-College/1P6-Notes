@@ -1,3 +1,6 @@
+**Week 11**
+- [27-Intro to Arrays](Markdown/27_arrays.md)
+
 **Week 10**
 - [26-Function Design & Default Params](Markdown/26_default_parameters.md)
 - [25-Function Params vs Args](Markdown/25_passing_parameters_to_functions.md)
@@ -27,7 +30,7 @@
 - [11-Boolean Algebra](Markdown/11_boolean_algebra.md)
 
 **Week 4**
-- [10-If Else-If](Markdown/10_if_else-if_random.md)
+- [10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
 - [9-If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices_magic_numbers.md)
 - [8-If Statement](Markdown/08_if_statements.md)
 
