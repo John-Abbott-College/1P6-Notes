@@ -40,7 +40,7 @@ We'll use two analogies to describe an array:
 
 1. An array is similar to a Canada Post community mailbox:
 
-![Two Canada Post community main boxes](https://raisethehammer.org/static/images/canada_post_cmb_inverness_near_knyvet.jpg ":size=500" )
+![Two Canada Post community main boxes](https://raisethehammer.org/static/images/canada_post_cmb_inverness_near_knyvet.jpg ":size=600" )
 *Source: [raisethehammer.org](https://raisethehammer.org/article/3029/canada_post_corporations_manufactured_crisis)*
 
 For this analogy, consider the following:
@@ -51,7 +51,7 @@ For this analogy, consider the following:
 
 2. An array is similar to a **box containing smaller boxes**.
 
-![](../Images/29_arrays_plastic_box.png)
+![](../Images/29_arrays_plastic_box.png ":size=600")
 *Source: [canada.michaels.com](https://canada.michaels.com/en/5-in-1-multi-use-organizer-by-simply-tidy/10622044.html)*
 
 For this analogy, consider the following:
