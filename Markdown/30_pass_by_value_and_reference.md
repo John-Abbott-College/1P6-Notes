@@ -228,11 +228,13 @@ static void Bob(ref int x)
 ```
 
 
+![](../Images/30_pass_by_reference_memory_table_4.png)
+
 ## The `out` keyword
 
 The `out` keyword works very similar to using the `ref` keyword, but with a few new rules
 
-* The receiving function (`ConvertInt` in the example below) *must* assign a number to `number`!
+* In the example below the receiving function `ToogleLight`  **must** **assign** a boolean to `light`.
 
 ```csharp
 static void Main(){
