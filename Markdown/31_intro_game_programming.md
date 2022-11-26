@@ -197,7 +197,7 @@ See the Microsoft documentation to see what is available for the `Console` class
 https://docs.microsoft.com/en-us/dotnet/api/system.console?view=net-5.0
 
 
-## About Microsoft Documentation
+### Microsoft Documentation on Console
 
 ### Properties
 
@@ -252,7 +252,7 @@ A `console` property is something that describes the console.  It can be '*read 
 
  
 
-# Interesting Console Properties
+### Interesting Console Properties
 
 * `BackgroundColor`, `ForegroundColor` : Changes the colors used to write text to the screen
 
@@ -266,7 +266,7 @@ A `console` property is something that describes the console.  It can be '*read 
 
   
 
-# Interesting Console Methods (functions)
+### Interesting Console Methods (functions)
 
 * `Beep` - doesn't work on Mac
 * `Clear` - clear the terminal of all text, reposition the cursor at row 0, and column 0
