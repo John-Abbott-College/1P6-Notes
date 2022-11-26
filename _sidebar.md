@@ -1,6 +1,8 @@
 
 **Week 13**
 - [30-Pass by Reference & Value](Markdown/30_pass_by_value_and_reference.md)
+- [31-Game Programming Intro](Markdown/31_intro_game_programming.md)
+
 
 **Week 12**
 - [28-Passing Arrays, Heap & Stack](Markdown/28_passing_arrays_heap_stack.md)
