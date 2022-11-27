@@ -1,6 +1,7 @@
 
 **Week 13**
-- [31-Game Programming Intro](Markdown/31_intro_game_programming.md)
+- [32-Game Programming Intro](Markdown/32_intro_game_programming.md)
+- [31-Console Manipulation](Markdown/31_console_class_manipulation.md)
 - [30-Pass by Reference & Value](Markdown/30_pass_by_value_and_reference.md)
 
 
