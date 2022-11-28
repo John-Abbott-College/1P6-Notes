@@ -7,7 +7,6 @@ Concepts covered:
 1. Program Flow for Console Games.
 2. Use of Global Variables.
 3. Processing Key Strokes.
-4. Game timing (frame-rate): Timer vs Sleep
 
 
 ## General Program Flow
@@ -28,11 +27,9 @@ Below is a common program flow for your Main function.
 // ===============================================================
 static bool gameover = false;
 
-// keeping track of location, direction, and speed
-static int dRow = 0;        // row direction: + is right, - is left
-static int dCol = 0;        // collumn direction: + is down, - is up
-static double row = 0;      // current row position
-static double col = 0;      // current collumn position
+// keeping track of location
+static int row = 0;      // current row position
+static int col = 0;      // current collumn position
 
 // ===============================================================
 // Entry point
@@ -45,8 +42,8 @@ static void Main(string[] args)
 
     Console.Clear();
 	// initial position in the middle of the console
-	int row = Console.WindowHeight / 2;
-    int col = Console.WindowWidth / 2;
+	row = Console.WindowHeight / 2;
+    col = Console.WindowWidth / 2;
     // make the cursor invisible. See next sections
     Console.CursorVisible = false;
 
@@ -183,3 +180,48 @@ i=935336, You hit key: C
 i=1237750, You hit key: D
 i=1781236, You hit key: E
 ```
+
+### Keystrokes to Position
+
+Once keystrokes can be accurately detected, they need to be converted to movements.
+
+1. Decide the functionality of each keys.
+	- Example:
+		- "Q" will exit the game
+		-  "Arrow Up" moves the character up one row.
+		- "Arrow Right" moves the character one column position to the right.
+	
+2. Use a **loop** to continuously read available keystrokes.
+
+3. Use a switch-case statement to translate each keystroke into movement.
+
+Below is an example (using the game setup show in the beginning of this section):
+
+```csharp
+// ===============================================================
+// Change direction of character by detecting specific keys
+// ===============================================================
+static void ProcessKeyStrokes()
+{
+	ConsoleKeyInfo key;
+    while (Console.KeyAvailable)
+	{
+		key = Console.ReadKey(true);
+        switch (key.Key)
+        {
+		    case ConsoleKey.Q:
+		        gameover = true;
+                break;
+            case ConsoleKey.UpArrow:
+	            Move(-1, 0);  // function containing movement logic
+                break;
+            case ConsoleKey.RightArrow:
+                Move(0, 1);
+                break;
+			// ... pattern continues
+        }
+    }
+}
+```
+
+

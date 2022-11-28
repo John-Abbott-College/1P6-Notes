@@ -125,17 +125,30 @@ Example:
 * Beware of the site, [Stack Overflow](https://stackoverflow.com/), it can contain great information, but answers can be wrong and out of date. It is largely based on opinion (via its voting system), and answers can be very specific to the question asked.
 
 
+### Console Direction
+
+The origin of the Console positioning system is at the top left corner. At this point, row = 0 and column = 0.
+
+Since, everything is measured from this point, to position the cursor onto the Console, use:
+
+-  `CursorLeft`: position of the cursor in the column direction (measuring from the left of the window).
+- `CursorTop`: position of the cursor in the row direction (measuring from the top of the window).
+
+Maximum positions of the cursor are:
+
+- In the column direction: given by `Console.WindowWidth`
+- In the row direction: given by `Console.WindowHeight`
+
+![](../Images/31_console_coordinates.png)
+
+
 ### Interesting Console Properties
 
  `BackgroundColor`, `ForegroundColor` : Changes the colors used to write text to the screen
 
- `CursorLeft`, `CursorTop`: defines the location of the cursor row, column)
-
  `CursorVisible`: Is the cursor visible?
 
- `KeyAvailable`: will be described next class
-
- `WindowHeight`, `WindowWidth`: the size of your terminal window in rows and columns
+ `KeyAvailable`: Has a key been pressed? Will be described next class.
 
 
 ## Methods
@@ -150,7 +163,7 @@ Example:
 public static void SetWindowSize (int width, int height);
 ```
 
-*Example in use*
+**Example:** Placing the cursor in the middle of the screen
 
 ```csharp
 // Step 1: Get the current window dimensions (properties)
