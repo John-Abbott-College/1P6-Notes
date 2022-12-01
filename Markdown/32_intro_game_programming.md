@@ -213,15 +213,14 @@ static void ProcessKeyStrokes()
 		        gameover = true;
                 break;
             case ConsoleKey.UpArrow:
-	            Move(-1, 0);  // function containing movement logic
+	            ChangeDirection(-1, 0);  // function containing movement logic
                 break;
             case ConsoleKey.RightArrow:
-                Move(0, 1);
+                ChangeDirection(0, 1);
                 break;
 			// ... pattern continues
         }
     }
 }
 ```
-
 

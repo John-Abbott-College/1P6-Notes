@@ -1,6 +1,10 @@
 
-**Week 13**
+**Week 14**
+- [34-Collision Detection & 2D Arrays](Markdown/34_boundary_collision_2d_arrays.md)
+- [33-Game Timing](Markdown/33_game_timing.md)
 - [32-Game Programming Intro](Markdown/32_intro_game_programming.md)
+
+**Week 13**
 - [31-Console Manipulation](Markdown/31_console_class_manipulation.md)
 - [30-Pass by Reference & Value](Markdown/30_pass_by_value_and_reference.md)
 

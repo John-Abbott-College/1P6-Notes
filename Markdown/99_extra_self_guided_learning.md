@@ -26,5 +26,5 @@ This is a list of resources for additional self-guided learning organized by top
 
 ### Timers (scheduling functions)
 
-- Brief explanation: [Introduction to Timer in C#](https://www.educba.com/timer-in-c-sharp/)
-- Detailed explanation: [C# Timer: Schedule a Task](https://social.technet.microsoft.com/wiki/contents/articles/37252.c-timer-schedule-a-task.aspx)
+- Brief explanation: [Introduction to Timer in C#](https://www.educba.com/timer-in-c-sharp/) by EduCBA.com
+- Detailed explanation: [C# Timer: Schedule a Task](https://social.technet.microsoft.com/wiki/contents/articles/37252.c-timer-schedule-a-task.aspx) by Microsoft TechNet (Blog)

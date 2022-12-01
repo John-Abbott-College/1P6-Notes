@@ -114,14 +114,19 @@ if (Console.CapsLock) {
 
 Example:
 
-> [ConsoleColor](https://docs.microsoft.com/en-us/dotnet/api/system.consolecolor?view=net-6.0)
-> - Relevant to `Console` color properties `BackgroundColor` and `ForegroundColor`.
+> [ConsoleColor](https://docs.microsoft.com/en-us/dotnet/api/system.consolecolor?view=net-6.0): Specifies constants that define foreground and background colors for the console.
+> 
+> - Relevant for the `Console` properties `BackgroundColor` and `ForegroundColor`.
 
 
-## Documentation Examples
+## Examples from Documentation
 
-* Examples included in the Microsoft documentation can be very helpful.  **However**, sometimes they are too complex or confusing to understand.
-* At this point, if you know what you want to learn, but do not understand the documentation, google is your friend.
+Examples included in the Microsoft documentation can be very helpful.  **However**, sometimes they are too complex or confusing to understand.
+
+When the examples in the official documentation are not helpful:
+
+* If you know what you want to learn, but do not understand the documentation, google is your friend.
+
 * Beware of the site, [Stack Overflow](https://stackoverflow.com/), it can contain great information, but answers can be wrong and out of date. It is largely based on opinion (via its voting system), and answers can be very specific to the question asked.
 
 

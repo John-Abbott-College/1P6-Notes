@@ -9,7 +9,7 @@ When developing a program.
    1. What are its inputs and outputs
    2. Make this function generic, so that it can be reused elsewhere.
    3. Should do one thing, and one thing only
-5. Are there any steps that are repeated... 
+ 
    1. create a loop,
    2. or create a function
    3. or both
