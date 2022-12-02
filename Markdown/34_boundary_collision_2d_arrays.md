@@ -12,7 +12,7 @@ For example:
 
 ## Starter Code
 
-Assume the previous chapter's code show in section ***Simple Example***.
+Assume the previous chapter's code show in [section ***Simple Example***.](https://john-abbott-college.github.io/1P6-Notes/#/Markdown/33_game_timing?id=a-simple-example)
 
 In particular, let's focus on functions `DrawPlayer` and `MoveAllowed`:
 

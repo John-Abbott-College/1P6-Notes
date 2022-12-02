@@ -204,6 +204,7 @@ namespace MoveX
             while (!gameover)
             {
                 ProcessKeyStrokes();
+				// Drawing is done by Timer
             }
         }
 
