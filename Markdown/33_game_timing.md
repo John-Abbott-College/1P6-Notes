@@ -153,6 +153,12 @@ static void DrawPlayer(Object source, ElapsedEventArgs e)
 ```
 
 
+#### Timer.AutoReset by Default
+
+> By default,  `Timer.AutoReset`  is set to `true`!
+> If you want the timer to only run once, you must **explicitly** set it to `false` .
+
+
 
 ## A Simple Example
 
