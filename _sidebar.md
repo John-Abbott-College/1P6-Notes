@@ -1,4 +1,5 @@
 
+<!--
 **Week 14**
 - [34-Collision Detection & 2D Arrays](Markdown/34_boundary_collision_2d_arrays.md)
 - [33-Game Timing](Markdown/33_game_timing.md)
@@ -56,11 +57,14 @@
 **Week 2**
 - [5-Variables: Int & String](Markdown/05_variables_int_strings.md)
 - [4-Visual Studio](Markdown/04_visualstudio.md)
+-->
 
 **Week 1**
-- [3-Computer Algorithms](Markdown/03_computer_algorithms.md)
-- [2-Computational Thinking](Markdown/02_computational_thinking.md)
+<!--- [3-Computer Algorithms](Markdown/03_computer_algorithms.md)
+- [2-Computational Thinking](Markdown/02_computational_thinking.md)-->
 - [1-Intro to Course](Markdown/01_intro_to_the_course.md)
 
+<!--
 **Extra Learning**
 - [Extra Learning Resources](Markdown/99_extra_self_guided_learning.md)
+-->
