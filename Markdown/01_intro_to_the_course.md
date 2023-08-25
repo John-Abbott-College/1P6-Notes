@@ -1,5 +1,4 @@
 # Programming 1
-**Date:** Mon, Aug 23rd
 
 ## Course Notes
 Notes for the class will be published to a website and updated as we progress:
@@ -18,10 +17,10 @@ Student login through most school apps:
 ## CS Department 
 The **Chairs** of the department are:
 - Helen Katalifos
-- Ian Clement
+- Meghrig Terzian
 - Aref Mourtada
 
-Offices are in the 2nd floor of the Penfield building. Please become familiar with the offices.
+Offices are in the 2nd and 3rd floor of the Penfield building. Please become familiar with the offices.
 
 The **Dean of Technologies** (our boss) : Roberta Silerova.
 
@@ -29,8 +28,8 @@ The **Dean of Technologies** (our boss) : Roberta Silerova.
 
 
 ## Contacting the Teacher
-Contact me (Mauricio Buschinelli) by Teams (fastest) and/or MIO.
-Office hours are posted in LEA and on my office door (Penfield 237).
+Contact me (Ian Clement) by Teams (fastest) and/or MIO.
+Office hours are posted in LEA and on my office door (Penfield 227).
 
 > Course announcements will be made in Teams.
 
@@ -38,4 +37,4 @@ Office hours are posted in LEA and on my office door (Penfield 237).
 We'll use primarily two programs, both can be downloaded and installed **for free**.
 
 - Microsoft Visual Studio 2022 (Community edition) - from https://visualstudio.microsoft.com/vs/
-- Flowgorithm - from www.flowgorithm.org
+
