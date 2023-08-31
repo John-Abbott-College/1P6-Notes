@@ -53,11 +53,10 @@
 **Week 3** 
 - [7-Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process)
 - [6-Input/Output & Conversions](Markdown/06_input_output_string_conversions.md)
-
-**Week 2**
-- [5-Variables: Int & String](Markdown/05_variables_int_strings.md)
-- [4-Visual Studio](Markdown/04_visualstudio.md)
 -->
+**Week 2**
+- [4-Visual Studio](Markdown/04_visualstudio.md)
+- [5-Variables: Int & String](Markdown/05_variables_int_strings.md)
 
 **Week 1**
 <!--- [3-Computer Algorithms](Markdown/03_computer_algorithms.md)
