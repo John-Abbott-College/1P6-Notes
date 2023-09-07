@@ -49,11 +49,12 @@
 - [10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
 - [9-If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices_magic_numbers.md)
 - [8-If Statement](Markdown/08_if_statements.md)
+- [7-Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process)
+-->
 
 **Week 3** 
-- [7-Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process)
 - [6-Input/Output & Conversions](Markdown/06_input_output_string_conversions.md)
--->
+
 **Week 2**
 - [4-Visual Studio](Markdown/04_visualstudio.md)
 - [5-Variables: Int & String](Markdown/05_variables_int_strings.md)
