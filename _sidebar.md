@@ -52,7 +52,7 @@
 -->
 **Week 4**
 
-- [7-Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process)
+- [7-Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process.md)
 
 
 **Week 3** 
