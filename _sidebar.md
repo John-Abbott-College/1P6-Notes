@@ -45,12 +45,15 @@
 - [12-Boolean Algebra, Pt2](Markdown/12_boolean_algebra_cont.md)
 - [11-Boolean Algebra](Markdown/11_boolean_algebra.md)
 
-**Week 4**
+   SOME OF THESE WILL BE WEEK 4
 - [10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
 - [9-If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices_magic_numbers.md)
 - [8-If Statement](Markdown/08_if_statements.md)
-- [7-Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process)
 -->
+**Week 4**
+
+- [7-Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process)
+
 
 **Week 3** 
 - [6-Input/Output & Conversions](Markdown/06_input_output_string_conversions.md)
