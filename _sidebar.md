@@ -48,10 +48,10 @@
    SOME OF THESE WILL BE WEEK 4
 - [10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
 - [9-If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices_magic_numbers.md)
-- [8-If Statement](Markdown/08_if_statements.md)
 -->
 **Week 4**
 
+- [8-If Statement](Markdown/08_if_statements.md)
 - [7-Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process.md)
 
 
@@ -69,5 +69,3 @@
 
 <!--
 **Extra Learning**
-- [Extra Learning Resources](Markdown/99_extra_self_guided_learning.md)
--->
