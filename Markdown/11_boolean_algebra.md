@@ -264,14 +264,14 @@ Console.WriteLine($@"
 
 | DateTime variable    | Data type | Value range                   |
 | -------------------- | --------- | ----------------------------- |
-| systemTime.Day       | `Int32`   | 1 to 31                       |
+| systemTime.Day       | `int`   | 1 to 31                       |
 | systemTime.DayOfWeek | `string`  | "Monday", "Tuesday", ... ,  "Friday" |
-| systemTime.Month     | `Int32`   | 1 to 12                       |
-| systemTime.Year      | `Int32`   | 2023 (current year)           |
-| systemTime.Hour      | `Int32`   | 0 to 24                       |
-| systemTime.Minute    | `Int32`   | 0 to 59                       |
+| systemTime.Month     | `int`   | 1 to 12                       |
+| systemTime.Year      | `int`   | 2023 (current year)           |
+| systemTime.Hour      | `int`   | 0 to 24                       |
+| systemTime.Minute    | `int`   | 0 to 59                       |
 
-As illustrated in the table above, with the exception of `DayOfWeek`, all of the date values show above are of type `Int32`. 
+As illustrated in the table above, with the exception of `DayOfWeek`, all of the date values show above are of type `int`. 
 
 Note that `DayOfWeek` can be easily converted to `string` with:
 
