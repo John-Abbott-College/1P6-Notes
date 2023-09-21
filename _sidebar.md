@@ -41,11 +41,12 @@
 - [14-While Loop, Counters & Accumulators](Markdown/14_while_loop_counters_accumulators.md)
 - [13-Flowcharts & Unary Operators](Markdown/13_flowcharts_unary_operators.md)
 
-- [12-Boolean Algebra, Pt2](Markdown/12_boolean_algebra_cont.md)
+
 - [10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
 -->
 
 **Week 5**
+- [12-Boolean Algebra, Pt2](Markdown/12_boolean_algebra_cont.md)
 - [11-Boolean Algebra](Markdown/11_boolean_algebra.md)
 
 **Week 4**
