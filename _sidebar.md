@@ -46,6 +46,7 @@
 -->
 
 **Week 5**
+- [12-Random Exercise](Markdown/12_random_exercise.md)
 - [12-Boolean Algebra, Pt2](Markdown/12_boolean_algebra_cont.md)
 - [11-Boolean Algebra](Markdown/11_boolean_algebra.md)
 
