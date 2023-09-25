@@ -46,28 +46,28 @@
 -->
 
 **Week 5**
-- [12-Random Exercise](Markdown/12_random_exercise.md)
-- [12-Boolean Algebra, Pt2](Markdown/12_boolean_algebra_cont.md)
-- [11-Boolean Algebra](Markdown/11_boolean_algebra.md)
+- [Random Exercise](Markdown/12_random_exercise.md)
+- [Boolean Algebra, Pt2](Markdown/12_boolean_algebra_cont.md)
+- [Boolean Algebra](Markdown/11_boolean_algebra.md)
 
 **Week 4**
 
-- [9-If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices_magic_numbers.md)
-- [8-If Statement](Markdown/08_if_statements.md)
-- [7-Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process.md)
+- [If-Else Good & Bad Practices](Markdown/09_if_else_bad_practices_magic_numbers.md)
+- [If Statement](Markdown/08_if_statements.md)
+- [Pseudo-code, Comments & Code Design](Markdown/07_pseudocode_comments_coding_process.md)
 
 
 **Week 3** 
-- [6-Input/Output & Conversions](Markdown/06_input_output_string_conversions.md)
+- [Input/Output & Conversions](Markdown/06_input_output_string_conversions.md)
 
 **Week 2**
-- [4-Visual Studio](Markdown/04_visualstudio.md)
-- [5-Variables: Int & String](Markdown/05_variables_int_strings.md)
+- [Visual Studio](Markdown/04_visualstudio.md)
+- [Variables: Int & String](Markdown/05_variables_int_strings.md)
 
 **Week 1**
 <!--- [3-Computer Algorithms](Markdown/03_computer_algorithms.md)
 - [2-Computational Thinking](Markdown/02_computational_thinking.md)-->
-- [1-Intro to Course](Markdown/01_intro_to_the_course.md)
+- [Intro to Course](Markdown/01_intro_to_the_course.md)
 
 <!--
 **Extra Learning**
