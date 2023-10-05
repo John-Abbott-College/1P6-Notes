@@ -36,14 +36,16 @@
 - [17-Functions](Markdown/17_functions.md)
 - [16-Do-While & For Loops](Markdown/16_do_while_and_for_loops.md)
 
-**Week 6**
-- [15-Debugging Techniques](Markdown/15_debugging.md)
-- [14-While Loop, Counters & Accumulators](Markdown/14_while_loop_counters_accumulators.md)
-- [13-Flowcharts & Unary Operators](Markdown/13_flowcharts_unary_operators.md)
-
-
 - [10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
+
 -->
+
+**Week 6**
+- [Debugging Techniques](Markdown/15_debugging.md)
+- [While Loop, Counters & Accumulators](Markdown/14_while_loop_counters_accumulators.md)
+- [Flowcharts & Unary Operators](Markdown/13_flowcharts_unary_operators.md)
+
+
 
 **Week 5**
 - [Random Exercise](Markdown/12_random_exercise.md)
