@@ -27,27 +27,33 @@
 - [22-Modulo, Typecasting & String Methods](Markdown/22_modulo_typecasting_string_methods.md)
 - [21-Scope, Globals & Keyboard tips](Markdown/21_scope_globals_keyboard.md)
 
-**Week 8**
 - [20-TryParse](Markdown/20_try_parse.md)
 - [19-Switch Statements](Markdown/19_switch_statements.md)
 - [18-Return Functions](Markdown/18_return_functions.md)
 
-**Week 7**
-- [17-Functions](Markdown/17_functions.md)
-- [16-Do-While & For Loops](Markdown/16_do_while_and_for_loops.md)
+- Not used??[10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
 
-- [10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
+- [17-Functions](Markdown/17_functions.md)
+- [For Loops](Markdown/16_5_for_loops.md)
 
 -->
 
-**Week 6**
+**Week 8**
+
 - [Debugging Techniques](Markdown/15_debugging.md)
+- [Do-While Loops](Markdown/16_do_while_loops.md)
+- [Unary Operators](Markdown/13_5_unary_operators.md)
+
+**Week 7**
+
 - [While Loop, Counters & Accumulators](Markdown/14_while_loop_counters_accumulators.md)
-- [Flowcharts & Unary Operators](Markdown/13_flowcharts_unary_operators.md)
 
+**Week 6**
 
+- Test 1
 
 **Week 5**
+
 - [Random Exercise](Markdown/12_random_exercise.md)
 - [Boolean Algebra, Pt2](Markdown/12_boolean_algebra_cont.md)
 - [Boolean Algebra](Markdown/11_boolean_algebra.md)
