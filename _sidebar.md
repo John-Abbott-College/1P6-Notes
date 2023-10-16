@@ -33,12 +33,12 @@
 
 - Not used??[10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
 
-- [17-Functions](Markdown/17_functions.md)
 - [For Loops](Markdown/16_5_for_loops.md)
 
 -->
 
 **Week 8**
+- [Functions](Markdown/17_functions.md)
 
 - [Debugging Techniques](Markdown/15_debugging.md)
 - [Do-While Loops](Markdown/16_do_while_loops.md)
