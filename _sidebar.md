@@ -22,20 +22,20 @@
 - [25-Function Params vs Args](Markdown/25_passing_parameters_to_functions.md)
 - [24-Changing Loop Behaviour](Markdown/24_changing_loop_behaviour.md)
 
-**Week 9**
 - [23-Nested Loops](Markdown/23_nested_loops_control.md)
 - [22-Modulo, Typecasting & String Methods](Markdown/22_modulo_typecasting_string_methods.md)
 - [21-Scope, Globals & Keyboard tips](Markdown/21_scope_globals_keyboard.md)
 
 - [20-TryParse](Markdown/20_try_parse.md)
 - [19-Switch Statements](Markdown/19_switch_statements.md)
-- [18-Return Functions](Markdown/18_return_functions.md)
 
 - Not used??[10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
 
 - [For Loops](Markdown/16_5_for_loops.md)
 
 -->
+**Week 9**
+- [Return Functions](Markdown/18_return_functions.md)
 
 **Week 8**
 - [Functions](Markdown/17_functions.md)

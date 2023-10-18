@@ -22,12 +22,6 @@ double wallWidth;
 wallWidth = Convert.ToDouble( userInput );
 ```
 
-- `int.Parse( )` takes one argument and returns an `int`
-```csharp
-int gymVisits;
-// Assigning the return value to gymVisits
-gymVisits = int.Parse( userInput );
-```
 
 > Remember that in an **assignment operation**, the **right hand side is evaluated first** and then assigned to the variable on the left.
 > 
@@ -122,18 +116,18 @@ static void Main(string[] args)
 {
   int userInput;  
   // the function returns an integer which must match the variale "storing" it.
-  userinput = GoGetIt();
+  userinput = UserNumber();
 
   Console.WriteLine("I see your number as "+ userinput);
   Console.ReadLine();
 }
 
-static int GoGetIt()
+static int UserNumber()
 {
-  int apple;
+  int number;
   Console.Write("What is your number? ");
-  apple = int.Parse(Console.ReadLine());
-  return apple;
+  number = Convert.ToInt32(Console.ReadLine());
+  return number;
 }
 ```
 
@@ -148,16 +142,16 @@ static void Main(string[] args)
 	int result;
   
 	// program to add 2 numbers and print result
-	result = GoGetIt() + GoGetIt(); // yes, you can use the return value of a function
+	result = UserNumber() + UserNumber(); // yes, you can use the return value of a function
 	// inside an equation
 	Console.WriteLine("The total of is equal to " + result);
 	Console.ReadLine();
 }
 
-static int GoGetIt() {
+static int UserNumber() {
   int number;
   Console.Write("what is your number? ");
-  number = int.Parse(Console.ReadLine());
+  number = Convert.ToInt32(Console.ReadLine());
   return number
 }
 ```
@@ -180,7 +174,7 @@ static void Main(string[] args)
   } while (! GameOver()); // what is the return type of gameover?
 }
 
-static Boolean TarGetHit()
+static Boolean TargetHit()
 {
   Boolean gotit = false;
   if (xship == xbullett && yxhip == ybullet) // need globals for these, etc
@@ -211,19 +205,19 @@ static Boolean GameOver()
 
 ### Exercise 1: Input Validation
 
-Create a function called `GetValidInt` that will return a valid integer after collecting user input. A valid input is a decimal number greater than 0.
+Create a function called `GetPositiveInt` that will return a valid integer after collecting user input. A valid input is a decimal number greater than 0.
 
 Pseudo code below:
 
 ```text
-int GetValidInt() 
+int GetPositiveInt() 
 {
 	declare theNumber
-	prompt user for input
 	do 
 	{
-		success = TryParse
-	} while not success
+        prompt user for input
+		read the user's response
+	} while not a positive number
 	
 	return theNumber
 }
@@ -236,11 +230,43 @@ static void RectangleArea()
 { 
   int side1, side2;
   Console.WriteLine ("enter value for side 1"); 
-  side1 = GetValidInt(); 
+  side1 = GetPositiveInt(); 
   
   Console.WriteLine("enter value for side 2"); 
-  side2 = GetValidInt(); 
+  side2 = GetPositiveInt(); 
   
   // and so on. 
 } 
 ```
+
+### Exercise 2: Max and Min
+
+Create a function called `Max` that will take two numbers and return the larger of the two. Create a second function called `Min` that will take two numbers and return the smaller of the two. 
+
+Your function will be used as illustrated below:
+
+```csharp
+static void Main() 
+{ 
+  Console.WriteLine("the larger of 3 and 6 is: " + Max(3, 6));
+  Console.WriteLine("the smaller of 3 and 6 is: " + Min(3, 6));
+} 
+```
+### Exercise 3 (Challenge):  IsInRange 
+
+Create a function called `IsInRange` that takes three numbers. The first number will be checked to see if it is between the second number (inclusive) and the third number (exclusive). In math we would say that the number is in the range: `[low, high[`. This function will have a `bool` return type.
+
+
+Your function will be used as illustrated below:
+
+```csharp
+static void Main() 
+{ 
+  bool check = IsInRange(4, 2, 10);
+  if (check)
+    Console.WriteLine("Yes, 4 is between 2 (inclusive) and 10 (exclusive).")
+} 
+```
+### Exercise 4 (Extra Challenge): MakeInRange
+
+Create a function called `MakeInRange` that takes three numbers. If the first number is between the second number (inclusive) and the third number (exclusive), it is returned. If the first number is lower than the range, return the lowest number in the range. If the first number is higher than the range, return the highest number. Use `IsInRange`, `Min` and `Max` functions for even extra challenge.
