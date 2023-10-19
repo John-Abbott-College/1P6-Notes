@@ -27,7 +27,6 @@
 - [21-Scope, Globals & Keyboard tips](Markdown/21_scope_globals_keyboard.md)
 
 - [20-TryParse](Markdown/20_try_parse.md)
-- [19-Switch Statements](Markdown/19_switch_statements.md)
 
 - Not used??[10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
 
@@ -35,6 +34,7 @@
 
 -->
 **Week 9**
+- [Switch Statements](Markdown/19_switch_statements.md)
 - [Return Functions](Markdown/18_return_functions.md)
 
 **Week 8**
