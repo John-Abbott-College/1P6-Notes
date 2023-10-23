@@ -24,7 +24,6 @@
 
 - [23-Nested Loops](Markdown/23_nested_loops_control.md)
 - [22-Modulo, Typecasting & String Methods](Markdown/22_modulo_typecasting_string_methods.md)
-- [21-Scope, Globals & Keyboard tips](Markdown/21_scope_globals_keyboard.md)
 
 - [20-TryParse](Markdown/20_try_parse.md)
 
@@ -34,6 +33,8 @@
 
 -->
 **Week 9**
+
+- [Scope, Globals & Keyboard tips](Markdown/21_scope_globals_keyboard.md)
 - [Switch Statements](Markdown/19_switch_statements.md)
 - [Return Functions](Markdown/18_return_functions.md)
 

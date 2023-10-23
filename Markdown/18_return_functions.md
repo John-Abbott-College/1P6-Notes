@@ -174,9 +174,9 @@ static void Main(string[] args)
   } while (! GameOver()); // what is the return type of gameover?
 }
 
-static Boolean TargetHit()
+static bool TargetHit()
 {
-  Boolean gotit = false;
+  bool gotit = false;
   if (xship == xbullett && yxhip == ybullet) // need globals for these, etc
   {
     gotit = true;
@@ -184,9 +184,9 @@ static Boolean TargetHit()
   return gotit;
 }
 
-static Boolean GameOver()
+static bool GameOver()
 {
-  Boolean gamedone = false;
+  bool gamedone = false;
   if (gametimer < 0)
   { 
     gamedone = true;
