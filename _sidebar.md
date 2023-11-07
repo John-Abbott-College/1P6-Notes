@@ -6,20 +6,15 @@
 - [32-Game Programming Intro](Markdown/32_intro_game_programming.md)
 
 **Week 13**
+
 - [31-Console Manipulation](Markdown/31_console_class_manipulation.md)
 - [30-Pass by Reference & Value](Markdown/30_pass_by_value_and_reference.md)
 
 
-**Week 12**
 - [28-Passing Arrays, Heap & Stack](Markdown/28_passing_arrays_heap_stack.md)
 - [29-Assignment 4 Lab Day](Markdown/29_assign4_lab_day.md)
 
-**Week 11**
-- [27-Intro to Arrays](Markdown/27_arrays.md)
 
-**Week 10**
-- [26-Function Design & Default Params](Markdown/26_default_parameters.md)
-- [25-Function Params vs Args](Markdown/25_passing_parameters_to_functions.md)
 - [24-Changing Loop Behaviour](Markdown/24_changing_loop_behaviour.md)
 
 - [23-Nested Loops](Markdown/23_nested_loops_control.md)
@@ -31,7 +26,24 @@
 
 - [For Loops](Markdown/16_5_for_loops.md)
 
+- [26-Function Design & Default Params](Markdown/26_default_parameters.md)
+
 -->
+
+**Week 12**
+
+- [27-Intro to Arrays](Markdown/27_arrays.md)
+
+
+**Week 11**
+
+- Test 2
+
+**Week 10**
+- [25-Function Params vs Args](Markdown/25_passing_parameters_to_functions.md)
+
+
+
 **Week 9**
 
 - [Scope, Globals & Keyboard tips](Markdown/21_scope_globals_keyboard.md)

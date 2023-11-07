@@ -47,7 +47,8 @@ static void Main() {
 ```csharp
 static jolly Foo(choco pink_box, jolly green_box)
 {
-	return green_box = (jolly) pink_box % green_box
+	red = pink_box + green_box
+    return red
 }
 ```
 
@@ -68,6 +69,7 @@ static void Main() {
 ```csharp
 static choco Foo(jolly green_box, choco pink_box)
 {
-	return green_box = pink_box % (choco)green_box
+     green_box = pink_box + green_box
+     return green
 }
 ```
