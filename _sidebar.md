@@ -15,7 +15,6 @@
 - [29-Assignment 4 Lab Day](Markdown/29_assign4_lab_day.md)
 
 
-- [24-Changing Loop Behaviour](Markdown/24_changing_loop_behaviour.md)
 
 - [23-Nested Loops](Markdown/23_nested_loops_control.md)
 - [22-Modulo, Typecasting & String Methods](Markdown/22_modulo_typecasting_string_methods.md)
@@ -24,7 +23,6 @@
 
 - Not used??[10-If Else-If & Random Ints](Markdown/10_if_else-if_random.md)
 
-- [For Loops](Markdown/16_5_for_loops.md)
 
 - [26-Function Design & Default Params](Markdown/26_default_parameters.md)
 
@@ -32,7 +30,9 @@
 
 **Week 12**
 
-- [27-Intro to Arrays](Markdown/27_arrays.md)
+- [For Loops](Markdown/16_5_for_loops.md)
+- [Changing Loop Behaviour](Markdown/24_changing_loop_behaviour.md)
+- [Intro to Arrays](Markdown/27_arrays.md)
 
 
 **Week 11**
@@ -40,7 +40,7 @@
 - Test 2
 
 **Week 10**
-- [25-Function Params vs Args](Markdown/25_passing_parameters_to_functions.md)
+- [Function Params vs Args](Markdown/25_passing_parameters_to_functions.md)
 
 
 
