@@ -2,14 +2,10 @@
 <!--
 **Week 14**
 - [34-Collision Detection & 2D Arrays](Markdown/34_boundary_collision_2d_arrays.md)
-- [33-Game Timing](Markdown/33_game_timing.md)
-- [32-Game Programming Intro](Markdown/32_intro_game_programming.md)
 
 **Week 13**
 
-- [31-Console Manipulation](Markdown/31_console_class_manipulation.md)
 - [30-Pass by Reference & Value](Markdown/30_pass_by_value_and_reference.md)
-- [28-Passing Arrays, Heap & Stack](Markdown/28_passing_arrays_heap_stack.md)
 - [29-Assignment 4 Lab Day](Markdown/29_assign4_lab_day.md)
 - [23-Nested Loops](Markdown/23_nested_loops_control.md)
 - [22-Modulo, Typecasting & String Methods](Markdown/22_modulo_typecasting_string_methods.md)
@@ -18,6 +14,13 @@
 - [26-Function Design & Default Params](Markdown/26_default_parameters.md)
 
 -->
+
+**Week 14**
+
+- [Game Timing](Markdown/33_game_timing.md)
+- [Game Programming Intro](Markdown/32_intro_game_programming.md)
+- [Console Manipulation](Markdown/31_console_class_manipulation.md)
+
 
 **Week 13**
 
